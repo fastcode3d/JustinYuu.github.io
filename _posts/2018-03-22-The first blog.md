@@ -2,8 +2,8 @@
 layout: post
 title: "The first blog"
 description: "The first blog,just for test."
-categories: [uncategorized]
-tags: [random, jekyll]
+categories: [tittle-tattle]
+tags: [test]
 redirect_from:
   - /2018/03/22/
 ---
