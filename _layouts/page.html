@@ -1,6 +1,6 @@
 ---
-layout: default
+layout: layout
 ---
 
-<h2 class="article__title article__title--single">{{ page.title }}</h2>
-{{ content }}
+{% assign __ = site.data.languages[site.language] %}
+{% include page.html %}
