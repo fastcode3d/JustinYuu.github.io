@@ -1,7 +1,7 @@
 # Site Settings
 encoding: UTF-8
 exclude: ["*.gem", "*.gemspec", "Gemfile", "Gemfile.lock", "node_modules", "Rakefile", "starter-kit", "vendor"]
-lang: zh-cn # Language code as defined in _data/i18n.yml. en, en-gb, en-us, zh, zh-cn, zh-tw etc.
+lang: en # Language code as defined in _data/i18n.yml. en, en-gb, en-us, zh, zh-cn, zh-tw etc.
 permalink: /blog/:year/:month/:day/:title/
 
 whitelist: [jekyll-feed, jekyll-redirect-from, jekyll-seo-tag, jekyll-sitemap]
@@ -27,10 +27,10 @@ title: Justin's Blog
 description: "Say goodbye to yesterday."
 keywords: 'jekyll,java,C,coding,gem-based,blog'
 author:
-  name:
-  job_title:
-  location:
-  email:
+  name: Justin Yu
+  job_title:  student 
+  location: Shanghai,China
+  email:  869113692@qq.com
   social_links:
    # - name: facebook
     #  url:
