@@ -6,7 +6,7 @@ permalink: /blog/:year/:month/:day/:title/
 
 whitelist: [jekyll-feed, jekyll-redirect-from, jekyll-seo-tag, jekyll-sitemap]
 plugins:
- # - jekyll-feed
+  - jekyll-feed
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -21,7 +21,7 @@ sass:
   style: compressed
 
 # Site Data
-url: # the base hostname & protocol for your site, e.g. http://example.com
+url: http://justin-yu.me
 baseurl: # the subpath of your site, e.g. /blog
 title: Justin's Blog
 description: "Say goodbye to yesterday."
@@ -36,8 +36,8 @@ author:
     #  url:
     - name: github
       url: https://github.com/JustinYuu/JustinYuu.github.io
-    - name: zhihu
-      url:  https://www.zhihu.com/people/AwoJustiN/activities
+    #- name: zhihu
+     # url:  https://www.zhihu.com/people/AwoJustiN/activities
     #- name: linkedin
      # url:
     #- name: stackoverflow
