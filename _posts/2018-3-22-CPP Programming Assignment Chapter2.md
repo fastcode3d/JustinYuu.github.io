@@ -9,7 +9,7 @@ redirect_from:
 ---
 #CPP Programming Assignment Week2
 
-As there is no programming assignment in Chapter 1 ,thus I post my programming assignment from chapter 2.
+As there is no programming assignment in Chapter 1 ,thus I post my programming assignments from chapter 2.
 
     2.1.c
     #include <stdio.h>
