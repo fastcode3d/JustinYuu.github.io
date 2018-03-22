@@ -12,7 +12,7 @@ redirect_from:
   Categories [C Primer Plus] mainly contains my own answers of *C Primer Plus* Programming Assignment ,and my own thoughts about
 something apperaerd in this book.
 
-  In order to practice my written English, I 'll dedicated myself to write blogs in Enlish in *this* catogory.
+  In order to practice my written English, I 'll dedicated myself to write blogs in English in *this* catogory.
     
   All codes in this category are based in C , which means all articles in this category will be taged in [C].
     
