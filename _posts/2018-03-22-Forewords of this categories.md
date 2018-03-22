@@ -9,13 +9,13 @@ redirect_from:
 ---
 #Forewords of this categories(C Primer Plus)
 
-    Categories [C Primer Plus] mainly contains my own answers of *C Primer Plus* Programming Assignment ,and my own thoughts about
+  Categories [C Primer Plus] mainly contains my own answers of *C Primer Plus* Programming Assignment ,and my own thoughts about
 something apperaerd in this book.
 
-    In order to practice my written English, I 'll dedicated myself to write blogs in Enlish in *this* catogory.
+  In order to practice my written English, I 'll dedicated myself to write blogs in Enlish in *this* catogory.
     
-    All codes in this category are based in C , which means all articles in this category will be taged in [C].
+  All codes in this category are based in C , which means all articles in this category will be taged in [C].
     
-    As a new coder, undoubtedly there will be dozens of faults in my blogs. I'd appreciate some feedback on my work,and any methods,
+  As a new coder, undoubtedly there will be dozens of faults in my blogs. I'd appreciate some feedback on my work,and any methods,
     
-    such as e-mail, github ,commenting(which will available in fews days) are welcomed.
+  such as e-mail, github ,commenting(which will available in fews days) are welcomed.
