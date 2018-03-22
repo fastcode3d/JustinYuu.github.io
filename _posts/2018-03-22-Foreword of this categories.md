@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Forewords of this categories"
-description: "Forewords."
+title: "Foreword of this categories"
+description: "Foreword."
 categories: [C-Primer-Plus]
 tags: [C]
 redirect_from:
   - /2018/03/22/
 ---
-#Forewords of this categories(C Primer Plus)
+#Foreword of this categories(C Primer Plus)
 
   Categories [C Primer Plus] mainly contains my own answers of *C Primer Plus* Programming Assignment ,and my own thoughts about
 something apperaerd in this book.
