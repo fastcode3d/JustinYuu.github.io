@@ -21,6 +21,7 @@ As there is no programming assignment in Chapter 1 ,thus I post my programming a
         printf("Yu");
         return 0;
     }
+    
 ----------------------------------------------------- 
     
     2.2.c
