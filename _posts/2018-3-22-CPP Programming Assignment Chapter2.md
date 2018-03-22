@@ -2,7 +2,7 @@
 layout: post
 title: "CPP Programming Assignment Chapter2"
 description: "my own source codes of Programming Assignment in C Premier Plus "
-categories: [C Primer Plus]
+categories: [C-Primer-Plus]
 tags: [C]
 redirect_from:
   - /2018/03/22/
