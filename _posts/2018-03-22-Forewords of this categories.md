@@ -2,7 +2,7 @@
 layout: post
 title: "Forewords of this categories"
 description: "Forewords."
-categories: [C Primer Plus]
+categories: [C-Primer-Plus]
 tags: [C]
 redirect_from:
   - /2018/03/22/
