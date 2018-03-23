@@ -46,6 +46,10 @@ author:
     #  url: 
     #- name: vk
      # url:
+# Analytics settings
+# Baidu Analytics
+ba_track_id: 274810423b2b334db0082de7eb52aa5d
+
 home:
   section1: <h1>Justin's Blog</h1>
   section2: <h2>Say goodbye to yesterday</h2>
