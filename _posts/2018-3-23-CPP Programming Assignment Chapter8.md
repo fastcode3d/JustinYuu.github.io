@@ -23,7 +23,7 @@ redirect_from:
         }
         printf("There are %ld characters in the text.\n",num);
     }
-    {% highlight ruby %}
+    {% endhighlight %}
 
 ---
 	8.2.c
