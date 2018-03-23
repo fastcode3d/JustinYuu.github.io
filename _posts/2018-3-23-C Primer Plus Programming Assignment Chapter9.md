@@ -9,6 +9,7 @@ redirect_from:
 ---
 #CPP Programming Assignment 9
 
+	{% highlight ruby %}
 	9.1.c
     #include <stdio.h>
     double min(double x,double y);
@@ -31,8 +32,11 @@ redirect_from:
         else
             return y;
     }
+	{% endhighlight %}
 
 ---
+
+	{% highlight ruby %}
 	9.2.c
     #include <stdio.h>
     void chline(char ch,int i,int j);
@@ -55,8 +59,11 @@ redirect_from:
             printf("\n");
         }
     }
-
+	{% endhighlight %}
+	
 ---
+
+	{% highlight ruby %}
 	9.3.c
     #include <stdio.h>
     void chLineRow(char ch,int c,int r)
@@ -69,8 +76,11 @@ redirect_from:
             putchar('\n');
         }
     }
-
+	{% endhighlight %}
+	
 ---
+
+	{% highlight ruby %}
 	9.4.c
     #include <stdio.h>
     double calculate(double q,double p)
@@ -87,8 +97,11 @@ redirect_from:
         while(scanf("%lf %lf",&x,&y)==2)
             printf("%f",calculate(x,y));
     }
-
+	{% endhighlight %}
+	
 ---
+
+	{% highlight ruby %}
 	9.5.c
 	#include <stdio.h>
     void larger_of(double *a,double *b)
@@ -109,8 +122,11 @@ redirect_from:
         printf("Bye!");
         return 0;
     }
-
+	{% endhighlight %}
+	
 ---
+
+	{% highlight ruby %}
 	9.6.c
 	#include <stdio.h>
     void sort(double *p1,double *p2,double *p3)
@@ -136,8 +152,11 @@ redirect_from:
             *p1 = temp;
         }
     }
-
+	{% endhighlight %}
+	
 ---
+
+	{% highlight ruby %}
 	9.7.c
     #include <stdio.h>
     #include <ctype.h>
@@ -166,8 +185,11 @@ redirect_from:
             }
         return 0;
     }
-
+	{% endhighlight %}
+	
 ---
+
+	{% highlight ruby %}
 	9.8.c
     #include <stdio.h>
     double power(double n, int p);
@@ -216,8 +238,11 @@ redirect_from:
         }
         return pow;                // return the value of pow
     }
-
+	{% endhighlight %}
+	
 ---
+
+	{% highlight ruby %}
 	9.9.c
     #include <stdio.h>
     double power(double n, int p);
@@ -266,8 +291,11 @@ redirect_from:
         }
         return pow;                // return the value of pow
     }
-
+	{% endhighlight %}
+	
 ---
+
+	{% highlight ruby %}
 	9.11.c
     #include <stdio.h>
     long long fibonacci_iteration(int n) {
@@ -293,6 +321,7 @@ redirect_from:
             printf("The %dth Fibonacci number is %lld.\n",n,fibonacci_iteration(n));
         return 0;
     }
-
+	{% endhighlight %}
+	
 ---
   If you find there are faults in the source codes, any method connecting with me is welcomed.
