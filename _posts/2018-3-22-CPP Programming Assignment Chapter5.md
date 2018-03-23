@@ -27,7 +27,8 @@ redirect_from:
             scanf("%d",&min);
         }
     }
-	
+	    {% endhighlight %}
+	    
 ---
 	5.2.c
     #include <stdio.h>
@@ -44,6 +45,7 @@ redirect_from:
         i++;
         }
     }
+	{% endhighlight %}
 	
 ---
 	5.3.c
@@ -64,6 +66,7 @@ redirect_from:
             scanf("%d",&day);
         }
     }
+	    {% endhighlight %}
 
 ---
 	5.4.c
@@ -89,6 +92,7 @@ redirect_from:
         }
         printf("bye");
     }
+	{% endhighlight %}
 
 ---
 	5.7.c
@@ -105,7 +109,8 @@ redirect_from:
     {
         printf("The cubic of %d is %d",n,n*n*n);
     }
-
+	{% endhighlight %}
+	
 ---
 	5.8.c
     #include <stdio.h>
@@ -128,7 +133,8 @@ redirect_from:
             }
             printf("Done");
         }
-
+	{% endhighlight %}
+	
 ---
 	5.9.c
     #include <stdio.h>
@@ -145,6 +151,7 @@ redirect_from:
         const float tem_c1 = 5.0 / 9.0;
         const float tem_c2 = 32.0;
     }
-
+	{% endhighlight %}
+	
 ---
 If you find there are faults in the source codes, any method connecting with me is welcomed.
