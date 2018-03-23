@@ -16,4 +16,4 @@ something apperaerd in this book.
     
   All codes in this category are based in C , which means all articles in this category will be taged in [C].
     
-  As a new coder, undoubtedly there will be dozens of faults in my blogs. I'd appreciate some feedback on my work,and any methods,such as e-mail, github ,commenting(which will available in fews days) are welcomed.
+  As a new coder, undoubtedly there will be dozens of faults in my blogs. I'd appreciate some feedback on my work,and any method,such as e-mail, github ,comments(which will available in fews days) are welcomed.
