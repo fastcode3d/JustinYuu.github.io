@@ -9,8 +9,9 @@ redirect_from:
 ---
 #CPP Programming Assignment Chapter8
 
-	{% highlight ruby %}
+
 	8.1.c
+	{% highlight ruby %}
     #include <stdio.h>
     int main(void)
     {
