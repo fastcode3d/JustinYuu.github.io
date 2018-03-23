@@ -249,7 +249,11 @@ redirect_from:
     }
     int main(void)
     {
-        double S[ROWS][COLS]={{2,4},{6,8},{5,7}};
+        double S[ROWS][COLS]={
+							  {2,4},
+							  {6,8},
+							  {5,7}
+							  };
         double T[ROWS][COLS];
         copy_ptr(T,S,ROWS);
         return 0;
