@@ -11,6 +11,7 @@ redirect_from:
 
 As there is no programming assignment in Chapter 1 ,thus I post my programming assignments from chapter 2.
 
+    {% highlight ruby %}
     2.1.c
     #include <stdio.h>
     int main(void)
@@ -21,9 +22,11 @@ As there is no programming assignment in Chapter 1 ,thus I post my programming a
         printf("Yu");
         return 0;
     }
- 
+     {% endhighlight %}
+     
 ----------------------------------------------------- 
     
+    {% highlight ruby %}
     2.2.c
     #include <stdio.h>
     int main(void)
@@ -32,8 +35,11 @@ As there is no programming assignment in Chapter 1 ,thus I post my programming a
         printf("My address is Road Wenhui 300#.");
         return 0;
     }
+    {% endhighlight %}
     
 ----------------------------------------------------- 
+
+    {% highlight ruby %}
     2.3.c
     #include <stdio.h>
     int main(void)
@@ -44,8 +50,11 @@ As there is no programming assignment in Chapter 1 ,thus I post my programming a
         printf("My age is %d years old, which is %d days",age,day);
         return 0;
     }
+    {% endhighlight %}
     
------------------------------------------------------ 
+-----------------------------------------------------
+
+    {% highlight ruby %}
     2.4.c
     #include <stdio.h>
     void jolly(void);
@@ -66,8 +75,11 @@ As there is no programming assignment in Chapter 1 ,thus I post my programming a
     {
         printf("Which nobody can deny!\n");
     }
-    
+     {% endhighlight %}
+     
 --------------------------------------------------------
+
+    {% highlight ruby %}
     2.5.c
     #include <stdio.h>
     void br(void);
@@ -91,8 +103,11 @@ As there is no programming assignment in Chapter 1 ,thus I post my programming a
     {
         printf("India, China");
     }
-    
+     {% endhighlight %}
+     
 ---------------------------------------------------------
+
+    {% highlight ruby %}
     2.6.c
     #include <stdio.h>
     int main(void)
@@ -102,8 +117,11 @@ As there is no programming assignment in Chapter 1 ,thus I post my programming a
         printf("toes is %d\ntoes' square is %d\ntoes' cube is %d ",toes,toes * toes,toes * toes * toes);
         return 0;
     }
-    
+      {% endhighlight %}
+      
 ---------------------------------------------------------------
+
+    {% highlight ruby %}
     2.7.c
     #include <stdio.h>
     void smile(void);
@@ -123,8 +141,11 @@ As there is no programming assignment in Chapter 1 ,thus I post my programming a
     {
         printf("Smile!");
     }
-    
+      {% endhighlight %}
+      
 ----------------------------------------------------------------
+
+    {% highlight ruby %}
     2.8.c
     #include <stdio.h>
     void one_three(void);
@@ -145,7 +166,8 @@ As there is no programming assignment in Chapter 1 ,thus I post my programming a
     {
         printf("two\n");
     }
-    
+      {% endhighlight %}
+      
 ----------------------------------------------------------------
 
   If you find there are faults in the source codes, any method connecting with me is welcomed.
