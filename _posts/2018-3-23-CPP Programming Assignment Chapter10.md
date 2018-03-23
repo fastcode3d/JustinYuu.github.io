@@ -136,7 +136,7 @@ redirect_from:
         printf("The maximum of those numbers is %d",max(S,5));
         return 0;
     }
-	{% endhighlignt %}
+	{% endhighlight %}
 	
 ---
 
