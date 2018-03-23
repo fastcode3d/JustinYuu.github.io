@@ -32,8 +32,8 @@ redirect_from:
     }
 	
 ---
-		7.2.c
-	    #include <stdio.h>
+	7.2.c
+	#include <stdio.h>
     int main(void)
     {
         char ch;
@@ -55,8 +55,8 @@ redirect_from:
     }
 	
 ---
-		7.3.c
-	    #include <stdio.h>
+	7.3.c
+	#include <stdio.h>
     int main(void)
     {
         int num;
@@ -105,7 +105,7 @@ redirect_from:
 	
 ---
 	7.4.c
-	    #include <stdio.h>
+	#include <stdio.h>
     #define  EMCLA '!'
     #define  STOP '.'
     int main(void)
@@ -138,7 +138,7 @@ redirect_from:
     }
 	
 ---
-		7.6.c
+	7.6.c
 	#include <stdio.h>
     int main(void)
     {
