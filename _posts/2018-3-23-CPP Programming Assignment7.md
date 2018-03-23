@@ -8,7 +8,8 @@ redirect_from:
   - /2018/03/23/
 ---
 #CPP Programming Assignment Chapter7
-
+	
+	{% highlight ruby %}
     7.1.c
     #include <stdio.h>
     int main(void)
@@ -30,8 +31,11 @@ redirect_from:
         printf("There are %d spaces , %d lines and %d other characters in the sentence you input.\n", space_n, line_n, else_n);
         return 0;
     }
+	{% endhighlight %}
 	
 ---
+
+	{% highlight ruby %}
 	7.2.c
 	#include <stdio.h>
     int main(void)
@@ -53,8 +57,11 @@ redirect_from:
         }
         return 0;
     }
+	{% endhighlight %}
 	
 ---
+
+	{% highlight ruby %}
 	7.3.c
 	#include <stdio.h>
     int main(void)
@@ -102,8 +109,11 @@ redirect_from:
         printf("There are %d even numbers, the average of even numbers is %f.\nAnd There are %d odd numbers, whose average is %f.\n", even_num,even_avg,odd_num,odd_avg);
         return 0;
     }
+	{% endhighlight %}
 	
 ---
+
+	{% highlight ruby %}
 	7.4.c
 	#include <stdio.h>
     #define  EMCLA '!'
@@ -136,8 +146,11 @@ redirect_from:
             printf("\nThere are %d changes.\n", ch_num);
         return 0;
     }
+	{% endhighlight %}
 	
 ---
+
+	{% highlight ruby %}
 	7.6.c
 	#include <stdio.h>
     int main(void)
@@ -160,8 +173,11 @@ redirect_from:
         printf("There are %d \'ei\'' in the sentence.\n" ,ch_num);
         return 0;
     }
+	{% endhighlight %}
 	
 ---
+
+	{% highlight ruby %}
 	7.7.c
     #include <stdio.h>
     #define BASIC_SAL 10.00
@@ -186,8 +202,11 @@ redirect_from:
         printf("Your salary is $%.2f\n", salary);
         return 0;
     }
+	{% endhighlight %}
 	
 ---
+
+	{% highlight ruby %}
 	7.8.c
 	#include <stdio.h>
     #include <stdbool.h>
@@ -219,6 +238,7 @@ redirect_from:
         printf("Bye!");
         return 0;
 	}
+	{% endhighlight %}
 	
 ---
   If you find there are faults in the source codes, any method connecting with me is welcomed.	
