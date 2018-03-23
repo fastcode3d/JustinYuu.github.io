@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CPP Programming Assignment Chapter3"
-description: "my own source codes of Programming Assignment in C Premier Plus "
+description: "my own source codes of Programming Assignment in C Primier Plus "
 categories: [C-Primer-Plus]
 tags: [C]
 redirect_from:
