@@ -165,7 +165,7 @@ redirect_from:
         }
         return n;
     }
-	{% endhighlignt %}
+	{% endhighlight %}
 	
 ---
 
@@ -198,7 +198,7 @@ redirect_from:
         }
         return (max - min);
     }
-	{% endhighlignt %}
+	{% endhighlight %}
 	
 ---
 
@@ -224,7 +224,7 @@ redirect_from:
             *(a+length-1-i)=temp;
         }
     }
-	{% endhighlignt %}
+	{% endhighlight %}
 	
 ---
 
@@ -254,7 +254,7 @@ redirect_from:
         copy_ptr(T,S,ROWS);
         return 0;
     }
-	{% endhighlignt %}
+	{% endhighlight %}
 	
 ---
 
@@ -281,7 +281,7 @@ redirect_from:
         copy_ptr(T,S+3,3);
         return 0;
     }
-	{% endhighlignt %}
+	{% endhighlight %}
 	
 ---
 
@@ -325,7 +325,7 @@ redirect_from:
         }
         printf("\n");
     }
-	{% endhighlignt %}
+	{% endhighlight %}
 	
 ---
 
@@ -349,7 +349,7 @@ redirect_from:
             printf("%d ",ar3[i]);
         }
     }
-	{% endhighlignt %}
+	{% endhighlight %}
 	
 ---
 
@@ -390,7 +390,7 @@ redirect_from:
                 ar[i][j]*=2;
         }
     }
-	{% endhighlignt %}
+	{% endhighlight %}
 	
 ---
 
@@ -466,7 +466,7 @@ redirect_from:
         printf("The average of the total group is %.3f.\n",aveall(arr,rows));
         printf("The maximum number of the total group is %.2f.\n",findmax(arr,rows));
     }
-	{% endhighlignt %}
+	{% endhighlight %}
 	
 ---
   If you find there are faults in the source codes, any method connecting with me is welcomed.
