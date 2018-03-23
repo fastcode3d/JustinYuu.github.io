@@ -140,7 +140,7 @@ redirect_from:
 	
 ---
 
-	{% highlight ruby%}
+	{% highlight ruby %}
 	10.4.c
     #include <stdio.h>
     int index(double *a,int length);
@@ -169,7 +169,7 @@ redirect_from:
 	
 ---
 
-	{% highlight ruby%}
+	{% highlight ruby %}
 	10.5.c
     #include <stdio.h>
     double subtract(double *r,int n);
@@ -202,7 +202,7 @@ redirect_from:
 	
 ---
 
-	{% highlight ruby%}
+	{% highlight ruby %}
 	10.6.c
     #include <stdio.h>
     void LGD_sort(double *a,int length);
@@ -228,7 +228,7 @@ redirect_from:
 	
 ---
 
-	{% highlight ruby%}
+	{% highlight ruby %}
 	10.7.c
     #include <stdio.h>
     #define ROWS 3
@@ -258,7 +258,7 @@ redirect_from:
 	
 ---
 
-	{% highlight ruby%}
+	{% highlight ruby %}
 	10.8.c
     #include <stdio.h>
     #define ROWS 3
@@ -329,7 +329,7 @@ redirect_from:
 	
 ---
 
-	{% highlight ruby%}
+	{% highlight ruby %}
 	10.10.c
     #include <stdio.h>
     void arplus(int ar1[],int ar2[],int ar3[],int n);
@@ -353,7 +353,7 @@ redirect_from:
 	
 ---
 
-	{% highlight ruby%}
+	{% highlight ruby %}
 	10.11.c
     #include <stdio.h>
     void show_arr(int ar[][5],int rows);
@@ -394,7 +394,7 @@ redirect_from:
 	
 ---
 
-	{% highlight ruby%}
+	{% highlight ruby %}
 	10.13.c
     #include <stdio.h>
     void savearr(double arr[][5],int rows);
