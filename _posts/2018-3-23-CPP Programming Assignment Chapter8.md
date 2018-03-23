@@ -9,9 +9,9 @@ redirect_from:
 ---
 #CPP Programming Assignment Chapter8
 
-
+{% highlight ruby %}
+	
 	8.1.c
-	{% highlight ruby %}
     #include <stdio.h>
     int main(void)
     {
@@ -23,7 +23,7 @@ redirect_from:
         }
         printf("There are %ld characters in the text.\n",num);
     }
-    {% endhighlight %}
+
 
 ---
 	8.2.c
@@ -47,7 +47,7 @@ redirect_from:
     }
 
 ---
-	8.3.c
+	8.3.
     #include <stdio.h>
     int main(void)
     {
@@ -262,4 +262,5 @@ redirect_from:
     }
 
 ---
+    {% endhighlight %}
   If you find there are faults in the source codes, any method connecting with me is welcomed.
