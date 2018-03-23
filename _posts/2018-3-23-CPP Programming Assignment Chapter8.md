@@ -9,8 +9,8 @@ redirect_from:
 ---
 #CPP Programming Assignment Chapter8
 
-{% highlight ruby %}
-	
+
+	{% highlight ruby %}
 	8.1.c
     #include <stdio.h>
     int main(void)
@@ -23,9 +23,10 @@ redirect_from:
         }
         printf("There are %ld characters in the text.\n",num);
     }
-
+    {% endhighlight %}
 
 ---
+	{% highlight ruby %}
 	8.2.c
     #include <stdio.h>
     int main(void)
@@ -45,8 +46,10 @@ redirect_from:
             }
         }
     }
-
+    {% endhighlight %}
+	
 ---
+	{% highlight ruby %}
 	8.3.
     #include <stdio.h>
     int main(void)
@@ -66,8 +69,10 @@ redirect_from:
             }
         }
     }
-
+    {% endhighlight %}
+	
 ---
+	{% highlight ruby %}
 	8.4.c
     #include <stdio.h>
     #include <ctype.h>
@@ -94,8 +99,10 @@ redirect_from:
             printf("There are %.1f characters per word.\n",n);
         return 0;
     }
-
+    {% endhighlight %}
+	
 ---
+	{% highlight ruby %}
 	8.5.c
     #include <stdio.h>
     #include <ctype.h>
@@ -129,15 +136,15 @@ redirect_from:
         printf("I knew I could do it!\n");
         return 0;
     }
+	{% endhighlight %}
 
 ---
+	{% highlight ruby %}
 	8.6.c
     #include <stdio.h>
     char get_first(void)
     {
         char ch;
-
-
             while ((ch = getchar())!= '\n')
             {
                 if ((ch ==' ')||(ch == '\t'))
@@ -157,8 +164,10 @@ redirect_from:
         putchar(ch);
         return 0;
     }
+	{% endhighlight %}
 
 ---
+	{% highlight ruby %}
 	8.7.c
     #include <stdio.h>
     #include <ctype.h>
@@ -171,7 +180,6 @@ redirect_from:
         float b;
         float a;
         void count(void);
-
         while ( (choice = get_choice()) != 'q')
         {
             switch (choice)
@@ -260,7 +268,8 @@ redirect_from:
             }
         return input;
     }
-
----
     {% endhighlight %}
+	
+---
+
   If you find there are faults in the source codes, any method connecting with me is welcomed.
