@@ -9,6 +9,7 @@ redirect_from:
 ---
 #CPP Programming Assignment Chapter4
 
+    {% highlight ruby %}
 	4.1.c
     #include <stdio.h>
 	int main(void)
@@ -19,8 +20,11 @@ redirect_from:
 	    printf("Your name is %s,%s\nd", last, first);
 	    return 0;
 	}
+	    {% endhighlight %}
 	
 ---
+
+    {% highlight ruby %}
 	4.2.c
 	#include <stdio.h>
 	#include <string.h>
@@ -35,8 +39,11 @@ redirect_from:
 	    printf("Your first name is \"%*s\"", strlen(name)+3,name);
 	    return 0;
 	}
+{% endhighlight %}
 
 ---
+
+    {% highlight ruby %}
 	4.3.c
 	#include <stdio.h>
 	int main(void)
@@ -48,8 +55,11 @@ redirect_from:
     	printf("The input is %+.3f or %1.3E.\n", length, length);
     	return 0;
 	}
-
+	    {% endhighlight %}
+		
 ---
+
+    {% highlight ruby %}
 	4.4.c
 	#include <stdio.h>
 	int main(void)
@@ -64,8 +74,11 @@ redirect_from:
 	    printf("%s, you are %.2f meters tall", name, height);
 	    return 0;
 	}
-
+	    {% endhighlight %}
+		
 ---
+
+    {% highlight ruby %}
 	4.5.c
 	#include <stdio.h>
 	int main(void)
@@ -81,8 +94,11 @@ redirect_from:
 	    printf("At %.2f megabits per second, a file of %.2f megabytes\ndownloads in %.2f seconds.", bps, megabytes, time);
 	   	return 0;
 	}
-	
+	    {% endhighlight %}
+		
 ---
+
+    {% highlight ruby %}
 	4.6.c
 	#include <stdio.h>
 	#include <string.h>
@@ -104,8 +120,12 @@ redirect_from:
 	    printf("%-*d %-*d\n",fnamenum,fnamenum,lnamenum,lnamenum);
 	    return 0;
 	}
-
+	    {% endhighlight %}
+			    {% endhighlight %}
+				
 ---
+
+    {% highlight ruby %}
 	4.7.c
 	#include <stdio.h>
 	#include <float.h>
@@ -120,8 +140,11 @@ redirect_from:
 	    printf("DBL_DIG: %f\n", DBL_DIG);
 	    return 0;
 	}
-
+	    {% endhighlight %}
+		
 ---
+
+    {% highlight ruby %}
 	4.8.c
 	#include <stdio.h>
 	#include <string.h>
@@ -147,7 +170,8 @@ redirect_from:
 	    printf("You use %.1fL gasoline per 100km\n",lper100km);
 	    return 0;
 	}
-	
+	    {% endhighlight %}
+		
 ---
   If you find there are faults in the source codes, any method connecting with me is welcomed.
 	
