@@ -9,6 +9,7 @@ redirect_from:
 ---
 #CPP Programming Assignment Chapter8
 
+	{% highlight ruby %}
 	8.1.c
     #include <stdio.h>
     int main(void)
@@ -21,6 +22,7 @@ redirect_from:
         }
         printf("There are %ld characters in the text.\n",num);
     }
+    {% highlight ruby %}
 
 ---
 	8.2.c
