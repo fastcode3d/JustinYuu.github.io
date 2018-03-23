@@ -9,6 +9,7 @@ redirect_from:
 ---
 #CPP Programming Assignment Chapter5
 
+	{% highlight ruby %}
     5.1.c
 	#include <stdio.h>
     #define SECPERMIN 60
@@ -27,9 +28,11 @@ redirect_from:
             scanf("%d",&min);
         }
     }
-	    {% endhighlight %}
+	{% endhighlight %}
 	    
 ---
+
+	{% highlight ruby %}
 	5.2.c
     #include <stdio.h>
     int main(void)
@@ -48,6 +51,8 @@ redirect_from:
 	{% endhighlight %}
 	
 ---
+
+	{% highlight ruby %}
 	5.3.c
     #include <stdio.h>
     #define DAYPERWEEK 7
@@ -66,9 +71,11 @@ redirect_from:
             scanf("%d",&day);
         }
     }
-	    {% endhighlight %}
+	{% endhighlight %}
 
 ---
+
+	{% highlight ruby %}
 	5.4.c
     #include <stdio.h>
     #define INCHPERFEET 12
@@ -95,6 +102,8 @@ redirect_from:
 	{% endhighlight %}
 
 ---
+
+	{% highlight ruby %}
 	5.7.c
     #include <stdio.h>
     int main(void)
@@ -112,6 +121,8 @@ redirect_from:
 	{% endhighlight %}
 	
 ---
+
+	{% highlight ruby %}
 	5.8.c
     #include <stdio.h>
     int main(void)
@@ -136,6 +147,8 @@ redirect_from:
 	{% endhighlight %}
 	
 ---
+
+	{% highlight ruby %}
 	5.9.c
     #include <stdio.h>
     int main(void)
