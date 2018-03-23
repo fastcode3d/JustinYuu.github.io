@@ -11,6 +11,7 @@ redirect_from:
 
 As there is no programming assignment in Chapter 1 ,thus I post my programming assignments from chapter 2.
 
+{% highlight ruby %}
     2.1.c
     #include <stdio.h>
     int main(void)
@@ -21,7 +22,8 @@ As there is no programming assignment in Chapter 1 ,thus I post my programming a
         printf("Yu");
         return 0;
     }
-    
+    {% highlight ruby %}
+ 
 ----------------------------------------------------- 
     
     2.2.c
