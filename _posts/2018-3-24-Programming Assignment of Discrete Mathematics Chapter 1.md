@@ -84,7 +84,7 @@ Write a function to count each letter's number of occurrences in the whole chara
 	
 ### Reflection
 
-This algorithm will call the count() function for each letter, which costs a lot. Besides, the circulation uses lots of *if* ,which literally ugly to read.
+This algorithm will call the count() function for each letter, which costs a lot. Besides, the circulation uses lots of *if* ,which is literally ugly to read.
 
 ---
 If you find any fault in this blog , any method connecting with me is available and welcomed.
