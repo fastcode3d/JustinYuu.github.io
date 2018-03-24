@@ -7,7 +7,7 @@ tags: [C]
 redirect_from:
   - /2018/03/23/
 ---
-#CPP Programming Assignment Chapter10
+# CPP Programming Assignment Chapter10
 
 
 	{% highlight ruby %}
