@@ -135,7 +135,8 @@ The operation *∩、∪、-* are realized via function *FindIntersaction()、Fi
             if(c[m]!=0)
             printf("%d ",c[m]);
         }
-        printf("\n");*/ //The output of function FindUnion().
+        printf("\n");*/ 
+	//The output of function FindUnion().
         return n;
     }
     
