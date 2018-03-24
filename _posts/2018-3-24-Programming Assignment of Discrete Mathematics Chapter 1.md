@@ -5,7 +5,7 @@ description: "my own source codes of Programming Assignment in Discrete Mathemat
 categories: [Discrete Mathematics]
 tags: [C]
 redirect_from:
-  - /2018/03/22/
+  - /2018/03/24/
 ---
 
 # Programming Assignment of Discrete Mathematics Chapter 1
