@@ -7,7 +7,7 @@ tags: [C]
 redirect_from:
   - /2018/03/22/
 ---
-#CPP Programming Assignment Chapter3
+# CPP Programming Assignment Chapter3
 
 	3.2.c
 	#include <stdio.h>
