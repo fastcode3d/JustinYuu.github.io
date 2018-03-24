@@ -31,7 +31,7 @@ Write a function to count each letter's number of occurrences in the whole chara
  
  	{% highlight ruby %}
  	count.cpp
-	#include <stdio.h>
+    #include <stdio.h>
     #include <string.h>
     int count(char str[],char c)
     {
