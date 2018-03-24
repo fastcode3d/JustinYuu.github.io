@@ -16,11 +16,19 @@ redirect_from:
 1、	实现算法： 集合的交 并 差。
 2、	集合A表示上课的学生，B为男生集合，C为女生集合，D为考试合格的同学。编程实现：
 输入集合A B C D (用两位学号表示) 。
-求出：没来上课的男生
-     考试不及格的女生。
-     没来上课且考试不及格的男生
+求出：(1)没来上课的男生
+     (2)考试不及格的女生。
+     (3)没来上课且考试不及格的男生
 
 ### My solution
+
+Three questiones represent three different set opertions
+(1):B-A
+(2):C-D
+(3):B-（A∪D）
+The operation *∩、∪、-* are realized via function *FindIntersaction()、FindUnion()、FindDeference()*.
+	
+### Source code
 
 	{% highlight ruby %}
 	student.cpp
@@ -161,7 +169,9 @@ redirect_from:
 
 ### Reflection
 
-This algorithm will call the count() function for each letter, which costs a lot. Besides, the circulation uses lots of *if* ,which literally ugly to read.
+This algorithm has a bad *encapsulation*. For function FindUnion() cannot print the array c[],which is because in question(3),we need to do a secondary operation , thus if we let the function FindUnion() print c[], we will get a extra array in the command line. Thus these functions can only be used to solve *this* problem, not for all problems which needs set operation.
+
+One possible improvement is to delete all output sentences in these functions.And if output features are needed, just call it in the function main(). This improvement may seems a little bothering when using this algorithm,but it do preseves the function's encapsulation. And encapsulation is really important for OOP(Objected-Oriented Programming).
 
 ---
 If you find any fault in this blog , any method connecting with me is available and welcomed.
