@@ -138,6 +138,7 @@ The operation *∩、∪、-* are realized via function *FindIntersaction()、Fi
         printf("\n");*/ //The output of function FindUnion().
         return n;
     }
+    
     int FindDeference(int a[],int b[],int len_a,int len_b)
     {
         int n;
