@@ -48,7 +48,7 @@ author:
      # url:
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 274810423b2b334db0082de7eb52aa5d
+baidu-analysis: 274810423b2b334db0082de7eb52aa5d
 
 home:
   section1: <h1>Justin's Blog</h1>
