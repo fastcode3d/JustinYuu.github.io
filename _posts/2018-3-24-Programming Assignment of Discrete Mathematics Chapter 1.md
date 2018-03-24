@@ -27,7 +27,7 @@ This experiment requires you to use the C++ language or the JAVA language to rea
 
 Write a function to count each letter's number of occurrences in the whole character string. And recall this function to count each letter's occurrences.
  
-### The source code:
+### Source code:
  
  	{% highlight ruby %}
  	count.cpp
