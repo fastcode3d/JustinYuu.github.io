@@ -7,7 +7,7 @@ tags: [C]
 redirect_from:
   - /2018/03/23/
 ---
-#CPP Programming Assignment 9
+# CPP Programming Assignment 9
 
 	{% highlight ruby %}
 	9.1.c
