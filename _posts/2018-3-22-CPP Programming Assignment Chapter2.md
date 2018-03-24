@@ -7,7 +7,7 @@ tags: [C]
 redirect_from:
   - /2018/03/22/
 ---
-#CPP Programming Assignment Chapter2
+# CPP Programming Assignment Chapter2
 
 As there is no programming assignment in Chapter 1 ,thus I post my programming assignments from chapter 2.
 
