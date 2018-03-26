@@ -248,7 +248,7 @@ redirect_from:
     {
         /*while(*str !=c && *str!='\0')
             str++;
-        return *str;*/                //one possible way to build is_within() function.
+        return *str;*/                /*one possible way to build is_within() function.*/
         bool isFind=false;
         for (;*str!='\0';*str++)
             if(*str==c)
@@ -256,7 +256,7 @@ redirect_from:
                 isFind=true;
                 break;
             }
-        return isFind;                //another possible way to build is_within() function;
+        return isFind;                /*another possible way to build is_within() function;*/
     }
 	{% endhighlight %}
 	
@@ -619,7 +619,7 @@ redirect_from:
             {
                 for(int j=0;j<str_num;j++)
                 {
-                    if(check_firlen(str_byfir[i]) < check_firlen(str_byfir[j]))// pointer in 2-dimension array
+                    if(check_firlen(str_byfir[i]) < check_firlen(str_byfir[j])) /*pointer in 2-dimension array*/
                     {
                         char* tmp = str_byfir[j];
                         str_byfir[j]=str_byfir[i];
