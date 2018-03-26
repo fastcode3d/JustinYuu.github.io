@@ -2,7 +2,7 @@
 layout: post
 title: "Programming Assignment of Discrete Mathematics Chapter 1"
 description: "my own source codes of Programming Assignment in Discrete Mathematics "
-categories: [Discrete Mathematics]
+categories: [Discrete-Mathematics]
 tags: [C]
 redirect_from:
   - /2018/03/24/
