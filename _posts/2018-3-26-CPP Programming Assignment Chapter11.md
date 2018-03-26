@@ -619,7 +619,8 @@ redirect_from:
             {
                 for(int j=0;j<str_num;j++)
                 {
-                    if(check_firlen(str_byfir[i]) < check_firlen(str_byfir[j])) /*pointer in 2-dimension array*/
+                    if(check_firlen(str_byfir[i]) < check_firlen(str_byfir[j])) 
+		    								/*pointer in 2-dimension array*/
                     {
                         char* tmp = str_byfir[j];
                         str_byfir[j]=str_byfir[i];
