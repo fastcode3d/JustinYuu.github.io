@@ -109,7 +109,7 @@ The operation *∩、∪、-* are realized via function *FindIntersaction()、Fi
         	printf("\n");
         	return k;
     	}
-    	int FindUnion(int a[],int b[],int c[],int len_a, int len_b)
+    int FindUnion(int a[],int b[],int c[],int len_a, int len_b)
 		{
     	int n;
     	for(int i=0;i<len_a;i++)
