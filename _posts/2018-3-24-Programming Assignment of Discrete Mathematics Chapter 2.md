@@ -101,44 +101,43 @@ The operation *∩、∪、-* are realized via function *FindIntersaction()、Fi
                 }
             }
         }
-        for(int n=0;n<(len_a+len_b);n++)
-        {
-            if(c[n]!=0)
+        	for(int n=0;n<(len_a+len_b);n++)
+        	{
+            	if(c[n]!=0)
                 printf("%d ",c[n]);
-        }
-        printf("\n");
-        return k;
-    }
-    int FindUnion(int a[],int b[],int c[],int len_a, int len_b)
-    {
-        int n;
-        for(int i=0;i<len_a;i++)
-        {
-            c[i]=a[i];
-            bool bFind = false;
-            for(int j=0;j<len_b;j++)
-            {
-                if(a[i]==b[j])
-                {
-                    bFind = true;
-                    break;
-                }
-            }
-            if(!bFind)
-            {
-                c[len_b+n]=a[i];
-                n++;
-            }
-        }
-        /*for(int m=0;m<(len_a+len_b);m++)
-        {
-            if(c[m]!=0)
-            printf("%d ",c[m]);
-        }
-        printf("\n");*/ 
-	//The output of function FindUnion().
-        return n;
-    }
+        	}
+        	printf("\n");
+        	return k;
+    	}
+    	int FindUnion(int a[],int b[],int c[],int len_a, int len_b)
+		{
+    	int n;
+    	for(int i=0;i<len_a;i++)
+    	{
+        	c[i]=a[i];
+        	bool bFind = false;
+        	for(int j=0;j<len_b;j++)
+        	{
+            	if(a[i]==b[j])
+            	{
+                	bFind = true;
+                	break;
+            	}
+            	if(!bFind)
+            	{
+                	c[len_b+n]=b[j];
+                	n++;
+            	}
+        	}
+    	}
+    	/*for(int m=0;m<(len_a+len_b);m++)
+    	{
+        	if(c[m]!=0)
+        	printf("%d ",c[m]);
+    	}
+    	printf("\n");*/ //The output of function FindUnion().
+    	return n;
+	}
     
     int FindDeference(int a[],int b[],int len_a,int len_b)
     {
