@@ -380,7 +380,7 @@ redirect_from:
 	
 ---
 
-	{%highlignt ruby%}
+	{%highlight ruby%}
 	13.8.c
     #include <stdio.h>
     #include <stdlib.h>
@@ -456,7 +456,7 @@ redirect_from:
 	
 ---
 
-	{%highlignt ruby%}
+	{%highlight ruby%}
 	13.10.c
     #include <stdio.h>
     #include <stdlib.h>
@@ -515,7 +515,7 @@ redirect_from:
 	
 ---
 
-	{%highlignt ruby%}
+	{%highlight ruby%}
 	13.11.c
     #include <stdio.h>
     #include <stdlib.h>
