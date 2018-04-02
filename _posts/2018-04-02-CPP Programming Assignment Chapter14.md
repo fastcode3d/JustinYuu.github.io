@@ -190,7 +190,7 @@ redirect_from:
         {
             for(total=0,j=0;j<3;j++)
                 total +=ar[i].grade[j];
-            ar[i].average = total /3;
+            ar[i].average = total / 3;
         }
     }
     void print_mes(struct student ar[],int num)
