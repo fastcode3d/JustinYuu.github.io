@@ -155,7 +155,7 @@ redirect_from:
     {
         struct names staff[NUM] ={
             {
-	    	{"yi"},{"Ding"}
+			{"yi"},{"Ding"}
 			},
             {
 			{"er"},{"Wang"}
