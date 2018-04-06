@@ -154,12 +154,24 @@ redirect_from:
     int main(void)
     {
         struct names staff[NUM] ={
-            {{"yi"},{"Ding"}},
-            {{"er"},{"Wang"}},
-            {{"san"},{"Zhang"}},
-            {{"si"},{"Li"}},
-            {{"wu"},{"Wang"}},
-            {{"liu"},{"Zhao"}},
+            {
+	    	{"yi"},{"Ding"}
+			},
+            {
+			{"er"},{"Wang"}
+			},
+            {
+			{"san"},{"Zhang"}
+			},
+            {
+			{"si"},{"Li"}
+			},
+            {
+			{"wu"},{"Wang"}
+			},
+            {
+			{"liu"},{"Zhao"}
+			},
         };
         puts("Random list:");
         showarray(staff, NUM);
