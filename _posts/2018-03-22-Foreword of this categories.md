@@ -7,7 +7,7 @@ tags: [C]
 redirect_from:
   - /2018/03/22/
 ---
-# Foreword of this categories(C Primer Plus)
+# Foreword of this categories\(C Primer Plus\)
 
   Categories [C Primer Plus] mainly contains my own answers of *C Primer Plus* Programming Assignment ,and my own thoughts about
 something apperaerd in this book.
