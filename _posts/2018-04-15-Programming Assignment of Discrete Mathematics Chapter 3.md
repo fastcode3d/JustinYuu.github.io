@@ -127,6 +127,7 @@ Using four functions to judge. The algorithm is literally easy.
 ### Introspection
 	
 Literally, this algorithm is relatively easy,thus there is few improving method. The only improvement I could find is to improve
-function isTransitive(),we could use *plus* operation instead of *multiply* method , which has lower time complexity.
+function isTransitive(),we could use *plus* operation instead of *multiply* operation , which has lower time complexity.
+
 ---
 If you find any fault in this blog , any method connecting with me is available and welcomed.
