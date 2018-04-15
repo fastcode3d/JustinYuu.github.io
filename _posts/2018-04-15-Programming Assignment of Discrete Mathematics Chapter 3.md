@@ -31,7 +31,14 @@ Using four functions to judge. The algorithm is literally easy.
     bool isAntiSymmetric(const int (*a)[LEN]);
     int main(void)
     {
-        int re_matr[LEN][LEN]={{1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,1,1,1},{1,1,1,1,1,1}};
+        int re_matr[LEN][LEN]={
+				{1,1,1,1,1,1},
+				{1,1,1,1,1,1},
+				{1,1,1,1,1,1},
+				{1,1,1,1,1,1},
+				{1,1,1,1,1,1},
+				{1,1,1,1,1,1}
+				};
         printf("Bonjour!\n");
         printf("Is this relation matrix symmetric?\n");
         if(isSymmetric(re_matr))
