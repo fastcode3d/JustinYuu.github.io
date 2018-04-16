@@ -5,7 +5,7 @@ description: "my own source codes of Programming Assignment in C Primer Plus "
 categories: [C-Primer-Plus]
 tags: [C]
 redirect_from:
-  - /2018/03/23/
+  - /2018/03/24/
 ---
 # CPP Programming Assignment Chapter10
 
