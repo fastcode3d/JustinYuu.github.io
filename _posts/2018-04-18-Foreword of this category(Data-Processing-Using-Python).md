@@ -7,7 +7,7 @@ tags: [Python]
 redirect_from:
   - /2018/04/18/
 ---
-#Foreword of this category(Data-Processing-Using-Python)
+# Foreword of this category(Data-Processing-Using-Python)
 This category mainly includes my thoughts and inspirations while I'm taking a course named  *Data Processing Using Python* in [coursera](www.coursera.org).
 
 Honestly I have never studied python before, thus I'll study from the very beginning, and it'll takes quite long time for me to get familiar with python and do lots of things via python.
