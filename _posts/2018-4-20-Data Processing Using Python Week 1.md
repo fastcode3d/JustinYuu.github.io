@@ -8,6 +8,7 @@ redirect_from:
   - /2018/04/20/
 ---
 #Data Processing Using Python Week 1
+
 本次课程基于coursera平台，由南京大学开设，语言为中文授课，因此在此类中博客以中文来书写
 
 第一周主要介绍一些python基本的语法知识和一些简单的编程练习，本篇文章将按照课程开设顺序记录个人笔记和一些源代码
@@ -44,8 +45,10 @@ redirect_from:
 	{%endhighlight%}
 
 ###1.2
+
 ####1.2.1 条件
 主要为if,elif,else的运用，注意python没有花括号，因此用首行缩进代替花括号，因此在一个block中要注意首行缩进对齐，否则会导致程序报错
+
 ####1.2.2 range函数
 range函数是python中很重要的一个函数，函数语法为
 
