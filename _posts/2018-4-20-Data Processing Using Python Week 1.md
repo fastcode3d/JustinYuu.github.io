@@ -7,13 +7,13 @@ tags: [Python]
 redirect_from:
   - /2018/04/20/
 ---
-#Data Processing Using Python Week 1
+# Data Processing Using Python Week 1
 
 本次课程基于coursera平台，由南京大学开设，语言为中文授课，因此在此类中博客以中文来书写
 
 第一周主要介绍一些python基本的语法知识和一些简单的编程练习，本篇文章将按照课程开设顺序记录个人笔记和一些源代码
 
-###1.1
+## 1.1
 
 1.1主要介绍Python开发环境的搭建（本MOOC基于Python 3），IDE的下载（本MOOC使用Python自带的IDLE和Anaconda Spyder），Python常用的数据类型、基本运算和函数、模块和包，整体较为基础。
 
@@ -45,18 +45,18 @@ redirect_from:
 	print(surname,firstname)
 	{%endhighlight%}
 
-###1.2
+### 1.2
 
-####1.2.1 条件
+#### 1.2.1 条件
 
 主要为if,elif,else的运用，注意python没有花括号，因此用首行缩进代替花括号，因此在一个block中要注意首行缩进对齐，否则会导致程序报错
 
-####1.2.2 range函数
+#### 1.2.2 range函数
 
 range函数是python中很重要的一个函数，函数语法为
 
 		range(start, stop[, step])
-####1.2.3 循环 
+#### 1.2.3 循环 
 
 python中的while循环和c/Java区别不大，但是for循环有一定区别，语法为
 
@@ -65,12 +65,12 @@ python中的while循环和c/Java区别不大，但是for循环有一定区别，
 	    
 此外，Python允许循环嵌套
 
-####1.2.4 循环中的break,continue和else
+#### 1.2.4 循环中的break,continue和else
 
 break 和continue与C/JAVA大同小异，else语句可以在循环中使用。 如果循环代码从break处终止 就跳出循环 不执行后面else语句中的代码 如果正常结束循环 则会
 执行else中的代码 这种结构的设计适合于某一些问题 比如说非常典型的就是 判断素数的这样的一个例子 
 
-####1.2.5 自定义函数
+#### 1.2.5 自定义函数
 
 格式为
 
@@ -79,13 +79,13 @@ break 和continue与C/JAVA大同小异，else语句可以在循环中使用。 �
 	   function_suite
 	   return [expression]
 
-####1.2.6 递归
+#### 1.2.6 递归
 
 又是经典的斐波那契数列- -
-####1.2.7变量作用域
+#### 1.2.7变量作用域
 
 类似于C语言中的文件作用域和局部作用域
-####编程小练习
+#### 编程小练习
 
 1.编写一个输入分数，输出分数等级的程序
 
@@ -160,10 +160,10 @@ break 和continue与C/JAVA大同小异，else语句可以在循环中使用。 �
 	    except ValueError:
 	        print("Error,please enter another one.")
 			
-####补充1：标准库函数
+#### 补充1：标准库函数
 
 介绍了python的几个标准库函数，如Math和时间函数
-####补充2：异常
+#### 补充2：异常
 
 介绍了try,except 和 with 的用法，其中with函数比较有难度，with基于上下文管理器，语法格式如下
 
@@ -188,10 +188,10 @@ Python 对一些内建对象进行改进，加入了对上下文管理器的支�
 	finally:
 	    somefile.close()
 比较起来，使用 with 语句可以减少编码量。
-####写出递归结果
+#### 写出递归结果
 
 简单的递归题目，答案-345，可用python验证 
-####编程练习 寻找第N个莫尼森数
+#### 编程练习 寻找第N个莫尼森数
 
 本章的编程练习相当简单，最终提交的文档居然是将查到莫尼森数的放在txt文档里上传，连代码都不看的，也是够水，不过好在这次编程练习比较简单，主要练习函数的定义和调用、循环的运用以及素数判定法的复习，代码如下：
 
