@@ -104,7 +104,7 @@ break 和continue与C/JAVA大同小异，else语句可以在循环中使用。 �
 	    print("The grade of {} is {}.".format(score,grade))
 	else:
 	    print("Invalid score")
-		{%endhighlight%}
+	{%endhighlight%}
 		
 2.验证命题：如果一个三位整数是37的倍数，则这个整数循环左移后得到的另两个3位数也是37的倍数。（注意验证命题的结果输出方式，只要输出命题为真还是假即可，而非每一个三位数都有一个真假的输出）
 
@@ -119,7 +119,7 @@ break 和continue与C/JAVA大同小异，else语句可以在循环中使用。 �
 	            break
 	else:
 	        print("True!")
-			{%endhighlight%}			
+	{%endhighlight%}			
 			
 3.验证哥德巴赫猜想之一：2000以内的正偶数（大于等于4）都能够分解为两个质数之和。每个偶数表达成形如：4=2+2的形式，输出时每行显示6个式子。
 
