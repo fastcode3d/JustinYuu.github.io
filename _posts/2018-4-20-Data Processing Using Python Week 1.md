@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Data Processing Using Python Week 1"
+description: "Forewords."
+categories: [Data-Processing-Using-Python]
+tags: [Python]
+redirect_from:
+  - /2018/04/20/
+---
 #Data Processing Using Python Week 1
 本次课程基于coursera平台，由南京大学开设，语言为中文授课，因此在此类中博客以中文来书写
 
@@ -12,19 +21,12 @@
 简单的输入输出：编程实现输入姓、名的提示语并接受用户输入，并单独显示姓、名和全名，执行效果如下所示：
 
 	Input your surname:ZHANG
-	
 	Input your firstname:Dazhuang
-	
 	Your surname is:
-	
 	ZHANG
-	
 	Your firstname is:
-	
 	Dazhuang
-	
-	Your full name is:
-	
+	Your full name is:	
 	ZHANG Dazhuang
 
 源代码如下：
