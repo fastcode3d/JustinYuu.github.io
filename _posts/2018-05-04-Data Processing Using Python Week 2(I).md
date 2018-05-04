@@ -188,7 +188,7 @@ re正则表达式模块进行各类正则表达式处理
 		pattern = re.compile('<td><a id="wcbody_0_wcgridpade50e7ca82ec64ee2b91ea4cc6c4e00c6_1_PlayerStatisticsTable_BestScorers_Name_.*?" href="/en/competition/teams/.*?/players/.*?id=.*?">(.*?)</a></td>\s+<td id="wcbody_0_wcgridpade50e7ca82ec64ee2b91ea4cc6c4e00c6_1_PlayerStatisticsTable_BestScorers_TeamCell_.*?"><a id="wcbody_0_wcgridpade50e7ca82ec64ee2b91ea4cc6c4e00c6_1_PlayerStatisticsTable_BestScorers_Team_.*?" href="/en/competition/teams/.*?">(.*?)</a></td>\s+<td>(.*?)</td>\s+<td>(.*?)</td>\s+<td>(.*?)</td>\s+<td>(.*?)</td>')
 		fivb2014result = re.findall(pattern, r.text)
 		print(fivb2014result)
-		{%endhighlight%}  
----  
-
+		{%endhighlight%}
+		
+---  
 本博客采用disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
