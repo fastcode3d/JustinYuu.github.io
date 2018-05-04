@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Data Processing Using Python Week 2(I)"
+title: "Data Processing Using Python Week 2"
 description: "My notes while startiing python"
 categories: [Data-Processing-Using-Python]
 tags: [Python]
 redirect_from:
   - /2018/05/04/
 ---
-# Data Processing Using Python Week 2(I)
+# Data Processing Using Python Week 2
 
 第二章主要包括数据的获取与表示，学习爬虫与序列运算等知识
 
@@ -191,4 +191,32 @@ re正则表达式模块进行各类正则表达式处理
 		{%endhighlight%}
 		
 ---  
+
+## 2.2 数据表示  
+
+### 2.2.1 序列  
+
+常用序列有三种：字符串，列表，元组。
+
+序列可进行标准类型运算符运算，如">","<","=","is","is not","not","and","or"等
+
+序列中用索引进行标注，存在负索引，如list[-2]；逆序，如list[::-1]；设置首尾，如list[1:4]  
+
+也可以用“+”，“\*”等运算符进行运算，用“in”进行是否包含元素的判断  
+
+序列类型还有其他常用的内建函数，如enumerate(),reversed(),len(),sorted(),max(),min(),sum(),zip().Zip函数可以将元素打包成元组。
+
+### 2.2.2 字符串
+
+Python中的字符串可用'' "" ''' ''' 来表示，三引号可以用来让字符串保持原貌。r'PATH'可以用来表示路径
+
+Python中也提供类C语言的%d类型的输出格式，但是Python3中逐渐被format格式替代，format格式的功能更加强大
+
+此外，Python中的字符串有多种常用方法，可以查阅Python手册或者dir(str)命令获得  
+
+几种常见方法：.find(),.lower(),.split("X")(以X为标志截断),.replace("A","B"),"X".join([A])(以X为标志连接A列表）等等  
+
+python的转义字符和C语言转义字符大致相同，不同的是用\OOO表示八进制数，用\xXX表示十六进制数表示的字符
+
+---
 本博客采用disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
