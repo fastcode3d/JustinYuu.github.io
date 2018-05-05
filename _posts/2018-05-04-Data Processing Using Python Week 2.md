@@ -245,6 +245,7 @@ python的转义字符和C语言转义字符大致相同，不同的是用\OOO表
 
 1.定义函数countchar()按字母表顺序统计字符串中26个字母出现的次数（不区分大小写）  
 
+		{%highlight ruby%}
 		countchar.py
 		def countchar(s):
     	lst = [0] * 26
@@ -256,6 +257,7 @@ python的转义字符和C语言转义字符大致相同，不同的是用\OOO表
 		s = "Hope is a good thing."
 		s = s.lower()
 		countchar(s)  
+		{%endhighlight%}
 		
 2.有一个咖啡列表['32Latte', '\_Americano30', '/34Cappuccino', 'Mocha35']，列表中每一个元素都是由咖啡名称、价格和一些其他非字母字符组成，编写一个函数clean_list()处理此咖啡列表，处理后列表中只含咖啡名称，并将此列表返回。__main__模块中初始化咖啡列表，调用clean_list()函数获得处理后的咖啡列表，并利用zip()函数给咖啡名称进行编号后输出，输出形式如下：
 
@@ -267,6 +269,7 @@ python的转义字符和C语言转义字符大致相同，不同的是用\OOO表
 
 4 Mocha
 	
+		{%highlight ruby%}
 		coffee.py
 		def clean_list(lst):
     	result =  []
@@ -280,7 +283,8 @@ python的转义字符和C语言转义字符大致相同，不同的是用\OOO表
 		coffee_lst = ['32Latte', '_Americano30', '/34Cappuccino', 'Mocha35']
 		coffee_clean = clean_list(coffee_lst)
 		for k,v in zip(range(1, len(coffee_clean)+1), coffee_clean):
-    		print(k, v)
+    	print(k, v)
+		{%endhighlight%}
 			
 3.请完成以下文件综合编程迷你项目（提示：可以利用list的insert函数）。
 
@@ -310,8 +314,9 @@ The answer is blowing in the wind
 
 (5) 在屏幕上打印文件内容
 
-		song.py
-        with open('Blowing in the wind.txt', 'r+') as f:
+			{%highlight ruby%}
+			song.py
+        	with open('Blowing in the wind.txt', 'r+') as f:
             lines = f.readlines()
             lines.insert(0, "Blowin' in the wind\n")
             lines.insert(1, "Bob Dylan\n")
@@ -320,6 +325,7 @@ The answer is blowing in the wind
             print(string)
             f.seek(0)
             f.write(string)
+			{%endhighlight%}
 
 ### 2.2.6 KO奥数高手
 
