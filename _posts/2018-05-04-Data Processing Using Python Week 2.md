@@ -241,7 +241,85 @@ python的转义字符和C语言转义字符大致相同，不同的是用\OOO表
 
 值得注意的是translate()方法，首先建立两个字符串x,y，然后用z=maketrans(x,y)方法创建字符映射转换表，转换表实际上是一种转换规则，利用translate(z)方法转换制定字符串  
 
-### 2.2.5 序列与文件编程练习
+### 2.2.5 序列与文件编程练习  
+
+1.定义函数countchar()按字母表顺序统计字符串中26个字母出现的次数（不区分大小写）  
+
+		countchar.py
+		def countchar(s):
+    	lst = [0] * 26
+    	for i in range(len(s)):
+        	if s[i] >= 'a' and s[i] <= 'z':
+            	lst[ord(s[i])-ord('a')] += 1
+    	print(lst)
+        
+		s = "Hope is a good thing."
+		s = s.lower()
+		countchar(s)  
+		
+2.有一个咖啡列表['32Latte', '\_Americano30', '/34Cappuccino', 'Mocha35']，列表中每一个元素都是由咖啡名称、价格和一些其他非字母字符组成，编写一个函数clean_list()处理此咖啡列表，处理后列表中只含咖啡名称，并将此列表返回。__main__模块中初始化咖啡列表，调用clean_list()函数获得处理后的咖啡列表，并利用zip()函数给咖啡名称进行编号后输出，输出形式如下：
+
+1 Latte
+
+2 Americano
+
+3 Cappuccino
+
+4 Mocha
+	
+		coffee.py
+		def clean_list(lst):
+    	result =  []
+    	for i in lst:
+        	for c in i:
+            	if c.isalpha()!=True:
+                	i = i.replace(c,'')
+        	result.append(i)
+    	return result
+
+		coffee_lst = ['32Latte', '_Americano30', '/34Cappuccino', 'Mocha35']
+		coffee_clean = clean_list(coffee_lst)
+		for k,v in zip(range(1, len(coffee_clean)+1), coffee_clean):
+    		print(k, v)
+			
+3.请完成以下文件综合编程迷你项目（提示：可以利用list的insert函数）。
+
+(1) 创建一个文件Blowing in the wind.txt，其内容是：
+
+How many roads must a man walk down
+
+Before they call him a man
+
+How many seas must a white dove sail
+
+Before she sleeps in the sand
+
+How many times must the cannon balls fly
+
+Before they're forever banned
+
+The answer my friend is blowing in the wind
+
+The answer is blowing in the wind
+
+(2) 在文件头部插入歌名“Blowin’ in the wind”
+
+(3) 在歌名后插入歌手名“Bob Dylan”
+
+(4) 在文件末尾加上字符串“1962 by Warner Bros. Inc.”
+
+(5) 在屏幕上打印文件内容
+
+		song.py
+        with open('Blowing in the wind.txt', 'r+') as f:
+            lines = f.readlines()
+            lines.insert(0, "Blowin' in the wind\n")
+            lines.insert(1, "Bob Dylan\n")
+            lines.append("\n1962 by Warner Bros. Inc.")
+            string = ''.join(lines)
+            print(string)
+            f.seek(0)
+            f.write(string)
 
 ### 2.2.6 KO奥数高手
 
