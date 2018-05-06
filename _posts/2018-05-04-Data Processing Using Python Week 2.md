@@ -118,9 +118,9 @@ re正则表达式模块进行各类正则表达式处理
 ### 爬虫进阶实战  
 1.	“迷你爬虫编程小练习”进阶：抽取某本书的前50条短评内容并计算评分的平均值。  
 
-2.	在“http://money.cnn.com/data/dow30/”上抓取道指成分股数据并将30家公司的代码、公司名称和最近一次成交价放到一个列表中输出。
+2.	在“ http://money.cnn.com/data/dow30/ ”上抓取道指成分股数据并将30家公司的代码、公司名称和最近一次成交价放到一个列表中输出。
 
-3. 请爬取网页（http://italy2014.fivb.org/en/competition/results_and_statistics）上的数据  
+3. 请爬取网页（ http://italy2014.fivb.org/en/competition/results_and_statistics ）上的数据  
 1.  
 ---
 		{%highlight ruby%}
