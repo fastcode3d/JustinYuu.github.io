@@ -44,8 +44,6 @@ redirect_from:
 			printf("Please input 10 numbers:\n");
 			for(i=0;i<LEN;i++)
 				scanf("%d",&b[i]);
-			//int b[LEN]={1,2,3,4,5};
-			//int a[LEN][LEN]={{1,0,0,0,0},{1,1,0,0,0},{1,1,1,0,0},{1,1,1,1,0},{1,1,1,1,1}};
 			getRelationMatrix(a,b);
 			printf("The absolute maximum number is %d.\n",getAbsMaxEle(a,b));
 			printf("The absolute minimum number is %d.\n",getAbsMinEle(a,b));
