@@ -77,7 +77,7 @@ Series中有数据对齐功能，可以将索引和数据相对应。
 
 Series中也有相应的函数来实现一些功能。
 
-#### 3.2.3 DataFrame
+#### 3.2.4 DataFrame
 
 DataFrame可以看做共享同一个index的series的集合，根本上是一个表格型的数据结构。  
 DataFrame的创建用.DataFrame()创建（注意函数的大写字母）。  
@@ -87,4 +87,4 @@ DataFrame的创建用.DataFrame()创建（注意函数的大写字母）。
 DataFrame中也含有统计功能。
 
 ---
-本博客采用disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
+本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
