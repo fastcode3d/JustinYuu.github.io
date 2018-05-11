@@ -18,6 +18,18 @@ redirect_from:
 
 此外还可以从语料库中获得，如NLTK语料库，方法为nltk.download打开NLTK下载器，选择要下载的语料。
 
+#### 4.2.2 数据准备
+
+用dataframe可以对原始数据进行一系列的预处理。  
+
+用dataframe.coloums可以给原始数据添加列名。用dataframe.index增加行索引名。  
+
+用dataframe.fillna方法填充NaN值，用其Method参数指定缺失值的填充方向，如.fillna(method = 'ffill',inplace = True)  
+其中ffill表示用后一个数据代替NaN填充，bfill表示用前一个数据代替NaN填充。
+
+用datatime中的data.fromtimestamp()处理timestamp格式的时间，使其变为普通日期形式。用.strftime(x,'%Y-%m-%d')可以使其转换为具体格式。  
+
+
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
