@@ -136,7 +136,55 @@ KMeans.predict()可以根据得到的类进行预测。
 
 #### 4.2.2 Matplotlib绘图基础
 
+Matplotlib是最著名的Python绘图库，主要用于二位绘图。其包含方便快捷的绘图模块：绘图API--pyplot模块和集成库--pylab模块（包含Numpy和pyplot中的常用函数）。
 
+##### pyplot绘图  
+
+作图命令如下：  
+折线图：plt.plot(x,y)（x,y也可以为numpy数组）。  
+散点图：plt.plot(x,y,'o')。
+柱状图：plt.bar(x,y)
+
+作图保存命令：plt.savefig('PATH')。
+
+作图示例如下：  
+	
+	{%highlight ruby%}
+	import numpy as np
+	import matplotlib.pyplot as plt
+	x = np.linspace(0,1)
+	y = np.sin(4 * np.pi * x) * np.exp(-5 * x)
+	plt.plot(x,y)
+	{%endhighlight%}
+
+##### pylab绘图
+
+作图示例如下
+
+	{%highlight ruby%}
+	import numpy as np
+	import pylab as pl
+	t=np.arange(0.,4.,0.1)
+	pl.plot(t,t,t,t+2,t,t**2)
+	{%endhighlight%}
+
+此外NumPy数组也可以作为Matplotlib的参数  
+
+#### 4.2.3 Matplotlib图像属性控制
+
+Matplotlib可以改变图线的色彩和样式。  
+例如 plt.plot(x,y,'g--'):用绿色的短横线  
+具体的命令可以通过matplotlib官网查询或者通过help(plt.plot)函数得到。
+
+Matplotlib可以加标题：图、横轴和纵轴:plt.title(),plt.xlabel(),plt.ylabel()  
+
+此外Matplotlib还有figsize,color,linestyle,marker,label,legend（图例）等参数
+
+Matplotlib可以用subplot(a,b,c)参数来进行多子图绘图。a代表行数，b代表列数
+
+axes([left,bottom,width,height])函数也可以进行子图绘制，其参数范围为(0,1)
+
+#### 4.2.4 pandas作图
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
