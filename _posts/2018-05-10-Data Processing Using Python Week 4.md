@@ -87,5 +87,56 @@ append追加的用法为p.append(q)（将p和q连接）  
 concat连接的方法为pd.concat(pieces)。concat可以连接两个不同逻辑结构的对象，也可以用pd.concat([df1,df2])。  
 join可以将有共同字段的两张表合并
 
+### 4.2 Python高级数据处理与可视化
+
+#### 4.2.1 聚类分析
+
+参考代码
+
+	kmeansStu1.py
+	{highlight ruby%}
+	import numpy as np
+	from scipy.cluster.vq import vq,kmeans,whiten
+	list1 = [88.0,74.0,96.0,85.0]
+	list2 = [92.0,99.0,95.0,94.0]
+	list3 = [91.0,87.0,99.0,95.0]
+	list4 = [78.0,99.0,97.0,81.0]
+	list5 = [88.0,78.0,98.0,84.0]
+	list6 = [100.0,95.0,100.0,92.0]
+	data = np.array([list1,list2,list3,list4,list5,list6])
+	whiten = whiten(data)
+	centroids,_ = kmeans(whiten,2)
+	result,_=vq(whiten,centroids)
+	print(result)
+	{%endhighlight%}
+	
+用k-means算法获得局部最优解，得到同学中的学霸名单。  
+
+k-means算法可以用于机器学习的聚类功能。
+
+用专业工具scikit learn也可以解决聚类功能 代码为  
+	
+	{% highlight ruby%}
+	kmeansStu2.py
+	import numpy as np
+	from sklearn.cluster import KMeans
+	list1 = [88.0,74.0,96.0,85.0]
+	list2 = [92.0,99.0,95.0,94.0]
+	list3 = [91.0,87.0,99.0,95.0]
+	list4 = [78.0,99.0,97.0,81.0]
+	list5 = [88.0,78.0,98.0,84.0]
+	list6 = [100.0,95.0,100.0,92.0]	
+	X = np.array([list1,list2,list3,list4,list5,list6])
+	kmeans = KMeans(n_clusters = 2).fit(X)
+	pred = kmeans.predict(X)
+	print(pred)
+	{%endhighlight%}
+
+KMeans.predict()可以根据得到的类进行预测。
+
+#### 4.2.2 Matplotlib绘图基础
+
+
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
