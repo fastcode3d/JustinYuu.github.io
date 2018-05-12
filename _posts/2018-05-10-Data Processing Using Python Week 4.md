@@ -20,7 +20,7 @@ redirect_from:
 
 此外还可以从语料库中获得，如NLTK语料库，方法为nltk.download打开NLTK下载器，选择要下载的语料。
 
-#### 4.2.2 数据准备
+#### 4.1.2 数据准备
 
 用DataFrame可以对原始数据进行一系列的预处理。  
 
@@ -44,13 +44,13 @@ redirect_from:
 	print(result)
 	{%endhighlight%}
 	
-#### 4.2.3 数据显示
+#### 4.1.3 数据显示
 
 数据显示方式有很多，如显示行和显示列，可以通过切片和专用方式。  
 
 行显示的切片方法为list[:5]或者list[-5:]，专用方式为.head(5)或者.tail(5)
 
-#### 4.2.4 数据选择
+#### 4.1.4 数据选择
 
 DataFrame中的数据选择相对来讲非常自由，可以选择行、选择列、选择区域、条件选择。
 
@@ -67,7 +67,7 @@ DataFrame中的数据选择相对来讲非常自由，可以选择行、选择�
 
 DataFrame中的条件选择也非常方便，可以用条件表达式来进行。
 
-#### 4.2.5 简单统计与处理
+#### 4.1.5 简单统计与处理
 
 DataFrame中有很多数据处理函数，比如DataFrame.describe()可以获得数据的个数、均值、标准差。DataFrame.corr()默认使用Pearson相关系数进行线性相关分析。
 
@@ -75,11 +75,11 @@ DataFrame中可以使用sort函数进行排序，如sort_index可以按行索引
 
 DataFrame.len()可以实现计数统计功能
 
-#### 4.2.6 Grouping
+#### 4.1.6 Grouping
 
 DataFrame.groupby()可以按行、列分组。也可以插入求和等函数，如df.groupby('month').volume.sum()。  
 
-#### 4.2.7 Merge
+#### 4.1.7 Merge
 
 Python中的的merge是一种很常用的连接方式，它有三种形式，append追加，concat连接，join连接。
 
