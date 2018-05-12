@@ -9,6 +9,8 @@ redirect_from:
 ---
 # Data Processing Using Python Week 4
 
+本章讲的相当笼统，可能是由于介绍的函数太多，每个函数在课程中都是一带而过，并没有具体的实例演示和分析，教学效果不是很好。
+
 ### 4.1 Python基本数据统计
 
 #### 4.1.1 便捷数据获取
@@ -66,6 +68,24 @@ DataFrame中的数据选择相对来讲非常自由，可以选择行、选择�
 DataFrame中的条件选择也非常方便，可以用条件表达式来进行。
 
 #### 4.2.5 简单统计与处理
+
+DataFrame中有很多数据处理函数，比如DataFrame.describe()可以获得数据的个数、均值、标准差。DataFrame.corr()默认使用Pearson相关系数进行线性相关分析。
+
+DataFrame中可以使用sort函数进行排序，如sort_index可以按行索引排序。  
+
+DataFrame.len()可以实现计数统计功能
+
+#### 4.2.6 Grouping
+
+DataFrame.groupby()可以按行、列分组。也可以插入求和等函数，如df.groupby('month').volume.sum()。  
+
+#### 4.2.7 Merge
+
+Python中的的merge是一种很常用的连接方式，它有三种形式，append追加，concat连接，join连接。
+
+append追加的用法为p.append(q)（将p和q连接）  
+concat连接的方法为pd.concat(pieces)。concat可以连接两个不同逻辑结构的对象，也可以用pd.concat([df1,df2])。  
+join可以将有共同字段的两张表合并
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
