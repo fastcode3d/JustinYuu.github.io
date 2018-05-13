@@ -248,7 +248,34 @@ Python还有很强大的图像处理库，常用的Python图像处理库有Pillo
 	im1.paste(out,(50,50))
 	{%endhighlight%}
 
+__Biopython__ 是一个用于开发计算分子生物学的工具，可以用于制作序列、字母表和染色体图  
 
+	>>>from Bio.Seq import Seq
+	>>>my_seq = Seq("AGTACACTGGT")
+	>>>my_seq.alphabet
+	Alphabet()
+	>>>print(my_seq)
+	AGTACACTGGT
+
+#### 4.2.7 Python的人文社科类应用
+
+古腾堡项目（Gutenberg）由志愿者参与，致力于文本著作的电子化、归档以及发布。该工程肇始于1971年，是最早的数字图书馆。其中的大部分书籍都是公有领域书籍的原本，古腾堡工程确保这些原本自由流通、格式开放，有利于长期保存，并可在各种计算机上阅读。  
+
+Python中可以通过NLTK库引入古腾堡语料库，并进行一些简单的计算。
+
+	freqG20.py
+	{%highlight ruby%}
+	from nltk.corpus import gutenberg
+	from nltk.probability import*
+	fd2 = FreqDist([sx.lower() for sx in allwords if sx.isalpha()])
+	print(fd2.B())
+	print(fd2.N())
+	fd2.tabulate(20)
+	fd2.plot(20)
+	fd2.plot(20,cumulative = True)
+	{%end highlight%}
+
+此外还有就职演说语料库等语料库可以用来统计。
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
