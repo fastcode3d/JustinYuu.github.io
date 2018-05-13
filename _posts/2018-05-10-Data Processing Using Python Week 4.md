@@ -248,7 +248,7 @@ Python还有很强大的图像处理库，常用的Python图像处理库有Pillo
 	im1.paste(out,(50,50))
 	{%endhighlight%}
 
-__Biopython__ 是一个用于开发计算分子生物学的工具，可以用于制作序列、字母表和染色体图  
+_Biopython_ 是一个用于开发计算分子生物学的工具，可以用于制作序列、字母表和染色体图    
 
 	from Bio.Seq import Seq
 	my_seq = Seq("AGTACACTGGT")
@@ -261,8 +261,8 @@ __Biopython__ 是一个用于开发计算分子生物学的工具，可以用于
 
 Python中可以通过NLTK库引入古腾堡语料库，并进行一些简单的计算。
 
-	freqG20.py
 	{%highlight ruby%}
+	freqG20.py
 	from nltk.corpus import gutenberg
 	from nltk.probability import*
 	fd2 = FreqDist([sx.lower() for sx in allwords if sx.isalpha()])
@@ -271,7 +271,7 @@ Python中可以通过NLTK库引入古腾堡语料库，并进行一些简单的�
 	fd2.tabulate(20)
 	fd2.plot(20)
 	fd2.plot(20,cumulative = True)
-	{%end highlight%}
+	{%endhighlight%}
 
 此外还有就职演说语料库等语料库可以用来统计。
 
