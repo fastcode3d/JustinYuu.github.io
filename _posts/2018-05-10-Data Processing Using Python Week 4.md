@@ -186,5 +186,32 @@ axes([left,bottom,width,height])函数也可以进行子图绘制，其参数范
 
 #### 4.2.4 pandas作图
 
+pandas作图可以和plot作图结合使用，通过创建DataFrame对象来进行作图。
+
+此外用kind参数可以生成不同的图形，autopct参数用来设置图像内数字的格式，subplots参数用来控制子图。
+
+boxplot()方法可以绘制一种特殊的图形：箱型图。箱型图由五条线组成，第一条线表示最大值，第二条线表示25%处的位置，第三条线表示中位数，第四条线表示75%处的位置，而最后一条线表示最小值。箱型图越长，表示数据离散程度越大。
+
+#### 4.2.5 数据存取
+
+txt格式的数据存取相对简单，使用文件的写入方法即可。  
+
+csv格式的数据存取也很简单，由to_csv函数即可实现，实例如下：
+
+	{%highlight ruby%}
+	to_csv.py
+	import pandas as pd
+	...
+	quotes = retrieve_quotes_historical('AXP')
+	df = pd.DataFrame(quotes)
+	df.to_csv('stockAXP.csv')
+	{%endhighlight%}
+
+csv格式文件的默认打开方式为excel，也可以用记事本打开，以纯文本格式存储，数据之间由','隔开。csv文件之所以称为csv，也是由于','的英文缩写为csv。
+
+csv格式的阅读函数为.read_csv('PATH')
+
+此外python也支持excel的读取和写入，函数名为.read_excel('PATH')和.to_excel('PATH')
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
