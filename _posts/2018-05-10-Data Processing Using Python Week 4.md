@@ -93,8 +93,8 @@ join可以将有共同字段的两张表合并
 
 参考代码
 
-	kmeansStu1.py
 	{highlight ruby%}
+	kmeansStu1.py
 	import numpy as np
 	from scipy.cluster.vq import vq,kmeans,whiten
 	list1 = [88.0,74.0,96.0,85.0]
@@ -116,7 +116,7 @@ k-means算法可以用于机器学习的聚类功能。
 
 用专业工具scikit learn也可以解决聚类功能 代码为  
 	
-	{% highlight ruby%}
+	{%highlight ruby%}
 	kmeansStu2.py
 	import numpy as np
 	from sklearn.cluster import KMeans
