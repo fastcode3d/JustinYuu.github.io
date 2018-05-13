@@ -58,7 +58,7 @@ DataFrame中的数据选择相对来讲非常自由，可以选择行、选择�
 
 选择列/行可以直接输入列/行名，如DataFrame.列名或者DataFrame['列名']。  
 
-选择行、列可以使用标签label(loc)，如DataFrame.loc[1:5,],DataFrame.loc[:['列名','列名']]，选择一个值时，可以用at。
+选择行、列可以使用标签label(loc)，如DataFrame.loc[1:5,],DataFrame.loc[:,['列名','列名']]，选择一个值时，可以用at。
 
 选择行、列和区域可以用iloc，取某个值可以用iat，loc和iloc的区别在于loc中的1:5指的是第一行到第五行，iloc中的1:5指的是第一行到第四行，行同理。  
 因为iloc实质上是用索引来表示，loc实质上使用名称来表示，我理解中这也是为什么要多出一个i(index)的原因  
