@@ -235,8 +235,8 @@ Python还有很强大的图像处理库，常用的Python图像处理库有Pillo
 
 基本图像处理库的代码示例：
 
-	#Filename:pasteimg.py
 	{%highlight ruby%}
+	#Filename:pasteimg.py
 	from PIL import Image
 	im1 = Image.open('1.jpg')
 	print(im1.size,im1.format,im1.mode)
@@ -250,12 +250,10 @@ Python还有很强大的图像处理库，常用的Python图像处理库有Pillo
 
 __Biopython__ 是一个用于开发计算分子生物学的工具，可以用于制作序列、字母表和染色体图  
 
-	>>>from Bio.Seq import Seq
-	>>>my_seq = Seq("AGTACACTGGT")
-	>>>my_seq.alphabet
-	Alphabet()
-	>>>print(my_seq)
-	AGTACACTGGT
+	from Bio.Seq import Seq
+	my_seq = Seq("AGTACACTGGT")
+	my_seq.alphabet
+	print(my_seq)
 
 #### 4.2.7 Python的人文社科类应用
 
