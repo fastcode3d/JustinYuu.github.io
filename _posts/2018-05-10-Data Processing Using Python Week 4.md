@@ -93,7 +93,7 @@ join可以将有共同字段的两张表合并
 
 参考代码
 
-	{highlight ruby%}
+	{%highlight ruby%}
 	kmeansStu1.py
 	import numpy as np
 	from scipy.cluster.vq import vq,kmeans,whiten
@@ -212,6 +212,43 @@ csv格式文件的默认打开方式为excel，也可以用记事本打开，以
 csv格式的阅读函数为.read_csv('PATH')
 
 此外python也支持excel的读取和写入，函数名为.read_excel('PATH')和.to_excel('PATH')
+
+具体应用（课后小练习）代码如下
+	
+	sum_score.py
+	{%highlight ruby%}
+	import pandas as pd
+	data = pd.DataFrame(pd.read_excel('data1.xlsx'))
+	a = data.loc[0,['Python','Math']].sum()
+	b = data.loc[1,['Python','Math']].sum()
+	c = data.loc[2,['Python','Math']].sum()
+	listA = [a,b,c]
+	data['sum']=listA
+	data.to_excel('data1.xlsx',sheet_name='Sum_score')
+	{%endhighlight%}
+
+#### 4.2.6 Python的理工类应用
+
+Python可以进行一系列数学处理，如scipy.fft()函数可以用于快速傅里叶变换。
+
+Python还有很强大的图像处理库，常用的Python图像处理库有Pillow(PIL),OpenCV,Skimage。
+
+基本图像处理库的代码示例：
+
+	#Filename:pasteimg.py
+	{%highlight ruby%}
+	from PIL import Image
+	im1 = Image.open('1.jpg')
+	print(im1.size,im1.format,im1.mode)
+	Image.open('1.jpg').save('2.png')
+	Im2 = Image.open('2.png')
+	size = (288,180)
+	im2.thumbnail(size)
+	out = im2.rotate(45)
+	im1.paste(out,(50,50))
+	{%endhighlight%}
+
+
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
