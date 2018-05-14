@@ -281,7 +281,7 @@ Python中可以通过NLTK库引入古腾堡语料库，并进行一些简单的�
 
 #### 1 股票数据对比分析编程
 
-	{%highligh ruby%}
+	{%highlight ruby%}
 	import requests
 	import re
 	import json
