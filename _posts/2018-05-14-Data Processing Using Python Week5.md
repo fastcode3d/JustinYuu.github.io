@@ -44,7 +44,20 @@ Python可以创建GUI（图形用户界面），也可以依靠面向对象的�
 
 #### 5.1.3 继承
 
+继承的概念来源于父类（基类）和子类（派生类）。  
 
+子类的定义方法如下：
+
+	class SubClassNmae(ParentClass1[,ParentClass2,...]):
+		'optional class documentation string'
+		class_suite
+	
+与JAVA不同，Python支持多继承。
+
+默认情况下，Python类的成员属性和方法都是"public"，此外也提供“访问控制符”来限定成员函数的访问（双下划线和单下划线）。  
+双下划线的作用是防止父类与子类的同名冲突。单下划线的作用是在属性名前使用一个单下划线字符，防止模块的属性用"from mymodule import * "来加载  
+
+### 5.2 图形用户界面
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
