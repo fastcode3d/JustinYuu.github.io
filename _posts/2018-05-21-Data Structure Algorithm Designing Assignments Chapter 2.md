@@ -5,7 +5,7 @@ description: "my own source codes of Algorithm Designing Assignment in Data Stru
 categories: [Data-Structure]
 tags: [C]
 redirect_from:
-  - /2018/04/11/
+  - /2018/05/21/
 ---
 # Data Structure Algorithm Designing Assignments Chapter 2
 
