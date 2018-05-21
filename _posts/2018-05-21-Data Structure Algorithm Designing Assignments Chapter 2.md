@@ -2695,7 +2695,9 @@ redirect_from:
     int main(void)
     {
         LinkedPoly P1;
-        PolyTerm a[7]={{-2,1},{4,2},{2,3},{11,5},{-7,6},{8,9},{-3,10}};
+        PolyTerm a[7]={
+			{-2,1},{4,2},{2,3},{11,5},{-7,6},{8,9},{-3,10}
+			};
         CreatPoly_L(&P1,7,a);
         printf("Pn(x) = ");
         OutputPoly_L(P1);
@@ -2807,7 +2809,9 @@ redirect_from:
     int main(void)
     {
         LinkedPoly P,P_odd,P_even;
-        PolyTerm a[7]={{-2,1},{4,2},{2,3},{11,5},{-7,6},{8,9},{-3,10}};
+        PolyTerm a[7]={
+			{-2,1},{4,2},{2,3},{11,5},{-7,6},{8,9},{-3,10}
+			};
         CreatPoly_L(&P,7,a);
         printf("Pn(x) = ");
         OutputPoly_L(P);
