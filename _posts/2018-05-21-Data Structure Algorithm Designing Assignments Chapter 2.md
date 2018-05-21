@@ -2527,7 +2527,9 @@ redirect_from:
     int main(void)
     {
         SqPoly Pa;
-        PolyTerm a[5]={{-2,1},{4,3},{11,5},{-7,7},{8,9}};
+        PolyTerm a[5]={
+						{-2,1},{4,3},{11,5},{-7,7},{8,9}
+						};
         CreatPoly_Sq(&Pa,5,a);
         printf("Pa = ");
         OutputPoly_Sq(Pa);
