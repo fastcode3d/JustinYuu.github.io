@@ -62,6 +62,7 @@ redirect_from:
   本节主要介绍如何将上节的J(θ<sub>1</sub>,θ<sub>2</sub>)最小化，在这节中我们将θ<sub>0</sub>设为0，即J函数只是J(θ<sub>1</sub>)，即只与θ<sub>1</sub>有关的函数。选择合适的方程y=h<sub>θ</sub>(x)，从而使h(x)-y为0，进而使J(θ)接近0。
   
   通过取不同的θ<sub>1</sub>，可以作J(θ<sub>1</sub>)-θ<sub>1</sub>曲线，从而得出θ<sub>1</sub>为何值时更适合J函数，从而使J(θ<sub>1</sub>)最小，从而优化得到最佳拟合直线，即y=θ<sub>1</sub>x。这就是如何通过最小化J(θ<sub>1</sub>)来选择合适的函数曲线的示例，也是J的意义所在。  
+  
 ![Cost FunctionI]
 (https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05.png?expiry=1527984000000&hmac=oX6TtZrw65iXN07xFTUU0IQSkMct3b9nDQAHEQ_VzwA)
 
@@ -72,7 +73,7 @@ redirect_from:
   做一个J-θ<sub>1</sub>-θ<sub>0</sub>的三维（弓形）曲面图，通过改变θ<sub>1</sub>，θ<sub>0</sub>的值来改变曲面图的结构。然后作出轮廓图，每一圈轮廓上的点都是J相同的时候的θ<sub>1</sub>、θ<sub>0</sub>的取值，从而更加直观的观察J(θ)的取值。
   
   而我们的算法致力于主动寻找合适的θ<sub>1</sub>和θ<sub>0</sub>，从而自动最小化J(θ<sub>0</sub>,θ<sub>1</sub>)，这将在接下来的视频中介绍。  
-![Cost Function](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37.png?expiry=1527984000000&hmac=1cU2NZl35dcAJEI0fyJrngzp4vti1bjwm8z6pO-msYo)
+![Cost FunctionII](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37.png?expiry=1527984000000&hmac=1cU2NZl35dcAJEI0fyJrngzp4vti1bjwm8z6pO-msYo)
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
