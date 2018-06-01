@@ -39,5 +39,19 @@ redirect_from:
 
   此课程中的算法均是通过Octave实现，同样也可以通过matlab实现。Octave的运行速度、编译量和学习速度将会远远快于Java和C++等主流编程语言。
   
+## Model and Cost Function
+
+  本节主要通过一个计算房价的模型来介绍线性回归分析的基本内容。
+
+### Model Representation
+
+  线性回归的最显而易见的应用便是监督学习中的回归分析和分类离散分析。用训练集里的数据喂给学习算法，从而得出一个hypothesis（假说），然后h(hypothesis)通过输入的x值得出最终的值，可以将h理解为一个x到y的映射。例如在求房价的算法中，输入房屋面积x,得出期望值。
+  
+  这个模型被称为线性回归(linear regression)模型，上述例子是关于单变量x的线性回归。
+  
+### Cost Function
+
+  本节主要介绍如何将数据与映射h相拟合。在本例中，h<sub>θ</sub>(x)=θ<sub>0</sub>+θ<sub>1</sub>x
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
