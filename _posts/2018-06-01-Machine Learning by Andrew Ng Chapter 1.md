@@ -55,7 +55,7 @@ redirect_from:
   
   因此我们需要选择合适的θ<sub>0</sub>和θ<sub>1</sub>来使得h<sub>θ</sub>(x)更接近y，从而达到拟合的目的。用数学语言描述，即使h<sub>θ</sub>(x)-y的值最小，用平均误差平方和来表示，即(h<sub>θ</sub>(x<sup>i</sup>)-y<sup>i</sup>)<sup>2</sup>的和，此代价函数也被称为平方误差函数，有时也被称为平方误差代价函数。
   
- ![avatar]https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM.png?expiry=1527984000000&hmac=EV3ub54ksxfh10WoGmfjLodS_tim7ONyvjXx3gbomS0
+ ![Cost Function](/https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM.png?expiry=1527984000000&hmac=EV3ub54ksxfh10WoGmfjLodS_tim7ONyvjXx3gbomS0)
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
