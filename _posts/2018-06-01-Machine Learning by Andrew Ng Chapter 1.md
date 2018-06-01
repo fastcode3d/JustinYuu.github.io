@@ -53,11 +53,9 @@ redirect_from:
 
   本节主要介绍如何将数据与映射h相拟合。在本例中，h<sub>θ</sub>(x)=θ<sub>0</sub>+θ<sub>1</sub>x。
   
-  因此我们需要选择合适的θ<sub>0</sub>和θ<sub>1</sub>来使得h<sub>θ</sub>(x)更接近y，从而达到拟合的目的。用数学语言描述，即使h<sub>θ</sub>(x)-y的值最小，用平均误差平方和来表示，即(1/2m)*\sum_i^n(h<sub>θ</sub>(x<sup>i</sup>)-y<sup>i</sup>)<sup>2</sup>
+  因此我们需要选择合适的θ<sub>0</sub>和θ<sub>1</sub>来使得h<sub>θ</sub>(x)更接近y，从而达到拟合的目的。用数学语言描述，即使h<sub>θ</sub>(x)-y的值最小，用平均误差平方和来表示，即(1/2m)* $ \sum_{i=0}^{n} $ (h<sub>θ</sub>(x<sup>i</sup>)-y<sup>i</sup>)<sup>2</sup>
   
-$$
-    \lbrace  \sum_{i=0}^{n}i^{2}=\frac{2a}{x^2+1}   \rbrace
-$$
-
+  
+  
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
