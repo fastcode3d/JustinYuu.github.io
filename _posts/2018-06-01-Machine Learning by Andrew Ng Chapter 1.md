@@ -63,8 +63,7 @@ redirect_from:
   
   通过取不同的θ<sub>1</sub>，可以作J(θ<sub>1</sub>)-θ<sub>1</sub>曲线，从而得出θ<sub>1</sub>为何值时更适合J函数，从而使J(θ<sub>1</sub>)最小，从而优化得到最佳拟合直线，即y=θ<sub>1</sub>x。这就是如何通过最小化J(θ<sub>1</sub>)来选择合适的函数曲线的示例，也是J的意义所在。  
   
-![Cost FunctionI]
-(https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05.png?expiry=1527984000000&hmac=oX6TtZrw65iXN07xFTUU0IQSkMct3b9nDQAHEQ_VzwA)
+![Cost FunctionI](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/_B8TJZtREea33w76dwnDIg_3e3d4433e32478f8df446d0b6da26c27_Screenshot-2016-10-26-00.57.56.png?expiry=1527984000000&hmac=aE_ypu_zSXpQ47ytjp-h1cern8aiejLb-oHQaulXPDI)
 
 ### Cost Function -Intuition II
 
