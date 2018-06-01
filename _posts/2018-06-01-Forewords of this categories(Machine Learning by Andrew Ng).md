@@ -3,7 +3,7 @@ layout: post
 title: "Forewords of this categories(Machine Learning by Andrew Ng)"
 description: "Forewords."
 categories: [Machine-Learning-by-Andrew-Ng]
-tags: [Python]
+tags: [O]
 redirect_from:
   - /2018/06/01/
 ---
