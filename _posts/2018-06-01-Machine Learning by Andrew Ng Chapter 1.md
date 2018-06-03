@@ -99,7 +99,17 @@ redirect_from:
   
   本节主要介绍了最简单的导数数学问题，可能是为了使未接触过导数概念的同学更好理解该算法公式的真正作用。
 
-### 
+### Gradient Descent For Linear Regression
+
+  将代价函数和梯度下降算法结合运用，从而得出最终的梯度下降法进行线性拟合的回归模型。本节将会将梯度下降算法实际应用到最小化平方误差代价函数的模型上。
+  
+  将最小化平方误差代价函数和梯度下降算法的公式合到一起，将偏导数项用最小平方和函数表示，得到公式
+  
+$$
+\begin{align*} \text{repeat until convergence: } \lbrace & \newline \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \newline \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \newline \rbrace& \end{align*}
+$$  
+
+
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
