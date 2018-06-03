@@ -74,5 +74,32 @@ redirect_from:
   而我们的算法致力于主动寻找合适的θ<sub>1</sub>和θ<sub>0</sub>，从而自动最小化J(θ<sub>0</sub>,θ<sub>1</sub>)，这将在接下来的视频中介绍。  
 ![Cost FunctionII](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37.png?expiry=1527984000000&hmac=1cU2NZl35dcAJEI0fyJrngzp4vti1bjwm8z6pO-msYo)
 
+## Parameter Learning
+
+### Gradient Descent
+
+  本节主要介绍梯度下降算法，该算法可用于线性回归分析和很多机器学习领域。本节将用梯度下降算法来解决J函数的最小化问题。
+  
+  具体实现思想是：预先选取θ<sub>1</sub>、θ<sub>0</sub>的取值，我们一般均取为0，然后一直改变θ<sub>1</sub>、θ<sub>0</sub>的取值，不断的减小J函数的值，直到J函数降到最小。  
+  用此算法取得新值，新的值便是新的θ<sub>1</sub>、θ<sub>0</sub>，而更新时要注意同步更新，在θ<sub>1</sub>、θ<sub>0</sub>均更新后再进行下一步赋值，从而实现在梯度下降中的进一步更新。  
+![Gradient Descent]
+(https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/yr-D1aDMEeai9RKvXdDYag_627e5ab52d5ff941c0fcc741c2b162a0_Screenshot-2016-11-02-00.19.56.png?expiry=1528156800000&hmac=KFESK7fOGrYobc6YNvBzl4R2McwS4INS1LzTLem965o)
+
+  不同起始点的梯度算法得到的结果截然不同，即使差距很小，梯度下降算法的每一步也会产生不同的结果。
+
+### Gradient Descent Intuition
+
+  梯度下降算法的主要内容为：重复，直到收敛(repeat until convergence)，重复的公式为θ<sub>j</sub>:=θ<sub>j</sub>-α∂J(θ<sub>0</sub>,θ<sub>1</sub>)/∂<sub>j</sub>,其中j的取值为0和1。
+  
+  在上面的公式中，α被称为学习速率，它决定了我们以多大的幅度来更新参数θ<sub>j</sub>，后面是导数项，随着J的增加或者降低而取正值/负值。学习速率影响了代价函数的梯度下降速率，α值过小有可能导致收敛的速度过慢，而α的值过大有可能导致无法收敛，甚至导致发散，因此需要选择合适大小的学习速率。
+  
+![Gradient Descent Intuition1](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/UJpiD6GWEeai9RKvXdDYag_3c3ad6625a2a4ec8456f421a2f4daf2e_Screenshot-2016-11-03-00.05.27.png?expiry=1528156800000&hmac=FvvbAcd5rNBmgju6QEKdxcOeePfLOjvi0FvDuAIZd5E)
+  
+  最后θ<sub>1</sub>总会停留在局部最优点上，即斜率为0的点，因为此时根据梯度下降算法，θ<sub>1</sub>在斜率为0的地方始终不变。同时，由于J的导数不断变小，因此就没有必要实时改变α。
+  
+  本节主要介绍了最简单的导数数学问题，可能是为了使未接触过导数概念的同学更好理解该算法公式的真正作用。
+
+### 
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
