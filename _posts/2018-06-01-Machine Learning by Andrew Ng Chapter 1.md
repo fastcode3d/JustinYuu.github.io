@@ -103,11 +103,145 @@ redirect_from:
 
   将代价函数和梯度下降算法结合运用，从而得出最终的梯度下降法进行线性拟合的回归模型。本节将会将梯度下降算法实际应用到最小化平方误差代价函数的模型上。
   
-  将最小化平方误差代价函数和梯度下降算法的公式合到一起，将偏导数项用最小平方和函数表示，得到公式
+  将最小化平方误差代价函数和梯度下降算法的公式合到一起，将偏导数项用最小平方和函数表示，得到公式。具体的表示方式如下图
   
-$$
-\begin{align*} \text{repeat until convergence: } \lbrace & \newline \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) \newline \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) \newline \rbrace& \end{align*}
-$$  
+![Gradient Descent For Linear Regression](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/QFpooaaaEea7TQ6MHcgMPA_cc3c276df7991b1072b2afb142a78da1_Screenshot-2016-11-09-08.30.54.png?expiry=1528156800000&hmac=YrQrhcsF6JZbxnCLUep8U2_Veb-suO73EZGK36zxPhQ)
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0.278em 2em 0.278em 2em 0.278em 2em 0.278em 2em 0.278em 2em 0.278em" displaystyle="true" minlabelspacing=".8em">
+    <mtr>
+      <mtd>
+        <mtext>repeat until convergence:&#xA0;</mtext>
+        <mo fence="false" stretchy="false">{</mo>
+      </mtd>
+      <mtd />
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>&#x03B8;<!-- θ --></mi>
+          <mn>0</mn>
+        </msub>
+        <mo>:=</mo>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>&#x03B8;<!-- θ --></mi>
+          <mn>0</mn>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>&#x03B1;<!-- α --></mi>
+        <mfrac>
+          <mn>1</mn>
+          <mi>m</mi>
+        </mfrac>
+        <munderover>
+          <mo movablelimits="false">&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>m</mi>
+          </mrow>
+        </munderover>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>h</mi>
+          <mi>&#x03B8;<!-- θ --></mi>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>&#x03B8;<!-- θ --></mi>
+          <mn>1</mn>
+        </msub>
+        <mo>:=</mo>
+      </mtd>
+      <mtd>
+        <msub>
+          <mi>&#x03B8;<!-- θ --></mi>
+          <mn>1</mn>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>&#x03B1;<!-- α --></mi>
+        <mfrac>
+          <mn>1</mn>
+          <mi>m</mi>
+        </mfrac>
+        <munderover>
+          <mo movablelimits="false">&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>m</mi>
+          </mrow>
+        </munderover>
+        <mfenced open="(" close=")">
+          <mrow>
+            <mo stretchy="false">(</mo>
+            <msub>
+              <mi>h</mi>
+              <mi>&#x03B8;<!-- θ --></mi>
+            </msub>
+            <mo stretchy="false">(</mo>
+            <msub>
+              <mi>x</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>i</mi>
+              </mrow>
+            </msub>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2212;<!-- − --></mo>
+            <msub>
+              <mi>y</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>i</mi>
+              </mrow>
+            </msub>
+            <mo stretchy="false">)</mo>
+            <msub>
+              <mi>x</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>i</mi>
+              </mrow>
+            </msub>
+          </mrow>
+        </mfenced>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mo fence="false" stretchy="false">}</mo>
+      </mtd>
+      <mtd />
+    </mtr>
+  </mtable>
+</math>
+  
+   
 
 
 
