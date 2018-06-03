@@ -76,9 +76,11 @@ redirect_from:
 
 ## Parameter Learning
 
+  本节主要介绍一个梯度下降算法的具体实现方式，旨在借此了解参数学习的基本思想。
+
 ### Gradient Descent
 
-  本节主要介绍梯度下降算法，该算法可用于线性回归分析和很多机器学习领域。本节将用梯度下降算法来解决J函数的最小化问题。
+  本小节主要介绍梯度下降算法，该算法可用于线性回归分析和很多机器学习领域。本节将用梯度下降算法来解决J函数的最小化问题。
   
   具体实现思想是：预先选取θ<sub>1</sub>、θ<sub>0</sub>的取值，我们一般均取为0，然后一直改变θ<sub>1</sub>、θ<sub>0</sub>的取值，不断的减小J函数的值，直到J函数降到最小。  
   用此算法取得新值，新的值便是新的θ<sub>1</sub>、θ<sub>0</sub>，而更新时要注意同步更新，在θ<sub>1</sub>、θ<sub>0</sub>均更新后再进行下一步赋值，从而实现在梯度下降中的进一步更新。  
@@ -113,6 +115,38 @@ redirect_from:
 ![Gradient Descent For Linear Regression I](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/xAQBlqaaEeawbAp5ByfpEg_24e9420f16fdd758ccb7097788f879e7_Screenshot-2016-11-09-08.36.49.png?expiry=1528156800000&hmac=35cpiKOUTmg3J1cl7_Ub8m6Odp-Im1nyvwi4bO_1jZo)
 
   对于大规模的数据来说，选用梯度下降方法更为方便，表现性能也会更好。
+  
+## Linear Algebra Review
+
+  本节主要介绍基本的线性代数知识，由于系统学过，因此简要略过
+
+### Matrices and Vectors
+  
+  介绍何为矩阵，以及何为向量。
+  
+  A<sub>i,j</sub>代表的是i行j列的数据
+
+### Addition and Scalar Multiplication
+
+  本节主要介绍加减和标量乘法，即矩阵的基本运算，在此不再赘述。
+  
+### Matrix Vector Multiplication
+
+  本节主要介绍矩阵和向量的乘法，是计算矩阵之间乘法的先导知识，在此不再赘述。
+  
+  值得注意的是当需要使用到数据集和线性回归函数时，可以利用矩阵和向量的性质进行处理，简单来讲，用公式 prediction = DataMatrix\*Parameter来表示。这样可以用一行或者几行代码完成大量数据集的处理。
+  
+### Matrix Matrix Multiplication
+
+  本节主要介绍矩阵和矩阵的乘法，同样是非常基础的线性代数知识。
+  
+### Matrix Multiplication Properties
+
+  本节主要介绍矩阵乘法的一些特性，如矩阵的乘法是不能交换的，矩阵的乘法符合结合律，以及对于单位矩阵I，有A·I=I·A=A
+  
+### Inverse and Transpose
+
+  本节主要介绍矩阵的求逆和转置
   
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
