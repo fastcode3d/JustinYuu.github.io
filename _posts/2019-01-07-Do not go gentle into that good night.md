@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "The first blog"
-description: "My favourite poem."
+title: "Do not go gentle into that good night"
+description: "My favourite poem"
 categories: [tittle-tattle]
 tags: [poem]
 redirect_from:
