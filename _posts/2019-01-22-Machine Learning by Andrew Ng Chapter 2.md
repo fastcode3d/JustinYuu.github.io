@@ -5,7 +5,7 @@ description: "Notes"
 categories: [Machine-Learning-by-Andrew-Ng]
 tags: [Octave]
 redirect_from:
-  - /2019/01/21/
+  - /2019/01/22/
 ---
 # Machine Learning by Andrew Ng Chapter 2
  
