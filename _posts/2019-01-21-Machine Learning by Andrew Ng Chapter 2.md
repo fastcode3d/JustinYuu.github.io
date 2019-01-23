@@ -37,5 +37,56 @@ PS:这一节的中文字幕实在太烂了，三句话也就翻译一句:(
 我所理解的非可逆矩阵即为奇异方阵或者非方阵，视频中给出了两个原因：1.冗余特征，即两个不同的特征其实是相关连的，我所理解的是这在线性代数中表现为两个列矩阵线性相关，即秩小于方阵行列数，导致特征值为0，即为奇异矩阵。2.特征太多，这在线性代数中表现为非方阵，当然也是不可逆的。  
 而处理方法给出两个，即减少冗余特征或者正则化，正则化只是简单一提，估计后面会有更加深入的介绍。  
 
+## Octave
+
+用了一章的篇幅来介绍了Octave的基本使用，大二的时候学过一学期的matlab，当时认为最没用的课万万没想到现在排上了用场，Octave的操作和语法和MATLAB基本相同，所以并没有什么难度，再想想当时学了一大堆以为会很重要的化学，现在却毫无用处了 :(
+
+## Ex1
+
+第一次作业放在了第二章，作业内容还是相当简单的，不是princeton的MOOC的那种写全部代码，而是类似计算机等级考试那种的代码填空，而且有长达12页的pdf文档给予详细的指导，此外还有专门的一篇指导材料[Programming Ex.1](https://www.coursera.org/learn/machine-learning/resources/O756o)。如此简单的题目加上如此详细的推导，一会便完成了所有题目和附加题目。  
+把代码放上来:
+
+### computeCost.m
+
+	h = X * theta;
+	error = h - y;
+	error_sqr = error.^2;
+	J = 0.5 / m * sum(error_sqr);
+	
+### computeCostMulti.m
+
+	h = X * theta;
+	error = h - y;
+	error_sqr = error' * error;
+	J = 0.5 / m * error_sqr;
+	
+### gradientDescent.m/gradientDescentMulti.m
+
+    h = X * theta;
+    error = h - y;
+    gradient = X' * error;
+    theta_change = (alpha / m) * gradient;
+    theta = theta - theta_change;
+
+### plotData.m
+
+	plot(x,y,'rx','MarkerSize',10);
+	ylabel('Profit in $10,000s');
+	xlabel('Population of City in 10,000s');
+
+### featureNormalize.m
+
+	mu = mean(X);
+	sigma = std(X);
+	X_norm = (X-mu)./sigma;
+
+### normalEqn.m
+
+	theta  = pinv(X' * X)* X' * y;
+
+---
+
+至此第二周内容全部结束，第三周笔记讲放在下一篇文章中。
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
