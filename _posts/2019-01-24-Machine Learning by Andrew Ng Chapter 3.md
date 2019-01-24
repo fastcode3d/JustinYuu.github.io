@@ -12,6 +12,7 @@ redirect_from:
 ## 前言  
 
 学习任务还很重啊，争取年前刷完三分之二的课程，还要兼顾PAT的刷题。
+[第三节笔记](https://www.coursera.org/learn/machine-learning/resources/Zi29t)
 
 ### Classification and Representation
 
@@ -19,6 +20,7 @@ redirect_from:
 
 ### Logistic Regression Model
 
+第一小节引入了代价函数的概念，感觉像是初中时学的分段函数，作用是量化产生误差时的代价。
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
