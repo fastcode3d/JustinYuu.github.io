@@ -36,6 +36,41 @@ redirect_from:
 接下来介绍了正则化及其代价函数  
 我理解的正则化就是将目标项变小，不管是线性回归中的梯度下降还是正规方程，都可以进行正则化，此外正规方程的正则化中由于加上了一个第一个对角元素为0其余为λ的对角矩阵，导致原本不可逆的矩阵特征值不为0，即变得可逆，也解决了正规方程的不可逆问题。具体的方法见官方笔记。对于逻辑回归的梯度下降也是同理
 
+## Programming Ex2  
+
+本节的题目依然比较简单，同样是代码填空，值得一提的是本节的[指导笔记]<https://www.coursera.org/learn/machine-learning/resources/fz4AU>更像是一个讨论帖子，主要讨论一些额外的代码解释，而不是像第一章一样手把手教你写代码，我觉得这样很好，将有限的学习资源放到更加深入的层面上去，可以学到更多东西。  
+fminunc所有的要求和建议都在PDF中说的很清楚了，整体也没有什么困难，感觉比较有趣的地方就是fminunc()函数了，使用这个函数就不用自定义α和迭代梯度了，感觉还是挺不错的，基本的参数和作用都讲到了，美中不足的是没有作为一道题目出现，感觉这样印象会更深刻。  
+下面是我的代码  
+
+### sigmoid.m
+
+	g = 1 ./ ( 1 + exp(-z) ); 
+	
+### costFunction.m
+
+	h = sigmoid(X*theta);
+	error = -y .* log(h) - (1-y) .* log(1-h); 
+	J = (1 / m) * sum(error);
+	grad = (1/m) * (X' *(h-y));
+	
+### costFunctionReg.m
+
+	h = sigmoid(X*theta);
+	tmpTheta = theta;
+	tmpTheta(1)=0;
+	J = (1/m)*sum((-y.*log(h))-(1-y).*log(1-h))+(lambda/(2*m))*(tmpTheta' * tmpTheta);
+	grad = (1/m)*(X'*(h-y))+ (lambda/m)*tmpTheta;
+
+### plotData.m
+
+	pos = find(y==1);
+	neg = find(y==0);
+	plot(X(pos,1),X(pos,2),'k+','LineWidth',2,'MarkerSize',7);
+	plot(X(neg,1),X(neg,2),'ko','MarkerFaceColor','y','MarkerSize',7);
+	
+### predict.m
+
+	p = round(sigmoid(X*theta));
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
