@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Machine Learning by Andrew Ng Chapter 6"
+description: "Notes"
+categories: [Machine-Learning-by-Andrew-Ng]
+tags: [Octave]
+redirect_from:
+  - /2019/01/28/
+---
+# Machine Learning by Andrew Ng Chapter 6
+ 
+## 前言  
+
+本章的设计很有趣，编程作业放在中间。[第六周笔记](https://www.coursera.org/learn/machine-learning/resources/LIZza)  
+
+## Evaluating a Learning Algorithm  
+
+本节讲了如何评价一个学习算法的性能。通常来讲，一般把数据集分为训练集和测试集，训练集负责优化θ，而测试集负责测试性能，这看起来很合理，但如果涉及到对于多项式的选择（以线性回归为例），那么只能通过测试集来进行选择，因为训练集已经对不同项数的线性方程进行了优化，那么问题在于，用测试集选出的误差最小多项式方程再用测试集去测试，其性能一定会好于其他数据，因为这个方程就是根据测试集误差最小选出来的，换言之，测试的结果无法合理反应这一方程的准确度，因此需要再多加一部分称为交叉验证集的数据集，这一部分的功能就是选项数，而测试集继续发挥测试的作用。这样测试和选项数所用的数据集不同，则对于性能的测试结果比较准确可靠。  
+
+## Bias vs. Variance  
+
+
+
+
+---
+本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
