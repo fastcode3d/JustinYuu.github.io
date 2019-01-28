@@ -32,11 +32,47 @@ redirect_from:
 学习曲线可以看出目前的学习函数的一些问题所在。  
 比如当高偏差时，增加训练集的数量帮助不大；而当高方差时增加训练集的数量却可能会有一定的帮助。这一结论理解起来也并不困难，高偏差对应的是欠拟合，此时应该做的是更好的拟合函数，一味的增加训练集不改变函数还是无法拟合，而高方差时对应的是过拟合，函数的复杂程度已经足够了，此时应该增加训练集不断的修正θ。   
 
-## Deciding What to Do Next Revisited  
+### Deciding What to Do Next Revisited  
 
 通过上面的介绍，最终回到最初的问题，如何确定接下来应该修改什么以改进算法呢？  
 课后的阅读材料对此进行了比较好的总结[阅读材料](https://www.coursera.org/learn/machine-learning/supplement/llc5g/deciding-what-to-do-next-revisited)，在笔记上也有相同的内容，因此这里就不再重复写一遍了。  
 
+## Ex5   
+
+本周的作业按部就班按照提示写，没有什么难度，但是最后一个题调用函数的时候写成另一个函数了，找了半天耽误了一些时间- -。  
+
+### learningCurve.m  
+
+	for i = 1:m
+		theta_train = trainLinearReg(X(1:i,:),y(1:i),lambda);
+		error_train(i) = linearRegCostFunction(X(1:i,:),y(1:i),theta_train,0);
+		error_val(i) = linearRegCostFunction(Xval,yval,theta_train,0);
+	endfor
+
+### linearRegCostFunction.m  
+
+	error = X * theta - y;
+	tmpTheta = theta;
+	tmpTheta(1) = 0;
+	J = (1/(2*m)) * (error' * error) + (lambda/(2*m)) * (tmpTheta' * tmpTheta);
+
+	grad = (1/m) * sum(error.*X) + (lambda/m) * tmpTheta';
+	
+### polyFeatures.m  
+
+	X_poly(:,1) = X;
+	for i = 2:p
+	  X_poly(:,i)= X.^i;
+	endfor
+
+### validationCurve.m   
+
+	for i = 1:length(lambda_vec)
+		lambda = lambda_vec(i);
+		theta = trainLinearReg(X,y,lambda);
+		error_train(i) = linearRegCostFunction(X,y,theta,0);
+		error_val(i) = linearRegCostFunction(Xval,yval,theta,0);
+	endfor
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
