@@ -34,7 +34,8 @@ redirect_from:
 
 ## Deciding What to Do Next Revisited  
 
-通过上面的介绍，最终回到最初的问题，如何确定接下来应该修改什么以改进算法呢？
+通过上面的介绍，最终回到最初的问题，如何确定接下来应该修改什么以改进算法呢？  
+课后的阅读材料对此进行了比较好的总结[阅读材料](https://www.coursera.org/learn/machine-learning/supplement/llc5g/deciding-what-to-do-next-revisited)，在笔记上也有相同的内容，因此这里就不再重复写一遍了。  
 
 
 ---
