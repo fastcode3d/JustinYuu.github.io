@@ -32,5 +32,47 @@ redirect_from:
 
 本节讲了SVM，神经网络和逻辑回归三种方法之间的选择，具体的选择策略在官方笔记里写的很详细，就不再重复写在这里了，看了一遍自己的感触还是不太深，以后真正用到的时候再看下应该会有更深的感触。  
 
+## Ex6  
+
+### gaussianKernel.m  
+
+	sim = exp(-sum((x1-x2).^2)/(2*sigma^2));  
+	
+### dataset3Params.m  
+
+	values = [0.01 0.03 0.1 0.3 1 3 10 30];
+	min_err = 1;
+	for i = 1:8
+	  for j = 1:8
+		  C_test = values(i);
+		  sigma_test = values(j);
+		  model = svmTrain(X,y,C_test,@(x1,x2) gaussianKernel(x1,x2,sigma_test));
+		  predictions = svmPredict(model,Xval);
+		  err= mean(double(predictions ~= yval));
+		  if err< min_err
+			  C = C_test;
+			  sigma = sigma_test;
+			  min_err = err;
+		  endif
+	  endfor
+	endfor
+
+### processEmail.m  
+
+    for i = 1:length(vocabList)
+        if(strcmp(str,vocabList(i))==1)
+            word_indices = [word_indices ; i];
+            break;
+          end;
+    endfor  
+	
+### emailFeatures.m  
+
+	for i = 1:length(word_indices)
+	  if(word_indices(i))
+		  x(word_indices(i))=1;
+	  end
+	endfor
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
