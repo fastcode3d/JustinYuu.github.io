@@ -39,5 +39,50 @@ Andrew特意强调不要用PCA来避免过拟合，这是因为PCA是无监督�
 这里引用一篇知乎回答，更为详细的解释了这个问题：  
 [为什么PCA不被推荐用来避免过拟合？ - 戴玮的回答 - 知乎](https://www.zhihu.com/question/47121788/answer/121838673)   
 
+## Ex7  
+本次编程作业和以往一样的风格，难的部分都已经写好，只要求写一些很简单的代码，而且也给了提示。我感觉这7次编程作业都非常好，特别是后面的3次，可以算作是几个小项目了，如果真的能吃透这几个小项目我感觉对自己的编程能力和对ML的理解都会有很大的帮助，所以我认为仅仅局限于完成这100分的作业还是不够的。  
+### computeCentroids.m  
+
+    for i = 1:K
+        centroids(i,:)=mean(X(find(idx==i),:));
+    endfor
+
+### findClosestCentroids.m  
+
+	for i = 1:size(X,1);
+		min_d = inf;
+		for j = 1:K
+		  diff = X(i,:)'-centroids(j,:)';
+		  d = diff' * diff;
+		  if(d<min_d)
+			idx(i)=j;
+			min_d=d;
+		  end
+		endfor
+	endfor
+
+这一段写的有点复杂了，用向量实现会更简单。  
+
+### pca.m  
+
+	sigma = (X' * X) / m; 
+	[U,S,V] = svd(sigma);  
+	
+
+### kMeansInitCentroids.m  
+
+	randidx = randperm(size(X,1));
+	centroids = X(randidx(1:K),:);
+	
+### projectData.m  
+
+	Ureduce = U(:,1:K);
+	Z = X * Ureduce;
+
+### recoverData.m  
+
+	Ureduce = U(:,1:K);
+	X_rec = Z * Ureduce';
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
