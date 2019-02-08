@@ -41,5 +41,29 @@ x的值的求法和θ是基本一样的，两种公式见下图：
 在实际应用中，给到电影i和j，通过电影i学习特征x1,x2,...,xn，然后计算电影j和i的最小差值从而得出电影i，j的相似程度。  
 此外还介绍了一个预处理步骤：均值均一化。通过这个方法使得未知特征的预测值为电影的平均得分而不是0。  
 
+## Anomaly Detection and Recommender Systems  
+本节的内容是对一个网络中故障的服务器进行监测和使用协同过滤来实现一个电影推荐评分系统。一共要完成三个文件的代码，代码如下:  
+
+### estimateGaussian.m  
+
+    mu = (1/m) * sum(X); 
+    sigma2 = (1/m)*sum((X - repmat(mu,m,1)).^2);  
+
+### selectThresold.m  
+
+    cvPredictions = (pval<epsilon);
+    fp = sum((cvPredictions==1)&(yval==0));
+    tp = sum((cvPredictions==1)&(yval==1));
+    fn = sum((cvPredictions==0)&(yval==1));
+    prec = tp/(tp+fp);
+    rec = tp/(tp+fn);
+    F1 = (2*prec*rec)/(prec+rec);
+
+### cofiCostFunc.m  
+
+	J = 0.5 * sum(((X * Theta' - Y).^2)(R == 1)) + (lambda/2)*sum(sum(Theta.^2))+(lambda/2)*sum(sum(X.^2));
+	X_grad = (X * Theta' - Y) .* R * Theta + lambda*X;
+	Theta_grad = ((X * Theta' - Y).* R)' * X + lambda*Theta;
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。
