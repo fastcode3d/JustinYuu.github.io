@@ -30,7 +30,7 @@ redirect_from:
 ## Collaborative Filtering  
 这一节主要讲协同过滤。通过协同过滤得到每部电影与各个特点的相关程度。用数学语言来讲，是通过θj和用户对电影的评分反推出x。  
 x的值的求法和θ是基本一样的，两种公式见下图：  
-![9-1.png](/images/9-1.png)  
+![9-1.png](images/Machine-Learning-by-Andrew-Ng/9-1.png)  
 不同之处在于在上一节中求θ是通过将x带入方程中通过梯度下降或者其他优化函数不断的最小化θ，而这里是将用户提供的θ带入公式中，通过梯度下降或者其他优化函数不断的最小化x。  
 那既然通过给定的θ可以得到x，也可以通过给定的x得到θ，那么究竟先给θ还是先给x呢？吴恩达很幽默的将其比喻成了先有鸡还是先有蛋的问题，并给出了他的回答:"You can also randomly guess the values for theta to guess the features repeatedly. You will actually converge to a good set of features."   
 此外，还有一个公式将这两个合为一体，在官方笔记的Collaborative Filtering Algorithm这一节中有详细介绍。要注意的是正则化要同时正则x和θ两项。  
