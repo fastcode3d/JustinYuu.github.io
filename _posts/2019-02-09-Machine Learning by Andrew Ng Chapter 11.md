@@ -15,7 +15,7 @@ redirect_from:
 ## Problem Description and Pipeline  
 照片OCR是指照片光学字符识别，简单来讲，就是从照片中识别字符并转录。其实OCR非常常见，比如我们使用扫描仪所用的OCR软件。  
 接下来介绍了OCR的几个步骤，首先要识别检测文本，然后对文本中的字符进行分割，最后进行字符的分类和自动更正，这整个流程也称为照片OCR流水线(pipeline)。
-![11-1](images/Machine-Learning-by-Andrew-Ng/11-1.png)  
+![11-1](/images/Machine-Learning-by-Andrew-Ng/11-1.png)  
 好冷的冷笑话..
 
 ## Sliding Windows  
