@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Neural Network and Deep Learning Chapter 1"
-description: "Forewords."
+description: "Notes"
 categories: [Neural-Networks-and-Deep-Learning]
 tags: [Python]
 redirect_from:
