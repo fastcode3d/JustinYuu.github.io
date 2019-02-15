@@ -24,7 +24,40 @@ redirect_from:
 在第二节的开头，吴大大上来就说，whenever possible, avoid explicit for-loops。其实整个算法的内容十分简单，但是如果用for循环来写的话会非常复杂，因此向量化便是比较重要的一步，首先对于z=wx+b这一步，可以用下列代码来向量化： `z = np.dot(w.T,X)+b` ，由于python的广播(broadcasting)机制，b本来是一个实数，加到一个向量上后会自动扩充为一个同尺寸的向量。通过这一行代码，即可实现所有z向量的向量化，然后通过下列代码 `A = [a1,a2,a3,...,am] = σ(z)` 来将所有的z放到sigmoid函数中统一求值。接下来对梯度下降进行向量化，便结束了整个过程的向量化。  
 接下来又专门讲了一下python当中的“广播”机制，举了一个计算百分比的例子，其实并没有那么麻烦，简单来讲，一个m×n的矩阵A，加/减/乘/除以一个1×n的矩阵B，那么矩阵B会自动扩容成为m×n的矩阵C，矩阵C的值是B的值复制m次。当n的值是1的时候仍然成立，即一个列向量加减乘除一个数，那么那个数会自动扩大为同尺寸的列向量。  
 此外，吴大大还用专门的一节介绍了python/numpy中比较常见的一些bug，并解释了其原理。比如说，`a = np.random.randn(5)` 这条语句产生的数组既不是行向量，也不是列向量，而是一种“奇怪的”秩为1的数组，这种数组的转置还是其本身，输出shape是(5,)，所以一般要避免使用这种数组,而是用 `a = np.random.randn(5,1)` 来代替。  
-本次课程的所有编程练习都在coursera的jupyter iPython Notebook上练习，这是一个在线python编写/编译器，无需安装python运行环境即可编写运行python程序，十分方便。  
+本次课程的所有编程练习都在coursera的jupyter iPython Notebook上练习，这是一个在线python编写/编译器，无需安装python运行环境即可编写运行python程序，十分方便,本课程的练习都会在一个叫做coursera-hub上进行。    
+
+## Programming Assignments  
+本节的编程练习分为两部分，第一部分是熟悉编程环境和Numpy,第二部分才是真正的编程练习。  
+
+### Python Basics with numpy(optional)  
+这一节的主要内容是熟悉编程环境和numpy，内容和难度和machine-learning的编程作业差不多，我把所有代码放在这里。  
+#### About iPython Notebooks  
+`test = "Hello World"`  
+
+#### sigmoid function,np.exp()  
+`s = 1/(1+math.exp(-x))`  
+`s = 1/(1+np.exp(-x))`  
+
+#### Sigmoid gradient  
+	s = sigmoid(x)
+	ds = s*(1-s)  
+	
+#### Reshaping arrays  
+`v = image.reshape((image.shape[0]*image.shape[1]*image.shape[2]),1)`  
+
+#### Normalizing rows  
+
+	x_norm = np.linalg.norm(x,axis=1,ord=2,keepdims = True)
+	x = x/x_norm
+
+#### Broadcasting and the softmax function  
+	x_exp = np.exp(x)
+	x_sum = np.sum(x_exp,axis=1,keepdims = True)
+	s = x_exp/x_sum
+
+#### Implement the L1 and L2 loss functions  
+	loss = np.sum(abs(y-yhat))
+	loss = np.dot(y-yhat,y-yhat)
 
 
 ---
