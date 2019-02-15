@@ -30,7 +30,7 @@ redirect_from:
 本节的编程练习分为两部分，第一部分是熟悉编程环境和Numpy,第二部分才是真正的编程练习。  
 
 ### Python Basics with numpy(optional)  
-这一节的主要内容是熟悉编程环境和numpy，内容和难度和machine-learning的编程作业差不多，我把所有代码放在这里。  
+这一节的主要内容是熟悉编程环境和numpy，内容和难度和machine-learning的编程作业差不多，我把需要自己编写的代码放在这里。  
 #### About iPython Notebooks  
 `test = "Hello World"`  
 
@@ -59,6 +59,54 @@ redirect_from:
 	loss = np.sum(abs(y-yhat))
 	loss = np.dot(y-yhat,y-yhat)
 
+---  
+### Logistic Regression with a Neural Network mindset  
+接下来的编程作业是完成一个识别猫的分类算法。内容和Machine-learning的某一个编程练习大同小异，代码如下（仅需要编写的部分）：  
+
+#### Overview of the Problem set  
+	m_train = train_set_x_orig.shape[0]
+	m_test = test_set_x_orig.shape[0]
+	num_px = train_set_x_orig.shape[1]  
+---  
+
+	train_set_x_flatten = train_set_x_orig.reshape(train_set_x_orig.shape[0],-1).T
+	test_set_x_flatten = test_set_x_orig.reshape(test_set_x_orig.shape[0],-1).T  
+	
+#### Helper functions  
+`s = 1/(1+np.exp(-z))`  
+
+#### Initializing parameters  
+    w = np.zeros((dim,1))
+    b = 0  
+---  
+
+	A = sigmoid(np.dot(w.T,X)+b)                                  
+    cost = (-1/m)*(np.dot(Y,np.log(A).T)+np.dot((1-Y),np.log(1-A).T))
+	dw = (1/m)*np.dot(X,(A-Y).T)
+    db = (1/m)*np.sum(A-Y)  
+	
+#### Optimization  
+	grads, cost = propagate(w,b,X,Y)
+	dw = grads["dw"]
+    db = grads["db"]
+	w = w - learning_rate * dw
+    b = b - learning_rate * db  
+---  
+
+	A = sigmoid(np.dot(w.T,X)+b)
+	for i in range(A.shape[1]):
+        if(A[0][i]<=0.5):
+            Y_prediction[0][i]=0
+        else:
+            Y_prediction[0][i]=1
+	
+#### Merge all functions into a model  
+	w, b = initialize_with_zeros(X_train.shape[0])
+	parameters, grads, costs = optimize(w,b,X_train,Y_train,num_iterations = 2000,learning_rate=0.5,print_cost = False)
+	w = parameters["w"]
+    b = parameters["b"]
+	Y_prediction_test = predict(w,b,X_test)
+    Y_prediction_train = predict(w,b,X_train)
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
