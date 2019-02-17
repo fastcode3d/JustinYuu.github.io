@@ -42,5 +42,135 @@ redirect_from:
 这节主要针对提问频率比较高的问题进行一个补充回答：深度学习与人类大脑有什么相似性？吴大大的回答是：没啥相似性。  
 只不过神经网络的结点和神经元比较相似，都是接受刺激后进行处理，然后通过突触传递给下一个神经元。至今人类神经元如何处理数据仍然无人知晓，因此谈不上处理的相似性，只是有形式的相似性。  
 
+## Programming Aassignments  
+最后一周了，有两个编程练习，第一个是建立一个深层的神经网络，第二个是利用建立的深层神经网络来识别猫的图片。  
+
+### Building your Deep Neural Network: Step by Step  
+这个编程练习的确比较难，但是跟着提示做应该问题不大，最重要的是理解代码到底在干什么，而不是一味的写。  
+
+#### 3-Initialization  
+##### 3.1 -2-layer Neural Network  
+      W1 = np.random.randn(n_h,n_x)*0.01
+      b1 = np.zeros((n_h,1))
+      W2 = np.random.randn(n_y,n_h)*0.01
+      b2 = np.zeros((n_y,1))   
+	  
+##### 3.2 -L-layer Neural Network  
+	parameters['W' + str(l)] = np.random.randn(layer_dims[l],layer_dims[l-1])*0.01
+    parameters['b' + str(l)] = np.zeros((layer_dims[l] ,1))   
+	
+#### 4-Forword propagation module  
+##### 4.1-Linear Forward  
+
+`Z = np.dot(W,A)+b`  
+##### 4.2-Linear-Activation Forward  
+	if activation == "sigmoid":
+			# Inputs: "A_prev, W, b". Outputs: "A, activation_cache".
+			### START CODE HERE ### (≈ 2 lines of code)
+			Z, linear_cache = linear_forward(A_prev,W,b)
+			A, activation_cache = sigmoid(Z)
+			### END CODE HERE ###
+
+		elif activation == "relu":
+			# Inputs: "A_prev, W, b". Outputs: "A, activation_cache".
+			### START CODE HERE ### (≈ 2 lines of code)
+			Z, linear_cache = linear_forward(A_prev,W,b)
+			A, activation_cache = relu(Z)
+			### END CODE HERE ###  
+			
+---  
+
+	for l in range(1, L):
+        A_prev = A 
+        ### START CODE HERE ### (≈ 2 lines of code)
+        A, cache = linear_activation_forward(A_prev,parameters['W'+str(l)],parameters['b'+str(l)],"relu")
+        caches.append(cache)
+        ### END CODE HERE ###
+    
+    # Implement LINEAR -> SIGMOID. Add "cache" to the "caches" list.
+    ### START CODE HERE ### (≈ 2 lines of code)
+    AL, cache = linear_activation_forward(A,parameters['W'+str(L)],parameters['b'+str(L)],"sigmoid")
+    caches.append(cache)  
+	
+#### 5-Cost function  
+	cost = (-1/m)*np.sum(np.multiply(Y,np.log(AL))+np.multiply((1-Y),np.log(1-AL)))
+
+#### 6 - Backward propagation module
+##### 6.1 -Linear backward  
+    dW = (1/m)*np.dot(dZ,A_prev.T)
+    db = (1/m)*np.sum(dZ,axis=1,keepdims=True)
+    dA_prev = np.dot(W.T,dZ)
+	
+##### 6.2 -Linear-Activation backward  
+    if activation == "relu":
+        ### START CODE HERE ### (≈ 2 lines of code)
+        dZ = relu_backward(dA, activation_cache)
+        dA_prev, dW, db = linear_backward(dZ,linear_cache)
+        ### END CODE HERE ###
+        
+    elif activation == "sigmoid":
+        ### START CODE HERE ### (≈ 2 lines of code)
+        dZ = sigmoid_backward(dA, activation_cache)
+        dA_prev, dW, db = linear_backward(dZ,linear_cache)
+		
+##### 6.3 -L-Model Backward  
+	{%highlight ruby%}
+	# GRADED FUNCTION: L_model_backward
+	def L_model_backward(AL, Y, caches):
+		"""
+		Implement the backward propagation for the [LINEAR->RELU] * (L-1) -> LINEAR -> SIGMOID group
+
+		Arguments:
+		AL -- probability vector, output of the forward propagation (L_model_forward())
+		Y -- true "label" vector (containing 0 if non-cat, 1 if cat)
+		caches -- list of caches containing:
+					every cache of linear_activation_forward() with "relu" (it's caches[l], for l in range(L-1) i.e l = 0...L-2)
+					the cache of linear_activation_forward() with "sigmoid" (it's caches[L-1])
+
+		Returns:
+		grads -- A dictionary with the gradients
+				 grads["dA" + str(l)] = ... 
+				 grads["dW" + str(l)] = ...
+				 grads["db" + str(l)] = ... 
+		"""
+		grads = {}
+		L = len(caches) # the number of layers
+		m = AL.shape[1]
+		Y = Y.reshape(AL.shape) # after this line, Y is the same shape as AL
+
+		# Initializing the backpropagation
+		### START CODE HERE ### (1 line of code)
+		dAL =  - (np.divide(Y, AL) - np.divide(1 - Y, 1 - AL))
+		### END CODE HERE ###
+
+		# Lth layer (SIGMOID -> LINEAR) gradients. Inputs: "dAL, current_cache". Outputs: "grads["dAL-1"], grads["dWL"], grads["dbL"]
+		### START CODE HERE ### (approx. 2 lines)
+		current_cache = caches[L-1]
+		grads["dA" + str(L-1)], grads["dW" + str(L)], grads["db" + str(L)] = linear_activation_backward(dAL, current_cache, activation = "sigmoid")
+		### END CODE HERE ###
+
+		# Loop from l=L-2 to l=0
+		for l in reversed(range(L-1)):
+			# lth layer: (RELU -> LINEAR) gradients.
+			# Inputs: "grads["dA" + str(l + 1)], current_cache". Outputs: "grads["dA" + str(l)] , grads["dW" + str(l + 1)] , grads["db" + str(l + 1)] 
+			### START CODE HERE ### (approx. 5 lines)
+			current_cache = caches[l]
+			dA_prev_temp, dW_temp, db_temp = linear_activation_backward(grads["dA"+str(L-1)], current_cache, activation = "relu")
+			grads["dA" + str(l)] = dA_prev_temp
+			grads["dW" + str(l + 1)] = dW_temp
+			grads["db" + str(l + 1)] = db_temp
+			### END CODE HERE ###
+		return grads
+	{%endhighlight%}
+	
+##### 6.4 - Update Parameters  
+	 for l in range(L):
+			parameters["W" + str(l+1)] = parameters["W"+str(l+1)]-learning_rate*grads["dW"+str(l+1)]
+			parameters["b" + str(l+1)] = parameters["b"+str(l+1)]-learning_rate*grads["db"+str(l+1)]
+
+### Deep Neural Network -Application  
+这一节是用上一节的神经网络进行猫的识别，识别率比第二章所用的逻辑回归的识别率要高。  
+
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
