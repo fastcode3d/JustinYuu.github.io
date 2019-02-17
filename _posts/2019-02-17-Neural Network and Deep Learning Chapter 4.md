@@ -333,5 +333,11 @@ redirect_from:
 		return parameters
 	{%endhighlight%}
 
+## Conclusion  
+这样来这门课程就结束了，课程一共四周，内容并不多，但是将神经系统介绍的比较细致了，也有python的编程练习可供训练和巩固，总体来说还是很不错的。  
+![5-1](/images/Neural Network and Deep Learning/5-1.png)  
+![5-2](/images/Neural Network and Deep Learning/5-2.png)  
+这个系列一共有4门课程，由于我以为助学金是一次性申请4门，结果2月6号申请到之后发现是要一门一门申请的，而审批时间是15天，所以要到2月22号左右才可以学习下一门课程，因此这几天我将主要更新PAT的题解。
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
