@@ -9,17 +9,17 @@ redirect_from:
 ---
 1021 Deepest Root （25 分）  
 
-A graph which is connected and acyclic can be considered a tree. The hight of the tree depends on the selected root. Now you are supposed to find the root that results in a highest tree. Such a root is called the deepest root.
+A graph which is connected and acyclic can be considered a tree. The hight of the tree depends on the selected root. Now you are supposed to find the root that results in a highest tree. Such a root is called the deepest root.  
 
-## Input Specification:
+## Input Specification:  
 
-Each input file contains one test case. For each case, the first line contains a positive integer N (≤10^4) which is the number of nodes, and hence the nodes are numbered from 1 to N. Then N−1 lines follow, each describes an edge by given the two adjacent nodes' numbers.
+Each input file contains one test case. For each case, the first line contains a positive integer N (≤10^4) which is the number of nodes, and hence the nodes are numbered from 1 to N. Then N−1 lines follow, each describes an edge by given the two adjacent nodes' numbers.  
     
-## Output Specification:
+## Output Specification:  
 
-For each test case, print each of the deepest roots in a line. If such a root is not unique, print them in increasing order of their numbers. In case that the given graph is not a tree, print Error: K components where K is the number of connected components in the graph.
+For each test case, print each of the deepest roots in a line. If such a root is not unique, print them in increasing order of their numbers. In case that the given graph is not a tree, print Error: K components where K is the number of connected components in the graph.  
 
-## Sample Input1:
+## Sample Input1:  
 
 	5
 	1 2
@@ -27,13 +27,13 @@ For each test case, print each of the deepest roots in a line. If such a root is
 	1 4
 	2 5
     
-## Sample Output2:
+## Sample Output2:  
     
 	3
 	4
 	5
     
-## Sample Input1:
+## Sample Input1:  
 
 	5
 	1 3
@@ -41,15 +41,15 @@ For each test case, print each of the deepest roots in a line. If such a root is
 	2 5
 	3 4
     
-## Sample Output2:
+## Sample Output2:  
     
 	Error: 2 components  
 
-## my own thoughts
+## my own thoughts  
  
 Use BFS to calculate depth of each nodes, and choose the largest as the result.  
 The time complex will be n square, since we need to calculate every node's depth.  
-Here are the codes:
+Here are the codes:  
   
     {% highlight ruby %}
     #include <iostream>
@@ -129,4 +129,4 @@ Firstly choose a random node in the graph, and use DFS or BFS to find the farest
 It need to be cautious that there might be more than 1 longest path,which means we shoule output all nodes appearing in these pathes together. Besides, we need to judge if this graph is connected or not.Since the problem already tells us that there are n-1 edges and n nodes, so if the graph is connected, the graph must be a tree and acyclic.  
 
 ---
-  If you find there are faults in the source codes, any method connecting with me is welcomed.
+  If you find there are faults in the source codes, any method connecting with me is welcomed.  
