@@ -47,7 +47,109 @@ dropout在CV领域使用非常频繁，因为在CV领域经常会出现训练集
 其次是梯度的爆炸和消失问题，名字听起来很吓人，但其实就是在深层神经网络中，梯度随着不断的递推而指数型增大或者缩小，从而达到很大或者很小的状态。这种状态下很难对结果进行分析和操作，因此我们需要尽量避免这种情况。解决这个问题的方法很多，吴大大举了一个例子，是用tanh函数时的一种初始化方法，叫做Xavier初始化，来自这篇文章[Understanding the difficulty of training deep feedforward neural networks])(http://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf),还有类似的方法可以应用在ReLU和sigmoid函数上，其目的都是让初始权重有一个默认值，从而确保在这个默认值下不会出现激活值的饱和或者0的现象。  
 接下来介绍了一种叫做梯度检验的方法，用来检查自己的梯度是否正确，方法就是微积分里学的取相邻两点求斜率（……），然后对于损失函数里的每一个θ都进行一次这个操作，从而获得一个向量θapprox，然后与自己得到的梯度θ相比。比较方法是测量两个矢量之差的欧氏距离，再除以两个矢量欧氏距离之和，如果结果小于1e-7，那么就说明得到的梯度是正确的。但是梯度检验只能在debug的时候使用，而不能在训练时用，这样会拖慢程序运行的速度。此外，进行dropout时不要进行梯度检验，因为dropout的时候不断的随机删除节点，所以很难计算J
 
+## Programming Assignment  
+本次编程作业分为三部分，分别来实现本章所讲的功能。 
 
+### Initialization  
+第一个编程作业主要实现不同的初始化权重会导致不同的结果，示例是进行红蓝点的分类，不同的初始化方式会导致不同的识别率。代码统一且简单，但是重点不是实现，而是体会到不同的初始化方式对结果产生的显著影响。    
+以下是需要编写的代码部分：  
+#### Zero Initialization  
+
+	    parameters['W' + str(l)] = np.zeros((layers_dims[l],layers_dims[l-1]))
+        parameters['b' + str(l)] = np.zeros((layers_dims[l],1))  
+		
+#### Random Initialization  
+
+        parameters['W' + str(l)] = np.random.randn(layers_dims[l],layers_dims[l-1]) * 10
+        parameters['b' + str(l)] = np.zeros((layers_dims[l],1))  
+		
+#### He Initialization  
+
+        parameters['W' + str(l)] = np.random.randn(layers_dims[l],layers_dims[l-1])*np.sqrt(2/layers_dims[l-1])
+        parameters['b' + str(l)] = np.zeros((layers_dims[l],1))  
+		
+### Regularization  
+第二个编程作业是实现不同的正则化,主要是L2和dropout，代码也非常简单，主要是为了对正则化的效果和dropout在forward prob和back prop中的应用方式有了更清晰和直观的认识和感受，需要编写的代码如下：  
+
+#### L2 Regularization  
+
+`L2_regularization_cost = (lambd/(2*m)) * (np.sum(np.square(W1))+np.sum(np.square(W2))+np.sum(np.square(W3)))`  
+`dW3 = 1./m * np.dot(dZ3, A2.T) + (lambd/m) * W3`  
+`dW2 = 1./m * np.dot(dZ2, A1.T) + (lambd/m) * W2`  
+`dW1 = 1./m * np.dot(dZ1, X.T) + (lambd/m) * W1`  
+
+#### Dropout  
+
+    D1 = np.random.rand(A1.shape[0],A1.shape[1]) 
+    D1 = (D1 < keep_prob)   
+    A1 = A1 * D1  
+    A1 = A1 / keep_prob 
+	
+---
+
+    D2 = np.random.rand(A2.shape[0],A2.shape[1])                                        
+    D2 = (D2 < keep_prob)                                     
+    A2 = A2 * D2     
+    A2 = A2 / keep_prob  
+	
+---
+
+	dA2 = dA2 * D2
+	dA2 = dA2 / keep_prob
+	
+---
+
+	dA1 = dA1 * D1 
+	dA1 = dA1 / keep_prob
+
+### Gradient Checking  
+第三个编程作业毫无疑问是梯度检测的部分，作业分为1层和n层两种，这样可以循序渐进的完成单个数字到向量的梯度检测学习，以下是需要自行完成的代码部分。  
+
+#### 1-dimensional gradient checking  
+
+` J = theta * x`  
+`dtheta = x`
+
+---
+
+    thetaplus = theta + epsilon                               # Step 1
+    thetaminus = theta - epsilon                              # Step 2
+    J_plus =  thetaplus * x                             # Step 3
+    J_minus = thetaminus * x                                 # Step 4
+    gradapprox = (J_plus - J_minus)/(2*epsilon)                              # Step 5
+
+    grad = backward_propagation(x,theta)
+    
+    numerator = np.linalg.norm(grad-gradapprox)                               # Step 1'
+    denominator = np.linalg.norm(grad)+np.linalg.norm(gradapprox)                             # Step 2'
+    difference = numerator/denominator  
+
+#### n-dimensional gradient checking  
+
+	thetaplus = np.copy(parameters_values)                                      # Step 1
+	thetaplus[i][0] = thetaplus[i][0]+epsilon                                # Step 2
+	J_plus[i], _ = forward_propagation_n(X,Y,vector_to_dictionary(thetaplus))  #Step 3
+
+	thetaminus = np.copy(parameters_values)                                     # Step 1
+	thetaminus[i][0] = thetaminus[i][0]-epsilon                               # Step 2        
+	J_minus[i], _ = forward_propagation_n(X,Y,vector_to_dictionary(thetaminus)) # Step 3
+
+	gradapprox[i] = (J_plus[i] - J_minus[i])/(2*epsilon)
+
+	numerator = np.linalg.norm(grad-gradapprox)               # Step 1'
+	denominator = np.linalg.norm(grad)+np.linalg.norm(gradapprox)  # Step 2'
+	difference = numerator/denominator  
+至此本周所有的代码部分已经完成完毕。  
+## Heroes of Deep Learning  
+我很高兴的发现这个系列的上一门课程中的这个环节被保留了下来，在这个环节中，吴恩达会采访一位深度学习的大牛，大牛分享他们的故事，并对初学者给出他们自己的建议，我觉得这是接触到深度学习领域很多著名专家的很好的途径。此外，通过这个环节，加上我自己google一些相关资料，可以让我对这一领域的一些里程碑性的进展有更深的了解。  
+本节要采访的大牛是Yoshua Bengio，随着我对深度学习的逐渐入门，我也开始了解了这一领域的一系列专家，Yoshua Bengio就是一位我经常在论文和博客文章中看到的大牛，本章的采访就是采访他。  
+Yoshua从1985年就接触了深度学习，可以说是非常早了，在当时普遍研究专家系统的时代，他发现了一条研究人脑的新道路，并阅读了Hinton的论文，做了一系列神经网络的研究。接下来，作为神经网络的专家，Yoshua讲了神经网络的演进史，并分享了自己在开发神经网络时犯的错误，他认为ReLU的表现会比sigmoid很差，在零导数时会更容易过饱和，但是后来事实证明ReLU的效果更好。然后Yoshua说了一些以我的水平无法理解的东西，我捕捉到的名词是“维数灾难”、“长期依赖”、“学习词向量”，以及“栈式的自编码器”、“栈式的RBM”……除此之外我能听懂的是ReLU和GAN，这是他最骄傲的成果之一。  
+接下来谈到了大脑和深度神经网络的关系。众所周知吴恩达在上次课程的最后总结中提到过，大脑和神经网络并没有什么关系，但是Yoshua似乎有着不同的见解，他似乎认为大脑也会做类似反向传播的事情，但是又解释不太清楚，讲的相当抽象，我也很难理解。  
+接下来是Yoshua对于无监督学习的看法，在这方面，他与Andrew的意见似乎非常相似，都认为无监督学习非常重要，但我发现他对于一些东西的解释非常抽象化，比如quote一句“构建一个心灵的建构，通过观察来解释世界的工作方式”，“与世界互动，理解世界”等等，再后来的东西就更加抽象了，总结来说他打算用神经网络和深度学习来理解“更高层次的抽象”，也就是在抽象之上的抽象，通过对目前所采用的研究方法的深入研究，将可研究的问题不断的扩大。目前可能只能研究一些简单的“玩具问题”，但后来就可以研究更为复杂更为困难的问题，就像“分治法”。  
+最后是建议部分。Yoshua认为，对于研究和开发两种不同的类型，所做的事情是不同的，但是共同需要的是多读书和多编程。此外，在使用软件或者库时，不能浮于表面，要深层次的了解底层的原理，甚至建议从底层的基本原理来重新建立一次，从而达到更深的理解。  
+此外，Yoshua给了读论文的建议，只要阅读最近几期的ICLR汇刊，就能够接触到很多好论文，并真正的了解这个领域。Yoshua还建议大家学习数学，并且不要害怕数学，“其实没那么难”。并不需要长年累月的学习就可以了解机器学习中所需要的数学知识，Yoshua认为真正了解只需要六个月的微积分、线代、概率论、优化的学习。  
+
+这样第一周的内容就学习完毕了，这一章的内容说多也不多，但说少也真不少，用了我6-7个小时才全部学习完毕，我们第二周见啦。  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
