@@ -30,10 +30,87 @@ redirect_from:
 
 ## Introduction to programming frameworks  
 
-终于到了介绍框架的时候，我激动的开始学习TensorFlow的使用方法了。本节只是简要介绍了一下，并举了一个梯度下降的训练例子来解释，我感觉还是不太懂，因此准备在编程练习时在认真看一下。
+终于到了介绍框架的时候，我激动的开始学习TensorFlow的使用方法了。本节只是简要介绍了一下，并举了一个梯度下降的训练例子来解释，我感觉还是不太懂，因此准备在编程练习时在认真看一下。  
 
+## Programming Assignment   
 
+本周的任务分为两部分，第一部分是熟悉TensorFlow，也就是tensor和session。第二部分是用TensorFlow实现简单的浅层神经网络。总体来说不难，目的本身就是熟悉TensorFlow。  
 
+### 1.1  
+
+    X = tf.constant(np.random.randn(3,1),name = "X")
+    W = tf.constant(np.random.randn(4,3),name = "W")
+    b = tf.constant(np.random.randn(4,1),name = "b")
+    Y = tf.add(tf.matmul(W,X),b)  
+    
+### 1.2  
+
+    x = tf.placeholder(tf.float32,name = "x")
+    sigmoid = tf.sigmoid(x)
+    with tf.Session() as sess:
+        result = sess.run(sigmoid,feed_dict = {x:z})  
+        
+### 1.3  
+
+    z = tf.placeholder(tf.float32,name = "z")
+    y = tf.placeholder(tf.float32,name = "y")
+        cost = tf.nn.sigmoid_cross_entropy_with_logits(logits = z,labels = y)
+    sess = tf.Session()
+    cost = sess.run(cost,feed_dict = {z:logits,y:labels})
+    sess.close()  
+    
+### 1.4  
+
+    C = tf.constant(C,name = "C")
+    one_hot_matrix = tf.one_hot(labels,C,axis = 0)
+    sess = tf.Session()
+    one_hot = sess.run(one_hot_matrix)
+    sess.close()
+    
+### 1.5
+
+    ones = tf.ones(shape)
+    sess = tf.Session()
+    ones = sess.run(ones)
+    sess.close()
+    
+### 2.1  
+
+    X = tf.placeholder(tf.float32,[n_x,None])
+    Y = tf.placeholder(tf.float32,[n_y,None])
+    
+### 2.2  
+
+    W1 = tf.get_variable("W1",[25,12288],initializer = tf.contrib.layers.xavier_initializer(seed = 1))
+    b1 = tf.get_variable("b1",[25,1],initializer = tf.zeros_initializer())
+    W2 = tf.get_variable("W2",[12,25],initializer = tf.contrib.layers.xavier_initializer(seed = 1))
+    b2 = tf.get_variable("b2",[12,1],initializer = tf.zeros_initializer())
+    W3 = tf.get_variable("W3",[6,12],initializer = tf.contrib.layers.xavier_initializer(seed = 1))
+    b3 = tf.get_variable("b3",[6,1],initializer = tf.zeros_initializer())
+    
+### 2.3  
+
+    Z1 = tf.add(tf.matmul(W1,X),b1)
+    A1 = tf.nn.relu(Z1)
+    Z2 = tf.add(tf.matmul(W2,A1),b2)
+    A2 = tf.nn.relu(Z2)
+    Z3 = tf.add(tf.matmul(W3,A2),b3)
+
+### 2.4  
+
+    cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=logits,labels =labels))
+    
+### 2.6  
+
+    X, Y = create_placeholders(n_x,n_y)
+    parameters = initialize_parameters()
+    Z3 = forward_propagation(X,parameters)
+    cost = compute_cost(Z3,Y)
+    optimizer = tf.train.AdamOptimizer(learning_rate = learning_rate).minimize(cost)
+    
+    _ , minibatch_cost = sess.run([optimizer, cost], feed_dict={X: minibatch_X, Y: minibatch_Y})  
+    
+至此这门课程就结束啦，这门课只有三周，但是由于中间松懈了三周左右，所以用了一个多月才完成，要赶快学习下一门课程啦。  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
