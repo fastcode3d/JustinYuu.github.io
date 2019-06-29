@@ -25,7 +25,7 @@ padding是组成基础卷积模块的一部分，而另一部分叫做带步长�
 
 ## Programming Assignments  
 
-本周共有两个编程作业，基本上完成了整个CNN的实现。对于CNN的反向传播我还没有太搞懂，其他的部分应该学习的差不多了。由于代码太长，因此就不和以前一样全部放在博客里，而是放在了我的github中的一个repository里面，按照每章进行分类存放。这周的链接在这里：[Convolution Neural Network Week 1](https://github.com/JustinYuu/Deeplearning-study/blob/master/Convolution%20Nerual%20Network%20by%20Deeplearning.ai/Week%201/Convolution%2Bmodel%2B-%2BStep%2Bby%2BStep%2B-%2Bv2.py)
+本周共有两个编程作业，基本上完成了整个CNN的实现。对于CNN的反向传播我还没有太搞懂，其他的部分应该学习的差不多了。由于代码太长，因此就不和以前一样全部放在博客里，而是放在了我的github中的一个repository里面，按照每章进行分类存放。这周的链接在这里：[Convolution Neural Network Week 1](https://github.com/JustinYuu/Deeplearning-study/tree/master/Convolution%20Nerual%20Network)
 
 ## Heroes of Deep Learning  
 
