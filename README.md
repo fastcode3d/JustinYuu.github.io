@@ -7,4 +7,4 @@ All articles posted here are all written by myself. I divide them into different
 
 My website is bound with a domain name <https://justin-yu.me>,which is shorter and easier to memorize.
 
-My blog supports live comments supported by disqus.<https://disqus.com/> Any acceptable comment is welcomed if you are so kind to be willing to communicate with me.
+My blog supports live comments supported by [disqus](https://disqus.com). Any acceptable comment is welcomed if you are so kind to be willing to communicate with me.
