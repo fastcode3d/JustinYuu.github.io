@@ -2,7 +2,7 @@
 layout: post
 title: "Convolutional Neural Networks Chapter 1"
 description: "Notes"
-categories: [Convolutional Neural Networks]
+categories: [Convolutional-Neural-Networks]
 tags: [Python]
 redirect_from:
   - /2019/06/11/
