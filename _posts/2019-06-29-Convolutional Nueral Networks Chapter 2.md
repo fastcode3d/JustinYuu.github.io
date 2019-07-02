@@ -30,7 +30,7 @@ f此外，更多的数据几乎对所有类型的计算机视觉工作都是有�
 
 ## Programming assignments  
 
-本次编程作业介绍了keras框架的用法，并用keras完成残杀网络的实例。这是这一系列课程中除了TensorFlow以外介绍的第二个框架，因此编程作业分为两部分，学习keras和应用keras。  
+本次编程作业介绍了keras框架的用法，并用keras完成残杀网络的实例。这是这一系列课程中除了TensorFlow以外介绍的第二个框架，因此编程作业分为两部分，学习keras和应用keras。[源码链接](https://github.com/JustinYuu/Deeplearning-study/tree/master/Convolution%20Nerual%20Network)  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
