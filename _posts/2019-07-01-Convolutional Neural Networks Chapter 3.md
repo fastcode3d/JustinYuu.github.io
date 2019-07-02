@@ -26,7 +26,8 @@ redirect_from:
 
 ## Programming Assignments  
 这周的编程作业我觉得是最有收获的一次，运用YOLOv2模型实现了自动驾驶汽车的碰撞检测。整个编程作业内容适中，难度适中，有一定的挑战性，不像以往的编程作业偏简单，并且基本上除了训练YOLOv2的权重之外整个流程都走了一遍，我认为这么一个流程下来收获还是比较大的，对整个流程也有了一定的把握。唯一美中不足的一点就是对于TensorFlow和keras框架的教学还不够到位，很多时候我都会觉得很懵，不知道是什么操作。这一部分还需要看看其他教程或者课程来补充一下。  
-
+我把整个笔记都以py的形式保留了下来，传到了我的github里，这里是[地址](https://github.com/JustinYuu/Deeplearning-study/tree/master/Convolution%20Nerual%20Network)  
+第三周的课程全部结束啦，我们第四周课程再见~  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
