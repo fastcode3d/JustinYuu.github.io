@@ -41,6 +41,13 @@ J(G)是由内容代价函数和风格代价函数组成的，首先来看如何�
 
 ## Programming Assignments  
 
+本周的编程作业分为两部分，一部分是通过神经风格迁移算法生成新的图片，另一部分是通过人脸识别和人脸验证设计门禁系统，两者都不需要自己训练，参数和模型都是课程给出的，编程练习难度也不大，但是对整个算法的流程梳理的特别清晰，因此我感觉十分有用。链接在这里：[第四周编程作业](https://github.com/JustinYuu/Deeplearning-study/tree/master/Convolution%20Nerual%20Network)  
+
+## Summary  
+
+至此CNN这门课程就结束啦。CV作为我研究生实验室主要的研究领域，我需要对其好好学习。这门课也是我觉得收获最大的一门课程，到目前为止除了攒了几篇经典论文还没有看，其他的知识我觉得都有了大致了了解。我也拿到了课程证书，也算是小有收获吧:)  [!certification](/images/Neural Network and Deep Learning/1.png)  
+
+这门课用了不到一周学完，接下来要学习这系列课程的最后一门课:Sequence Model，接触一下神奇的RNN和著名的nlp领域。下门课程再见啦~  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
