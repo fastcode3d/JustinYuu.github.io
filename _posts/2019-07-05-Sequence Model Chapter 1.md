@@ -51,8 +51,9 @@ RNN也会出现梯度消失的情况，那么如何解决RNN的梯度消失呢�
 
 值得一提的是这里用的GRU是简化版，完整版的GRU多了一个相关门，在计算c~<sup>\<t></sup>的时候与c<sup>\<t-1></sup>相乘。这个门的值表示c~<sup>\<t></sup>和c<sup>\<t-1></sup>的相关性。所以完整的GRU里面有两个门：更新门和相关性门。  
 
-GRU是LSTM的变体，我不太懂为什么吴恩达大大要先介绍GRU再介绍LSTM，LSTM是Long Short Term Memory的简称，它比GRU功能更强大，也更为泛化。这里放上一张很重要的图片：GRU和LSTM的对比图[!GRU VS LSTM](/images/Neural Network and Deep Learning/LSTM_GRU.jpg)  
-在LSTM中，c和a的值并不相同。此外，从图中可以看出LSTM将使用两种不同的门控来控制c~<sup>\<t></sup>和c<sup>\<t-1></sup>,分别是Γ<sub>u</sub>更新门和Γ<sub>f</sub>遗忘门，此外去掉了GRU的相关门，并引用了一个输出门Γ<sub>o</sub>来计算a<sup>\<t></sup>。这是我觉得描述LSTM非常形象的一张结构图:[!LSTM](/images/Neural Network and Deep Learning/LSTM.jpg)。多个LSTM的单元串联在一起，共同组成了LSTM网络，其中c以一条直线贯穿下去，从而保证了解决长距离依赖问题和避免梯度消失。  
+GRU是LSTM的变体，我不太懂为什么吴恩达大大要先介绍GRU再介绍LSTM，LSTM是Long Short Term Memory的简称，它比GRU功能更强大，也更为泛化。这里放上一张很重要的图片：GRU和LSTM的对比图![GRU VS LSTM](/images/Neural Network and Deep Learning/LSTM_GRU.jpg)  
+在LSTM中，c和a的值并不相同。此外，从图中可以看出LSTM将使用两种不同的门控来控制c~<sup>\<t></sup>和c<sup>\<t-1></sup>,分别是Γ<sub>u</sub>更新门和Γ<sub>f</sub>遗忘门，此外去掉了GRU的相关门，并引用了一个输出门Γ<sub>o</sub>来计算a<sup>\<t></sup>。这是我觉得描述LSTM非常形象的一张结构图:
+![LSTM](/images/Neural Network and Deep Learning/LSTM.jpg)。多个LSTM的单元串联在一起，共同组成了LSTM网络，其中c以一条直线贯穿下去，从而保证了解决长距离依赖问题和避免梯度消失。  
 
 
 
