@@ -64,5 +64,8 @@ GRU和LSTM各有千秋，不同的场景可以使用不同的模型，一般来�
 
 ## Programming Assignments  
 
+本周一共有3个编程作业，第一个最复杂，基本上从头到尾的实现了一遍RNN和LSTM，我感觉还是挺有用的。第二个和第三个编程作业是RNN的应用，分别应用RNN和LSTM自动生成了新恐龙的名称和一段JASS音乐，感觉挺有意思的。  
+我把源码照例传到了我的github上 [这里](https://github.com/JustinYuu/Deeplearning-study/tree/master/Sequence%20Model)，最后的JAZZ音乐我也传上去了，听起来还有点JAZZ的意思。  
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
