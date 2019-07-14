@@ -65,6 +65,7 @@ Word2vec模型在论文原文中提到了两种实现方式，一种是skip-gram
 
 ## Programming Assignments  
 
+本周的两个编程任务回顾了这周学习的内容，第一个编程任务用来解决单词之间的对应关系，以及消除一些偏见。第二个编程作业对输入的句子自动配一个emoji表情，两个编程任务都很有趣，难度也适中，做完之后对词嵌入以及keras的embedding层的使用都有了一定的掌握。这里是我的源码：[地址](https://github.com/JustinYuu/Deeplearning-study/tree/master/Sequence%20Model)  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
