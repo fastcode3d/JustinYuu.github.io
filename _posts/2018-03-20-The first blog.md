@@ -5,7 +5,7 @@ description: "The first blog,just for test."
 categories: [tittle-tattle]
 tags: [test]
 redirect_from:
-  - /2018/03/22/
+  - /2018/03/20/
 ---
 This is the first blog , which is just for test.
 
