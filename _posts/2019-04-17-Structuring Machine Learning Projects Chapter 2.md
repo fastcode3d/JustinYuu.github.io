@@ -2,7 +2,7 @@
 layout: post
 title: "Structuring Machine Learning Projects Chapter 2"
 description: "Notes"
-categories: [Structuring Machine Learning Projects]
+categories: [Structuring-Machine-Learning-Projects]
 tags: [Python]
 redirect_from:
   - /2019/04/17/
