@@ -5,7 +5,7 @@ description: "Forewords."
 categories: [C-Primer-Plus]
 tags: [C]
 redirect_from:
-  - /2018/03/22/
+  - /2018/03/21/
 ---
 # Forewords of this categories(C Primer Plus)
 
