@@ -16,6 +16,8 @@ redirect_from:
 
 这时候我们就要借鉴无监督学习的思想，具体做法是采用“词嵌入”，将不同的词语嵌入到多维的向量空间中，让语义相近的单词靠的尽可能近一点，语义相反的单词远一些。那么词嵌入的模型就是word2vec，那么如果想让三维的向量变成二维的，那么用机器学习中的PCA会丢掉太多的信息，并且效果也不好，所以可以用t-SNE来保持向量的相对距离不变。此外这里还介绍了一个比较有用的方法，叫做sample softmax，与普通的softmax相比，它将结果为0的一部分结果舍去，只采样一部分，并保留结果为1的所有值，从而降低输出向量的规模。  
 
+这里有一个编程练习，练习里给出了Word2vec的skip-gram的实现细节，让自己仿照其写一个CBOW的实现细节，CBOW和skip-gram基本上是反着的，所以基本上不需要什么修改，只需要多写一个函数，把两者反过来就好了。这里是源码[链接](https://github.com/JustinYuu/Deeplearning-study/blob/master/Deeplearning-Udacity/5_word2vec.ipynb)  
+
 
 
 
