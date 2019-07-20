@@ -10,7 +10,7 @@ redirect_from:
 
 # Introduction to Tensorflow Chapter 1  
 
-本来是要看一下cs231n的，但是由于Udacity里MOOC的编程作业把我给打击了一顿，加上TensorFlow 2.0更新后与1.x的差距非常之大，使得我之前一知半解的TensorFlow语法也没啥用了，而刚好TensorFlow 2.0的应用又非常广泛，最最重要的是，我接下来学习的cs231n还是用TensorFlow完成编程作业的，但是我安装的TensorFlow 2.0语法又不兼容课程使用的1.x，所以这使得我势必要学习一下TensorFlow2.0的用法，所以我上了这门系列课程。  
+本来是要看一下cs231n的，但是由于Udacity MOOC的编程作业把我给打击了一顿，加上TensorFlow 2.0更新后与1.x的差距非常之大，使得我之前一知半解的TensorFlow语法也没啥用了，而刚好TensorFlow 2.0的应用又非常广泛，最最重要的是，我接下来学习的cs231n还是用TensorFlow完成编程作业的，但是我安装的TensorFlow 2.0语法又不兼容课程使用的1.x，所以这使得我势必要学习一下TensorFlow2.0的用法，所以我上了这门系列课程。  
 
 这系列课程共有四门MOOC，我很期待这么大的课程量之后我的水平会到达一个什么程度，希望这可以让我熟练的使用TensorFlow，从而让我可以顺利的学习接下来的pytorch。第一门MOOC的名字叫做Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning，名字实在太长，而且后半部分没啥用，所以我就简称这门MOOC叫做Introduction to Tensorflow好了，以后(包括这篇博客)的名字都用这个来简称。  
 
@@ -24,7 +24,7 @@ redirect_from:
 
 这门MOOC中，课程用的编程环境是Google Colab，当然文件都是以ipynb的形式存在的，所以完全可以保存到自己的jupyter notebook上跑，课程也提供了官方的ipynb文件，但是第一，免费的GPU不用白不用。第二，多学一个IDE总没坏处，所以在这门课程中，我将使用Google Colab来完成这门MOOC的所有编程作业，而我的所有代码还是和以前一样以ipynb的形式存在我的github上，并在博客上给出链接。  
 
-这里的习题还挺有趣的- - ![1-1](/images/tensorflow in specialization/1.png)  
+这里的习题还挺有趣的- - ![1-1](/images/Tensorflow in Specialization/1.png)  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
