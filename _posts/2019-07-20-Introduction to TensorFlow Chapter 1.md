@@ -24,7 +24,7 @@ redirect_from:
 
 这门MOOC中，课程用的编程环境是Google Colab，当然文件都是以ipynb的形式存在的，所以完全可以保存到自己的jupyter notebook上跑，课程也提供了官方的ipynb文件，但是第一，免费的GPU不用白不用。第二，多学一个IDE总没坏处，所以在这门课程中，我将使用Google Colab来完成这门MOOC的所有编程作业，而我的所有代码还是和以前一样以ipynb的形式存在我的github上，并在博客上给出链接。  
 
-这里的习题还挺有趣的- - ![1-1](/image/tensorflow in specialization/1.png)  
+这里的习题还挺有趣的- - ![1-1](/images/tensorflow in specialization/1.png)  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
