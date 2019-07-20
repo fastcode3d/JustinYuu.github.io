@@ -26,5 +26,9 @@ redirect_from:
 
 这里的习题还挺有趣的- - ![1-1](/images/Tensorflow in Specialization/1.png)  
 
+第一周的编程作业很简单，实现一个和例子几乎相同的线性回归，代码在[这里](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Introduction%20to%20Tensorflow/Exercise_1_House_Prices_Question.ipynb)  
+
+这样第一周的任务就结束了，任务量还是比较少的，看看下周的任务量吧。  
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
