@@ -16,6 +16,9 @@ redirect_from:
 
 这里用了一个非常不错的小练习来了解CNN，我把链接放在[这里](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Introduction%20to%20Tensorflow/Course_1_Part_4_Lesson_2_Notebook.ipynb)，这个练习中介绍了一个很重要的东西：callback。通过callback，你可以不必等到神经网络计算到最后，而是在达到需要的准确率后就停止计算。callback需要重写callback类里的on_epoch_end函数实现，重写完之后，建立callback实例并在fit中增加callback参数即可。  
 
+这一周的编程作业也很简单，和练习中的最后一个基本相同，只不过callback停止的准确率变成了99%，这里是[源码](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Introduction%20to%20Tensorflow/Exercise2_Question.ipynb)  
+
+由于这门课程的内容实在是太少了，所以我把第三周和第二周的内容合并在一个博客里写了，接下来是第三周的内容。  
 
 
 ---
