@@ -27,7 +27,7 @@ redirect_from:
 
 损失函数有很多种，[这篇](https://gombru.github.io/2018/05/23/cross_entropy_loss/)文章详细的介绍了不同损失函数的区别以及各自的数学公式，介绍的非常详细，值得一看。  
 
-接下来用一个colab练习文件来实现这个人马分离器。  
+接下来用一个[colab练习文件](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Introduction%20to%20Tensorflow/Horse_or_Human_NoValidation.ipynb)来实现这个人马分离器。  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
