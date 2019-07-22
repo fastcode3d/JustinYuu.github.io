@@ -22,7 +22,13 @@ redirect_from:
 
 第二周的时候口口声声的说要介绍CNN，结果到了最后连卷积都没接触过，第三周总算要接触一下了，结果只是简单的介绍了一下CNN的卷积层，推荐的视频还就是刚学完的吴恩达MOOC里的视频……  
 
-接下来用了一个视频简单的介绍了一下具体的代码，简而言之，DNN到CNN的转变只是在原有的Flatten层前面加上若干层卷积层和池化层。
+接下来用了一个视频简单的介绍了一下具体的代码，简而言之，DNN到CNN的转变只是在原有的Flatten层前面加上若干层卷积层和池化层。接着用一个具体的练习示例来演示了卷积层是如何检测到图像的特征的，以及不同的卷积层带来的不同影响。这里是练习的[笔记](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Introduction%20to%20Tensorflow/Course_1_Part_6_Lesson_2_Notebook.ipynb)  
+
+接下来又用了一个练习笔记来详细的做了一遍卷积，并探究了卷积带来的具体作用以及不同卷积核对卷积效果的影响。从整篇练习的结果中可以明确的看出，不同的卷积核所探测的目标不同，有垂直检测，也有水平检测，也有其他特征检测。这里是练习的[链接](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Introduction%20to%20Tensorflow/Convolutions_Sidebar.ipynb)  
+
+本周的课程作业是实现一个Fashion-MINST的改进版，
+
+
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
