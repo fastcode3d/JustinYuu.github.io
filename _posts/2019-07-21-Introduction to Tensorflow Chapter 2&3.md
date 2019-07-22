@@ -26,7 +26,7 @@ redirect_from:
 
 接下来又用了一个练习笔记来详细的做了一遍卷积，并探究了卷积带来的具体作用以及不同卷积核对卷积效果的影响。从整篇练习的结果中可以明确的看出，不同的卷积核所探测的目标不同，有垂直检测，也有水平检测，也有其他特征检测。这里是练习的[链接](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Introduction%20to%20Tensorflow/Convolutions_Sidebar.ipynb)  
 
-本周的课程作业是实现一个Fashion-MINST的改进版，
+本周的课程作业是实现一个Fashion-MINST的改进版，这里是[源码链接](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Introduction%20to%20Tensorflow/Exercise_3_Question.ipynb)  
 
 
 
