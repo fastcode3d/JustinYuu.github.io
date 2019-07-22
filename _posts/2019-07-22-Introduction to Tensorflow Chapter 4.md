@@ -27,7 +27,11 @@ redirect_from:
 
 损失函数有很多种，[这篇](https://gombru.github.io/2018/05/23/cross_entropy_loss/)文章详细的介绍了不同损失函数的区别以及各自的数学公式，介绍的非常详细，值得一看。  
 
-接下来用一个[colab练习文件](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Introduction%20to%20Tensorflow/Horse_or_Human_NoValidation.ipynb)来实现这个人马分离器。  
+接下来用一个[colab练习文件](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Introduction%20to%20Tensorflow/Horse_or_Human_NoValidation.ipynb)来实现这个人马分离器。此外又通过添加了一个交叉验证集的方式来验证这个算法的正确率，同样的也用了一个[colab文件](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Introduction%20to%20Tensorflow/Course_2_Part_2_Lesson_3_Notebook.ipynb)来实现。  
+
+接下来我们把图像的尺寸从300×300缩小到150×150，也就是原来的1/4大小。我们会发现训练的速度快了很多，正确率也还可以，但是当我们上传一些图片进行测试时，我们会发现之前大尺寸的时候可以检测成功的一些图片，现在检测会被分类错误，这是由于图像的尺寸缩小导致一些特征没有被算法捕捉到，从而无法根据这些特征做出正确的检测。所以我们在实际应用中，要根据自己的训练成本和达到的准确率找到一个折中的方案。  
+
+
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
