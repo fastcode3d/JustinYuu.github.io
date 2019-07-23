@@ -2,7 +2,7 @@
 layout: post
 title: "Introduction to Tensorflow Chapter 2&3"
 description: "Notes"
-categories: [Introduction-to-Tensorflow]
+categories: [Tensorflow-Specialization]
 tags: [Python]
 redirect_from:
   - /2019/07/21/
