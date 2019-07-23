@@ -28,5 +28,8 @@ redirect_from:
 
 ## Weekly Exercise  
 
+本周的编程作业还是有点难度的，其中数据预处理的一个函数我是参考了答案才写出来的，这里是练习的[链接](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Convolutional%20Neural%20Networks%20in%20TensorFlow/Exercise_5_Question.ipynb)  
+
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
