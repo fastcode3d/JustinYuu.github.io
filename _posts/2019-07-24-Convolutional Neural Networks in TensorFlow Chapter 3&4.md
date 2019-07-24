@@ -28,7 +28,9 @@ redirect_from:
 
 这一章的内容实在是太简单。所有的内容到这里就结束了。这里是课程示例[代码](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Convolutional%20Neural%20Networks%20in%20TensorFlow/rock_paper_scissors.ipynb)  
 
+这一章的练习是来自于kaggle的一个手势表示字母的数据集，通过训练该数据集，得到一个可以正确识别手写数字的神经网络。这里是我的代码[链接](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Convolutional%20Neural%20Networks%20in%20TensorFlow/Exercise_8_Question.ipynb)  
 
+这样第二门课程就学完了，下面就要学习TensorFlow下RNN的使用了。这系列课程的内容不多，剩下的两门课争取在这周，也就是接下来的四天学完。
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
