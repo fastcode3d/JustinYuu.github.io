@@ -22,6 +22,12 @@ redirect_from:
 
 ## Chapter 4 Multiclass Classification  
 
+第四章介绍的是多任务分类。在之前我们接触的大多都是二元分类，而在很多场景下，我们的分类目标将会超过两个，这时候之前介绍的二元分类就无法使用了，所以这周的内容就致力于解决这个限制。此外，机器合成图片能够快速而有效的增大数据集的规模，从而能够达到更好的训练效果，这一周也同样会接触图像的人工合成。  
+
+这章采取的例子是Laurence自己制作的石头剪刀布数据集，其中包括各个肤色大小的手型，以及一些由他人工制造的一些手型。那么首先我们要做的是将目录里的两项改成三项，这很简单也很好理解。其次就是改进输出项的规模，在二元分类中，输出项的规模为1，只需要输出是0还是1即可，但是现在既然要进行多任务分类，肯定需要用到softmax函数，所以输出的值是一个softmax的结果向量。  
+
+这一章的内容实在是太简单。所有的内容到这里就结束了。这里是课程示例[代码](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Convolutional%20Neural%20Networks%20in%20TensorFlow/rock_paper_scissors.ipynb)  
+
 
 
 ---
