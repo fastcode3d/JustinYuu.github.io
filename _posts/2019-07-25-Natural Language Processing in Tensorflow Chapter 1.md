@@ -28,8 +28,7 @@ redirect_from:
 
 ## Weekly Exercise  
 
-
-
+这周的作业基本上是将这周的代码整合在一起又写了一遍，这里是我的源码[链接](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Natural%20Language%20Processing%20in%20Tensorflow/Exercise_question.ipynb)  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
