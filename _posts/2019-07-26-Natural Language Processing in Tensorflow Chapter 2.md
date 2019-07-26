@@ -24,5 +24,9 @@ lesson 2延续了上周课程中的讽刺检测，上周仅仅对其进行了预
 
 lesson 3继续讨论IMDB数据集我们之前导入IMDB的数据集的时候，是将原数据集导入后再进行标注分类的，但是有很多情况下导入的原数据集已经被预处理了，我们只需导入进来即可使用。这里提一下，我们使用TensorFlow2.0版本，从而避免了1.x版本中那些繁琐的固定流程。我们导入了一个预先训练好的sub_word tokenizer，名字叫做subword8k，这里的内容都是已经编码好的数字而不是原有的字符，我们可以用decode命令来查看这些编码的原貌，也就是对应的单词。这里我们将GlobalAveragePooling1D放在Embedding层后面来池化，其他的和之前的代码基本相同。  
 
+## Programming Assignment  
+
+本周的作业是实现一个BBC新闻的多元化分类，那么和之前课程的demo相比就是把最后的二元分类变成了multiclass，具体方式就是改一下输出尺寸，由1变成题目要求的6，将最后一层Dense层的sigmoid函数改成softmax即可，这里是我的代码[链接](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Natural%20Language%20Processing%20in%20Tensorflow/Course_4_Week_2_Exercise_Question.ipynb)  
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
