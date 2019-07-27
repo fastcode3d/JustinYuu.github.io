@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Natural Language Processing in TensorFlow Chapter 3&4"
+description: "Notes"
+categories: [Tensorflow-Specialization]
+tags: [Python]
+redirect_from:
+  - /2019/07/27/
+---
+
+# Natural Language Processing in TensorFlow Chapter 3&4  
+
+## Chapter 3  
+
+第三周介绍序列模型和一个RNN模型LSTM，RNN的原理并没有介绍太多，而是直接放了吴恩达Sequence Model这一门课程的链接，而我的博客中也有对应的笔记，可以直接查阅。  
+
+这里要实现的RNN网络是LSTM，简单来讲，LSTM通过三个门来对输入和输出进行控制。这里是LSTM那一节的[笔记](http://justin-yu.me/blog/2019/07/05/Sequence-Model-Chapter-1/)。那么在代码的实现过程中，只需在Embedding后面加n层LSTM层就可以，这里应用了双向RNN，所以代码是`tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64,return_sequence = True))`，在这里如果下一层还是RNN层的话，要把return_sequence参数设为true。    
+
+值得注意的是，Laurence用图像指出，有LSTM的网络更容易过拟合，虽然在训练集表现非常好，但是在验证集的表现并不稳定。这里其实也可以用1维卷积+池化层来代替LSTM，最后的效果也不错。  
+
+---
+本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
