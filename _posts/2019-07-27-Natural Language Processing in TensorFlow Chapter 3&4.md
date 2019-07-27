@@ -18,5 +18,9 @@ redirect_from:
 
 值得注意的是，Laurence用图像指出，有LSTM的网络更容易过拟合，虽然在训练集表现非常好，但是在验证集的表现并不稳定。这里其实也可以用1维卷积+池化层来代替LSTM，最后的效果也不错。  
 
+这周的编程作业利用了kaggle里面的数据集进行迁移学习，研究不同的层，不同的参数对过拟合的影响，这里是我的编程[代码](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Natural%20Language%20Processing%20in%20Tensorflow/NLP_Course_Week_3_Exercise_Question.ipynb)  
+
+## Chapter 4  
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
