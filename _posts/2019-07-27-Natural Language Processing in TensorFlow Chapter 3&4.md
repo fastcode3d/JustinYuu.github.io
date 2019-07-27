@@ -22,5 +22,23 @@ redirect_from:
 
 ## Chapter 4  
 
+这一周的任务是用序列模型来生成文学作品。这里把句子编码后作为输入，而将one-hot向量作为输出。这里我们使用了Embedding层和LSTM层作为隐藏层，之后又将LSTM层改成了双向LSTM层，结果显示双向LSTM层的收敛速度更快。这里由于我们需要不断生成新词汇，所以我们要将生成的token实时转变为输入的sequence，所以我们需要写一个for-loop来将除最后一个以外的生成值全部转变为sequence。由于这个非常重要，所以我把完整代码摘抄在这里：  
+
+    for _ in range(next_words):
+      token_list = tokenizer.texts_to_sequences([seed_text])[0]  
+      token_list = pad_sequence([token_list], maxlen = max_sequence_len - 1, padding = 'pre')
+      predicted = model.predict_classes(token_list, verbose=0)
+      output_word = ""
+      for word,index in tokenizer.word_index.items():
+        if index == predicted:
+          output_word = word
+          Break
+      seed_text += " " + output_word  
+    print(seed_text)
+
+这里Laurence拿着他训练的模型做了一下测试，将星球大战著名的名言help me obi-wan kenobi输入进去，结果得到了一堆看起来花里花哨但又不知所云的诗……  
+
+最后的编程作业出奇的简单，这是我意想不到的，我以为会把所学的所有内容混合起来，结果最后只是填了个sequence和compile方法，这里是我的代码[链接]()。这样这门课就全部结束了，明天开始第四门课程，也是这个系列的最后一门课程。    
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
