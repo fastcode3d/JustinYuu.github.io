@@ -38,7 +38,7 @@ redirect_from:
 
 这里Laurence拿着他训练的模型做了一下测试，将星球大战著名的名言help me obi-wan kenobi输入进去，结果得到了一堆看起来花里花哨但又不知所云的诗……  
 
-最后的编程作业出奇的简单，这是我意想不到的，我以为会把所学的所有内容混合起来，结果最后只是填了个sequence和compile方法，这里是我的代码[链接]()。这样这门课就全部结束了，明天开始第四门课程，也是这个系列的最后一门课程。    
+最后的编程作业出奇的简单，这是我意想不到的，我以为会把所学的所有内容混合起来，结果最后只是填了个sequence和compile方法，这里是我的代码[链接](https://github.com/JustinYuu/Deeplearning-study/blob/master/Tensorflow%20in%20Practice/Natural%20Language%20Processing%20in%20Tensorflow/NLP_Week4_Exercise_Shakespeare_Question.ipynb)。这样这门课就全部结束了，明天开始第四门课程，也是这个系列的最后一门课程。    
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
