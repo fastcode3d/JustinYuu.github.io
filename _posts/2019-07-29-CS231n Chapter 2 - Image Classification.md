@@ -38,5 +38,7 @@ redirect_from:
 
 课后给了一个Justin Johnson创建的python和numpy的简单tutorial，并对matplotlib，scipy都有简要的介绍，内容和之前我的博客记录的MOOC"Data Processing Using Python"大同小异，可以参考当时的笔记，这里是cs231n的tutorial[链接](https://cs231n.github.io/python-numpy-tutorial/)，可供查阅。  
 
+此外，课程还提供了两节本课的官方笔记，分别是[classfication](https://cs231n.github.io/classification/)和[linear-classify](https://cs231n.github.io/linear-classify/)。  
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
