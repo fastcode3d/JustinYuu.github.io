@@ -34,5 +34,9 @@ redirect_from:
 
 这里讲的比较简略，但是事实上这里是机器学习的一个重要的思想，即用参数来表示权重，用权重来完成分类，那么我们就将复杂的机器学习任务变成了简单的（目前为止的）线性计算，这种转变其实非常重要，也是机器学习之所以有效的基础之一。  
 
+## Python/Numpy Tutorial  
+
+课后给了一个Justin Johnson创建的python和numpy的简单tutorial，并对matplotlib，scipy都有简要的介绍，内容和之前我的博客记录的MOOC"Data Processing Using Python"大同小异，可以参考当时的笔记，这里是cs231n的tutorial[链接](https://cs231n.github.io/python-numpy-tutorial/)，可供查阅。  
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
