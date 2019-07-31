@@ -33,7 +33,7 @@ redirect_from:
 
 这里还介绍了多种激活函数，比如RELU和tanh等等，不过只是简单提了一下，在后面的课程中将会详细介绍。之前讲的2-layer Neural Net，其实就是有一层隐藏层的神经网络，而用神经网络的层数来命名神经网络是更加符合神经网络结构的命名。此外，最后一层隐藏层到输出层称作全连接层(fully-connected)，这个名词在后面会频繁的看到。事实上全连接层这个名词是用于CNN网络架构中的，与卷积池化层相并列。用术语来讲，全连接层起到将学到的“分布式特征表示”映射到样本标记空间的作用，简单来讲就是分类器。在我的理解下，我们目前所学的层都还是全连接层，都起到的是分类的作用。  
 
-本周的syllabus提供了一大堆材料，这里全部列出来，分别是[back prop笔记](https://cs231n.github.io/optimization-2/)、Justin Johnson写的[linear back prop实例](http://cs231n.stanford.edu/handouts/linear-backprop.pdf)以及一些选读材料，选读材料的连接我就不一一放了，这里放上cs231n的syllabus链接去自取:[syllabus](http://cs231n.stanford.edu/syllabus.html)。  
+本周的syllabus提供了一大堆材料，这里全部列出来，分别是[back prop笔记](https://cs231n.github.io/optimization-2/)、Justin Johnson写的[linear back prop实例](http://cs231n.stanford.edu/handouts/linear-backprop.pdf)以及一些选读材料，选读材料的连接我就不一一放了，这里放上cs231n的syllabus链接去自取:[syllabus](http://cs231n.stanford.edu/syllabus.html)，这里我把一个我认为比较重要的可选内容放上来：[derivatives note](http://cs231n.stanford.edu/handouts/derivatives.pdf)，这是justin johnson所写的一系列求偏导的方法，其中向量和标量的求导我们已经学习过，但是对于矩阵的求偏导非常值得一看。  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
