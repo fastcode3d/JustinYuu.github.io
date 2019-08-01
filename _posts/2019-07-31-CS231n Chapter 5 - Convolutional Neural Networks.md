@@ -26,7 +26,7 @@ redirect_from:
 
 接下来介绍池化层，池化层的作用就是简单的将尺寸减小，并在此基础上尽量保留原数据的特征。池化分为最大池化和平均池化两种，最大池化是选取区域内最大的值保留，而平均池化是取平均值。这里有同学问既然stride和pooling都是为了减少尺寸，那么可不可以用stride代替pooling呢？我感觉这个问题非常好，Serena的回答是都可以，但是pooling貌似更好一些，我在这里找到了一篇文献，试图分析一下何种效果更好，这里是中文讲解[链接](https://blog.csdn.net/u013010889/article/details/85635926)。  
 
-这里是这一章的笔记[链接](https://cs231n.github.io/convolutional-networks/)。  
+这里是这一章的笔记[链接](https://cs231n.github.io/convolutional-networks/),其中提到的dilated和FC与Conv层的转换都是很新颖的想法，值得一看。  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
