@@ -28,5 +28,9 @@ redirect_from:
 
 这里是这一章的笔记[链接](https://cs231n.github.io/convolutional-networks/),其中提到的dilated和FC与Conv层的转换都是很新颖的想法，值得一看。  
 
+## Assignment 1  
+
+到这里本门课程的Assignment终于出现了，cs231n的作业容量和难度远远超出了我的想象，果然Stanford的学生都是大神，很多部分我都参考了网上其他同学的代码，经过了整整两天我才完成所有的编程任务，也就是5个IPython Notebook加上5个py文件，但是不得不说收获也是挺大的，无论是对numpy，还是反向传播，还是整个机器学习的流程都有了一定的认识。这里是我的编程代码[链接](https://github.com/JustinYuu/Deeplearning-study/tree/master/cs231n/Assignment%201)  
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
