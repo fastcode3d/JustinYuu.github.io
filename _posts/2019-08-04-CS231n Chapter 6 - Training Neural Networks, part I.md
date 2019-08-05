@@ -5,7 +5,7 @@ description: "Notes"
 categories: [CS231n]
 tags: [Python]
 redirect_from:
-  - /2019/07/31/
+  - /2019/08/04/
 ---
 
 # CS231n Chapter 6 - Training Neural Networks, part I    
