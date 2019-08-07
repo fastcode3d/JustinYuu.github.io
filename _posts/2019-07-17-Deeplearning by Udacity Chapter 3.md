@@ -34,7 +34,7 @@ redirect_from:
 此外，如果用小批量或者批量梯度下降的话还需要用placeholder来将一批数据放进去从而进行训练，形式为tf.placeholder(tf.float32,shape=(batch_size,dataset_size))。  
 通过一个实例，让我对整个TensorFlow的过程有了一个基本的了解。从这方面来讲，这的确是这门MOOC优秀的地方，至少吴恩达MOOC的编程作业的一大堆文字说明把我绕的头晕眼花，这里一步步增加内容的方法反而让我非常适应。  
 
-比较惨的是作为勇敢下载TensorFlow2.0的人，很多1.13里面的函数在2.0里面都没有或者改名字了，这里我找到了一篇官方文档，个人觉得非常好用，可以查找对应的函数变成了什么:(神器)[https://docs.google.com/spreadsheets/d/1FLFJLzg7WNP6JHODX5q8BDgptKafq_slHpnHVbJIteQ/edit#gid=0].  
+比较惨的是作为勇敢下载TensorFlow2.0的人，很多1.13里面的函数在2.0里面都没有或者改名字了，这里我找到了一篇官方文档，个人觉得非常好用，可以查找对应的函数变成了什么:[神器](https://docs.google.com/spreadsheets/d/1FLFJLzg7WNP6JHODX5q8BDgptKafq_slHpnHVbJIteQ/edit#gid=0).  
 
 这次我终于可以自行完成任务了，这里是我的源码[地址](https://github.com/JustinYuu/Deeplearning-study/blob/master/Deeplearning-Udacity/2_fullyconnected.ipynb)  
 
