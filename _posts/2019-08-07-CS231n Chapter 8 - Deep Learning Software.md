@@ -5,7 +5,7 @@ description: "Notes"
 categories: [CS231n]
 tags: [Python]
 redirect_from:
-  - /2019/08/05/
+  - /2019/08/07/
 ---
 
 # CS231n Chapter 8 - Deep Learning Software      
