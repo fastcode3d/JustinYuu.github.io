@@ -49,5 +49,7 @@ Q-learning还是有缺点的，比如Q函数实在是太复杂了，那么如果
 
 这里还有另一个例子，就是我们熟悉的AlphaGo，它其实是一个强化学习和监督学习的结合，它将深度强化学习和很多旧的方法，包括蒙特卡洛搜索树结合。2017年这节课授课的时候，刚好是alphago的升级版和柯洁的比赛，当时alphago1比0获胜，我们现在知道已经3比0获胜了。alphago的整体流程是首先用监督学习的方式来从职业围棋手的交战记录里训练，然后使用policy gradient来自己训练自己，它也同时学习价值网络，也就是actor-critic中的critic，最后在一个蒙特卡洛搜索树中将policy和value值结合在一起。  
 
+后面还有两个lecture，我就不做笔记了，自己过一遍就好了，那么到这里cs231n所有的内容就结束啦，assignment 3我节选了几个做，因为不论是pytorch还是tensorflow都是17年的老版本了，所以做的意义不是很大，我会把做的放到我的github[链接](https://github.com/JustinYuu/Deeplearning-study/tree/master/cs231n/Assignment%203)里，那么到此为止DL的MOOC坑基本上已经填完了，还有tensorflow的最后一门MOOC没有看，抽空补上，以后上这种MOOC的次数将会越来越少，更多的是把一些项目或者科研过程中遇到的问题放在这里记录一下。  
+
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
