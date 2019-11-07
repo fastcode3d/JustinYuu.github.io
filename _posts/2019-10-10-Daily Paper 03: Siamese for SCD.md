@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 03"
+title: "Daily Paper 03: Siamese for SCD"
 description: "Notes"
 categories: [SR-SCD]
 tags: [Paper]
