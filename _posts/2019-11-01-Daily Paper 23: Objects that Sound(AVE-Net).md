@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 23: Objetcs that Sound"
+title: "Daily Paper 23: Objetcs that Sound(AVE-Net)"
 description: "Notes"
 categories: [MMML-Self_Supervised]
 tags: [Paper]
