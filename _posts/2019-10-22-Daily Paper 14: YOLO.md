@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 14"
+title: "Daily Paper 14: YOLO"
 description: "Notes"
 categories: [CV-classic]
 tags: [Paper]
