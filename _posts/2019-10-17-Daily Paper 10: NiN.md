@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 10"
+title: "Daily Paper 10: NiN"
 description: "Notes"
 categories: [CV-classic]
 tags: [Paper]
