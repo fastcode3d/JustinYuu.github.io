@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 27"
+title: "Daily Paper 27: SyncNet"
 description: "Notes"
 categories: [MMML-Self_Supervised]
 tags: [Paper]
