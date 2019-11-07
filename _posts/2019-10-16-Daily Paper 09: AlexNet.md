@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 09"
+title: "Daily Paper 09: AlexNet"
 description: "Notes"
 categories: [CV-classic]
 tags: [Paper]
