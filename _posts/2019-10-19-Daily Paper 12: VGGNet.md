@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 12"
+title: "Daily Paper 12: VGGNet"
 description: "Notes"
 categories: [CV-classic]
 tags: [Paper]
