@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 13"
+title: "Daily Paper 13: Inception"
 description: "Notes"
 categories: [CV-classic]
 tags: [Paper]
