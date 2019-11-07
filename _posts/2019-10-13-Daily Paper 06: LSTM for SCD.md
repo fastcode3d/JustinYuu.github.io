@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 06"
+title: "Daily Paper 06: LSTM for SCD"
 description: "Notes"
 categories: [SR-SCD]
 tags: [Paper]
