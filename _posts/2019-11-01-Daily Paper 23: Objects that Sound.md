@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 23"
+title: "Daily Paper 23: Objetcs that Sound"
 description: "Notes"
 categories: [MMML-Self_Supervised]
 tags: [Paper]
