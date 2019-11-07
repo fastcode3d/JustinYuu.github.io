@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 20"
+title: "Daily Paper 20: Embodied QA"
 description: "Notes"
 categories: [MMML-VLN]
 tags: [Paper]
