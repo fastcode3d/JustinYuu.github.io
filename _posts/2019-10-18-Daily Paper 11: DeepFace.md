@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 11"
+title: "Daily Paper 11: DeepFace"
 description: "Notes"
 categories: [CV-classic]
 tags: [Paper]
