@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 28"
+title: "Daily Paper 28: Perfect Match"
 description: "Notes"
 categories: [MMML-Self_Supervised]
 tags: [Paper]
@@ -26,7 +26,6 @@ redirect_from:
 
 作者采用了两个baseline：SyncNet、AVE-Net，SyncNet使用对比损失，而AVE-Net计算两个模态之间的欧氏距离后导入FC层和softmax层，之后使用2路交叉熵函数输出结果。而这里提出的Multi-way classification不仅仅考虑视听对之间的距离，还考虑了序列状数据之间的相关信息。作者给定的学习标准使得网络从视频流里输入一个特征，但是从音频流里输入多个特征，这就类似N路特征匹配任务，计算视频特征和每个音频特征之间的欧氏距离，从而得到N个距离，接着通过softmax层后将距离的倒数导入交叉熵损失函数，使得距离远的分数更少，距离近的分数更高。  
 
-总体来看，该模型就是摒弃了挑出当前
 
 ## Experiments  
 
