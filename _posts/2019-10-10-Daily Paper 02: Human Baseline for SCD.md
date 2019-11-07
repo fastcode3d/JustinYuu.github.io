@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 02"
+title: "Daily Paper 02: Human Baseline for SCD"
 description: "Notes"
 categories: [SR-SCD]
 tags: [Paper]
