@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 18"
+title: "Daily Paper 18: Are you looking?"
 description: "Notes"
 categories: [MMML-VLN]
 tags: [Paper]
