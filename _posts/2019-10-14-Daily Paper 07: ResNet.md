@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 07"
+title: "Daily Paper 07: ResNet"
 description: "Notes"
 categories: [CV-classic]
 tags: [Paper]
