@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 24"
+title: "Daily Paper 24: L³-Net"
 description: "Notes"
 categories: [MMML-Self_Supervised]
 tags: [Paper]
