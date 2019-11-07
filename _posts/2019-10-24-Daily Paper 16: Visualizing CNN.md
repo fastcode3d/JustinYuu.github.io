@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 16"
+title: "Daily Paper 16: Visualizing CNN"
 description: "Notes"
 categories: [CV-classic]
 tags: [Paper]
