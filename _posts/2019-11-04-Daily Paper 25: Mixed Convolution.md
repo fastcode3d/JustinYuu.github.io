@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 25"
+title: "Daily Paper 25: Mixed Convolution"
 description: "Notes"
 categories: [MMML-Self_Supervised]
 tags: [Paper]
