@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 19"
+title: "Daily Paper 19: A3C"
 description: "Notes"
 categories: [MMML-VLN]
 tags: [Paper]
