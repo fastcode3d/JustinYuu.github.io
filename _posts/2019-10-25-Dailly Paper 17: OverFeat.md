@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 17"
+title: "Daily Paper 17: OverFeat"
 description: "Notes"
 categories: [CV-classic]
 tags: [Paper]
