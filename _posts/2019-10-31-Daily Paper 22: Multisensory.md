@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 22"
+title: "Daily Paper 22: Multisensory"
 description: "Notes"
 categories: [MMML-Self_Supervised]
 tags: [Paper]
