@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 04"
+title: "Daily Paper 04: pitch in SCD"
 description: "Notes"
 categories: [SR-SCD]
 tags: [Paper]
