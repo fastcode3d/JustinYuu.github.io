@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 26"
+title: "Daily Paper 26: Attention AVS"
 description: "Notes"
 categories: [MMML-Self_Supervised]
 tags: [Paper]
