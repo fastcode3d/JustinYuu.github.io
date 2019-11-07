@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 05"
+title: "Daily Paper 05: NN for SCD"
 description: "Notes"
 categories: [SR-SCD]
 tags: [Paper]
