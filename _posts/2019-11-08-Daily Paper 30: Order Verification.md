@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 30: "
+title: "Daily Paper 30: Order Verification"
 description: "Notes"
 categories: [MMML-Self_Supervised]
 tags: [Paper]
