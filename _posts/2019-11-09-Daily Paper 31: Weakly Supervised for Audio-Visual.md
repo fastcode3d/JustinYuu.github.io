@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 31"
+title: "Daily Paper 31：Weakly Supervised for Audio-Visual"
 description: "Notes"
 categories: [MMML-Self_Supervised]
 tags: [Paper]
