@@ -5,7 +5,7 @@ description: "Notes"
 categories: [MMML-Self_Supervised]
 tags: [Paper]
 redirect_from:
-  - /2019/11/09/
+  - /2019/11/10/
 ---
 
 # Daily Paper 32 - ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks  
