@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Paper 33："
+title: "Daily Paper 33: RCM+SIL for VLN"
 description: "Notes"
 categories: [MMML-VLN]
 tags: [Paper]
