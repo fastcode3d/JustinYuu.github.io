@@ -16,7 +16,7 @@ redirect_from:
 
 今天看的这篇paper是Transformer，看之前把李宏毅讲Transformer的视频看了一遍，感觉讲的很清楚，所以更想要看一下原来的文献长啥样了，所以就简单的看一下。Transformer的应用大多还是在经典的NLP问题中，所以我把这篇paper分类到了NLP的领域。  
 
-这篇paper是Google发表在Nips2017上的，属于比较老的文献了。
+这篇paper是Google发表在NIPS2017上的，属于比较老的文献了。
 
 
 ---
