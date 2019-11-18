@@ -56,6 +56,8 @@ Matterport3D Simulator是用OpenGL和C++写的，此外还提供Python接口，�
 
 最后就是作者的baseline了，由于作者的baseline在现在已经被秒成渣渣，所以简单看一下就好。  
 
+作者使用一个基于LSTM的带有注意力机制的seq2seq架构，每一个时间步t，decoder都将当前图像o<sub>t</sub>的图像表示和前一个动作a<sub>t-1</sub>作为输入，并在语言encoder的隐藏层中应用注意力机制，预测下一个动作a<sub>t</sub>。语言指令通过LSTM encoder处理为词嵌入，在注意力机制中使用。作者使用ImageNet上预训练的ResNet-152作为图像特征提取器，此外上一个时间步的动作也类似词语embedding一样，获得一个动作embedding，和编码的图像concat在一起形成一个单独的向量q<sub>t</sub>，decoder LSTM的整体操作公式为h'<sub>t</sub> = LSTM<sub>dec</sub>(q<sub>t</sub>,h'<sub>t-1</sub>)。  
+
 
 
 
