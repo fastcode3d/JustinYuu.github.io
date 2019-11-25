@@ -10,7 +10,7 @@ redirect_from:
 
 # Daily Paper 36 - From Language to goals: Inverse Reinforcement Learning for Vision-Based Instruction Following  
 
-今天的paper也是VLN领域的一篇经典paper，是由Google AI发表在ICLR2019上的，主要通过Inverse RL的方式来进行视频-语言导航。但是因为我要回家了，所以今天的paper明天再看。
+今天的paper也是VLN领域的一篇经典paper，是由Google AI发表在ICLR2019上的，主要通过Inverse RL的方式来进行视频-语言导航。这篇paper的idea源于将VLN任务用RL方法来解决时奖励的不确定性，
 
 
 
