@@ -8,7 +8,7 @@ redirect_from:
   - /2019/11/26/
 ---
 
-# Daily Paper 39 - Face2Face: Real-time Face Capture and Reenactment of RGB Videos  
+# Daily Paper 40 - Face2Face: Real-time Face Capture and Reenactment of RGB Videos  
 
 ## Introduction  
 
