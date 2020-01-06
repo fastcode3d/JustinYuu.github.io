@@ -22,6 +22,23 @@ nndl这门课需要复现一篇论文，我选了这篇作为复现的目标论�
 
 ## Related Works  
 
+作者将小样本学习分为三种，第一种叫做度量学习，主要来学习一个相似度空间，在这个空间内对于小样本的学习是非常便利的；第二种叫做记忆网络，它主要来学习对于学习经验的储存，然后将其泛化到未见过的任务中；第三种叫做基于梯度下降的方法，这些方法都有一个特定的meta-learner，用来适应一个特定的base-learner，解决多种任务，整个meta-learner优化的完成都通过使用base-learner的验证损失来进行梯度下降。作者的方法属于第三种方法，不过作者使用了迁移学习的方式来将深度网络作为base-learner。  
+
+对于迁移学习而言，迁移什么、怎么迁移一直是核心问题。对于深度模型，应用一个预训练模型来解决一个新的问题，一般叫做微调（fine-tune），在 大规模数据集上预训练的模型已经被证明相对于完全随机初始化的模型能够有更好的泛化性能。另一种流行的迁移学习方法是将预训练模型作为backbone，在此基础上添加高级别的函数，比如目标检测、目标识别、语义分割等。作者的mtl方法就利用了预训练权重的迁移学习，主要解决如何更好的进行深度模型权重的迁移问题。在这篇paper中，在大规模数据集上训练的深度学习网络权重就是要迁移的目标，而迁移的方法就是scaling and shifting(SS)。  
+
+课程学习是由bengio提出的，该方法在多任务学习领域中相当流行。课程学习的思想就是有规律的将训练数据喂给模型比完全随机的喂给模型会更容易完成收敛，学习结果也更有效，泛化性能也更好。课程学习在各大领域都有过应用，就我个人就在图像、音频、视频等领域看到过各种应用了。难例挖掘一开始应用在目标检测区域，它将与ground-truth重叠的图像区域定义为hard negative样本，在这些非常具有迷惑性的数据上进行训练能够获得更高的健壮性和更好的表现。作者受该例子的启发，在线采样了更困难的任务，使得MTL能够通过训练困难的任务成长的更为迅速和强大。  
+
+## Preliminary  
+
+作者首先介绍了一下一些基础的知识，这对于刚开始接触元学习的我来说很有帮助，因此把这一部分也精读一下。  
+
+元学习由两个phase组成:meta-train和meta-test，meta-train一般是一个从分布p(T)中采样的分类任务T,T叫做episode，包括一个train split T<sup>(tr)</sup>用来优化base-learner和一个test split T<sup>(te)</sup>来优化meta-learner。特别的，meta-training试图从一系列采样自p(T)的episode{T}中学习。meta-test中会有一个从没见过的新任务T<sub>unseen</sub>，它将会从meta-learner开始，适应base-learner，最终的评估是由在一系列没有见过的数据点T<sub>unseen</sub><sup>(te)</sup>上完成的。  
+
+Meta-training phase试图去从多个episode中学习到一个meta-learner。在每一个episode中，meta-training都有一个两步的优化。第一步叫做base-learning，这一过程使用交叉熵损失来优化base-learner的参数；第二步在episode测试点上会有一个feed-forward test，test loss用来优化meta-learner的参数。具体而言，给定一个episodeT，base-learner θ<sub>T</sub>会从episode训练数据T<sup>(tr)</sup>中学习到，并生成一个相关联的损失函数L<sub>T</sub>(θ<sub>T</sub>,T<sup>(tr)</sup>)。优化完损失函数之后，base learner就有了参数θ<sub>T</sub>~。之后，meta-learner就会使用测试损失L<sub>T</sub>(θ<sub>T</sub>~,T<sup>(te)</sup>)来更新。经过在所有的episodes上的meta-training之后，meta-learner就由测试损失优化完成，meta-learner的更新次数等同于episode的数量。  
+
+Meta-test phase主要去测试meta-learner在未见过的任务上的快速适应性。给定T<sub>unseen</sub>，meta-learner θ<sub>T</sub>~通过一些方法教会base learner θ<sub>T<sub>unseen</sub></sub>去适应T<sub>unseen</sub>的目的，比如通过初始化。接下来在T<sub>unseen</sub><sup>(te)</sup>上的测试结果用来评估meta-learning方法的性能，如果有多个未见过的方法，那么就取平均值作为评估结果。  
+
+## Methodology  
 
 
 ---
