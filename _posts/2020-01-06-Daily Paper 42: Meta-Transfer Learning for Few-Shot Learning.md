@@ -73,8 +73,23 @@ Meta-test phase主要去测试meta-learner在未见过的任务上的快速适�
 
 ## Experiments  
 
+实验部分依照惯例简述即可。首先是benchmarks，作者的这篇paper通篇都是小样本学习，所以在miniImageNet和FC100数据集上各跑了一遍，具体的介绍就不说了。作者对于这两个数据集上的操作是相同的，具体来说，对于大规模的DNN，经过10000次迭代之后停止训练，训练的方式和STOA方法完全相同。对于mtl，作者的采样方式和其他方法的方式也相同，具体而言，作者考虑到了5-class分类，在训练的episode进行了5class1shot的采样，而用于测试的episode中有15个样本。作者一共为meta-training采样了8000个tasks，并为meta-validation和meta-test各采样了600个task。  
 
+对于特征提取器的网络架构，作者考虑了两种网络：ResNet-12和4CONV。4CONV比较浅，而作者想搞个深一点的，因此自然而然的选择了ResNet-12。而Φ<sub>S<sub>1</sub></sub>和Φ<sub>S<sub>2</sub></sub>的网络架构和特征提取器的相同。对于分类器的网络架构，就是简单的一个FC层，作者在训练的过程中得到了一个经验性结论：一个单独的FC层相对于MLP来说训练起来更为快速和有效。  
 
+为了更好的体现作者算法的有效性，作者还做了隔离实验，用了两个非元学习的传统方法baseline，称为update，三个小数量Fine-tune的baseline，称为FT和两个使用作者预训练模型和HT meta-batch的MAML变种。  
+
+在miniImageNet上的结果显示，使用meta-batch的MTL方法能够达到60.2的1-shot准确率和74.3的5-shot准确率，而HT meta-batch能达到61.2和75.5的1-shot和5-shot准确率。在FC100上的结果显示，HT meta-batch能够达到45.1、57.6和63.4的1-shot、5-shot、10-shot准确率。不管是在miniImageNet还是FC100上，作者的两种方法均远超当今的STOA，作者的HT meta-batch也成为了STOA方法。  
+
+作者还进行了隔离实验进行对比，首先对比了没有meta-learning方法的表现，结果显示在miniImageNet和FC100上的准确率都远低于作者的方法，这进一步证明了元学习的方法的有效性。其次对比了MTL模型内部组成部分的影响，首先可以明显的得到HT meta-batch方法能够有效的提升训练结果，其次作者的SS方法效果也好于普通的FT微调，可以得到MTL的两大组成部分都起到了至关重要的作用。  
+
+作者进一步对比了MTL的收敛速度，MAML使用了240k的任务来得到了在miniImageNet上的最好的表现，而作者只用了8k个任务就达到了，而在FC100上结果更为显著，只用了接近2k个任务，这是由于作者采用了性能更好的深度DNN ResNet-12和较少的训练参数所致的。  
+
+作者还研究了HT meta-batch的收敛速度，HT meta-batch的效果很好，但是在FC100上得到更好的表现比普通的MTL更早，这就很厉害了。  
+
+## Conclusion  
+
+简单总结一下，作者提出了一个将元学习和迁移学习结合在一起的新方法，并提出了一套配套的训练方式，这一揽子算法在小样本学习的两个主流benchmarks miniImageNet和FC100上都达到了STOA，并且显著的降低了训练复杂度，从速度和质量两方面显著提升了STOA表现。  
 
 ---
 本博客支持disqus实时评论功能，如有错误或者建议，欢迎在下方评论区提出，共同探讨。  
